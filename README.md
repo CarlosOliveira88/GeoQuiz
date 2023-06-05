@@ -2,7 +2,7 @@
 
 
 # GeoQuiz
-```
+
 
 ## Sobre nosotros ✒️
 Somos Carlos Oliveira y Ana Medina, dos alumnos del Bootcamp de Full Stack Development de **Ironhack Barcelona** y este es el primer proyecto combinando `CSS`, `HTML` y `JavaScript` que ambos hemos desarrollado.
