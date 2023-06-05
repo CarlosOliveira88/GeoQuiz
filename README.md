@@ -2,33 +2,33 @@
 
 
 # GeoQuiz
+```
 
-
-## Sobre nosotros
+## Sobre nosotros ✒️
 Somos Carlos Oliveira y Ana Medina, dos alumnos del Bootcamp de Full Stack Development de **Ironhack Barcelona** y este es el primer proyecto combinando `CSS`, `HTML` y `JavaScript` que ambos hemos desarrollado.
 
 
 
 
-## Deployment
+## Deployment 🚀
 
 
 Puedes jugar al juego []
 
 
-## Estructura de trabajo
+## Estructura de trabajo 📋
 
 
 Desarrollamos este proyecto usando [Trello](http://trello.com/home) para organizar nuestro flujo de trabajo.
 
 
-## Sobre el juego
+## Sobre el juego 
 
 
 ....
 
 
-## Controles
+## Controles ⚙️
 
 
 Debes presionar la barra espaciadora para saltar.
@@ -42,17 +42,7 @@ Debes presionar la barra espaciadora para saltar.
 ## Condición de derrota
 
 
-....
 
 
-## Clases
 
-
-|   Class   | Properties                                                            | Methods                                          |
-| :-------: | --------------------------------------------------------------------- | ------------------------------------------------ |
-|   Player  |                                             | print(ctx), jumping()                            |
-| Obstaculo |                                               | print(ctx), move()                               |
-|   Juego   | |
-|   Suelo   |                                             | print(ctx), move()                               |
-|   Fondo   |                                             | print(ctx), move()                               | 
 
