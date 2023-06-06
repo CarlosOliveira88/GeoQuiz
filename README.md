@@ -17,7 +17,7 @@ Desarrollamos este proyecto usando [Trello](http://trello.com/home) para organiz
 En este juego de Quiz de Geografía, pondrás a prueba tus conocimientos sobre países, capitales, banderas y otros aspectos relacionados con la geografía mundial. El objetivo es responder correctamente la mayor cantidad de preguntas en el menor tiempo posible.
 
 ## Controles
-Usa el teclado o el ratón para seleccionar las respuestas y navegar por el juego.
+Usa el ratón para seleccionar las respuestas y navegar por el juego.
 
 ## Funcionalidades principales
 - Preguntas de opción múltiple sobre geografía.

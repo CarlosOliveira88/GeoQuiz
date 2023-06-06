@@ -1,1030 +1,3 @@
-var continentes = [
-    {
-        nombre: "África",
-        paises: ["Angola", "Argelia", "Benín", "Botsuana", "Burkina Faso", "Burundi", "Cabo Verde", "Camerún", "Chad", "Comoras", "Congo", "Costa de Marfil", "Djibouti", "Egipto", "Eritrea", "Esuatini", "Etiopía", "Gabón", "Gambia", "Ghana", "Guinea", "Guinea-Bisáu", "Guinea Ecuatorial", "Kenia", "Lesoto", "Liberia", "Libia", "Madagascar", "Malaui", "Malí", "Marruecos", "Mauricio", "Mauritania", "Mozambique", "Namibia", "Níger", "Nigeria", "República Centroafricana", "República Democrática del Congo", "Ruanda", "Santo Tomé y Príncipe", "Senegal", "Seychelles", "Sierra Leona", "Somalia", "Sudáfrica", "Sudán", "Sudán del Sur", "Tanzania", "Togo", "Túnez", "Uganda", "Yibuti", "Zambia", "Zimbabue"]
-    },
-    {
-        nombre: "América",
-        paises: ["Antigua y Barbuda", "Argentina", "Bahamas", "Barbados", "Belice", "Bolivia", "Brasil", "Canadá", "Chile", "Colombia", "Costa Rica", "Cuba", "Dominica", "Ecuador", "El Salvador", "Estados Unidos", "Granada", "Guatemala", "Guyana", "Haití", "Honduras", "Jamaica", "México", "Nicaragua", "Panamá", "Paraguay", "Perú", "República Dominicana", "San Cristóbal y Nieves", "San Vicente y las Granadinas", "Santa Lucía", "Surinam", "Trinidad y Tobago", "Uruguay", "Venezuela"]
-    },
-    {
-        nombre: "Asia",
-        paises: ["Afganistán", "Arabia Saudita", "Bangladés", "Baréin", "Birmania", "Brunéi", "Bután", "Camboya", "Catar", "China", "Corea del Norte", "Corea del Sur", "Emiratos Árabes Unidos", "Filipinas", "India", "Indonesia", "Irak", "Irán", "Israel", "Japón", "Jordania", "Kazajistán", "Kirguistán", "Kuwait", "Laos", "Líbano", "Malasia", "Maldivas", "Mongolia", "Nepal", "Omán", "Pakistán", "Palaos", "Papúa Nueva Guinea", "Filipinas", "Qatar", "Rusia", "Singapur", "Siria", "Sri Lanka", "Tailandia", "Tayikistán", "Timor Oriental", "Turkmenistán", "Turquía", "Uzbekistán"
-        ]
-    }]
-
-var europa = [
-    {
-        nombre: "Albania",
-        bandera: "al.png",
-        capital: "Tirana"
-    },
-    {
-        nombre: "Alemania",
-        bandera: "de.png",
-        capital: "Berlín"
-    },
-    {
-        nombre: "Andorra",
-        bandera: "ad.png",
-        capital: "Andorra la Vella"
-    },
-    {
-        nombre: "Armenia",
-        bandera: "am.png",
-        capital: "Ereván"
-    },
-    {
-        nombre: "Austria",
-        bandera: "at.png",
-        capital: "Viena"
-    },
-    {
-        nombre: "Azerbaiyán",
-        bandera: "az.png",
-        capital: "Bakú"
-    },
-    {
-        nombre: "Bélgica",
-        bandera: "be.png",
-        capital: "Bruselas"
-    },
-    {
-        nombre: "Bielorrusia",
-        bandera: "by.png",
-        capital: "Minsk"
-    },
-    {
-        nombre: "Bosnia y Herzegovina",
-        bandera: "ba.png",
-        capital: "Sarajevo"
-    },
-    {
-        nombre: "Bulgaria",
-        bandera: "bg.png",
-        capital: "Sofía"
-    },
-    {
-        nombre: "Chipre",
-        bandera: "cy.png",
-        capital: "Nicosia"
-    },
-    {
-        nombre: "Croacia",
-        bandera: "hr.png",
-        capital: "Zagreb"
-    },
-    {
-        nombre: "Dinamarca",
-        bandera: "dk.png",
-        capital: "Copenhague"
-    },
-    {
-        nombre: "Eslovaquia",
-        bandera: "sk.png",
-        capital: "Bratislava"
-    },
-    {
-        nombre: "Eslovenia",
-        bandera: "si.png",
-        capital: "Liubliana"
-    },
-    {
-        nombre: "España",
-        bandera: "es.png",
-        capital: "Madrid"
-    },
-    {
-        nombre: "Estonia",
-        bandera: "ee.png",
-        capital: "Tallin"
-    },
-    {
-        nombre: "Finlandia",
-        bandera: "fi.png",
-        capital: "Helsinki"
-    },
-    {
-        nombre: "Francia",
-        bandera: "fr.png",
-        capital: "París"
-    },
-    {
-        nombre: "Georgia",
-        bandera: "ge.png",
-        capital: "Tiflis"
-    },
-    {
-        nombre: "Grecia",
-        bandera: "gr.png",
-        capital: "Atenas"
-    },
-    {
-        nombre: "Hungría",
-        bandera: "hu.png",
-        capital: "Budapest"
-    },
-    {
-        nombre: "Irlanda",
-        bandera: "ie.png",
-        capital: "Dublín"
-    },
-    {
-        nombre: "Islandia",
-        bandera: "is.png",
-        capital: "Reikiavik"
-    },
-    {
-        nombre: "Italia",
-        bandera: "it.png",
-        capital: "Roma"
-    },
-    {
-        nombre: "Kazajistán",
-        bandera: "kz.png",
-        capital: "Astana"
-    },
-    {
-        nombre: "Letonia",
-        bandera: "lv.png",
-        capital: "Riga"
-    },
-    {
-        nombre: "Liechtenstein",
-        bandera: "li.png",
-        capital: "Vaduz"
-    },
-    {
-        nombre: "Lituania",
-        bandera: "lt.png",
-        capital: "Vilna"
-    },
-    {
-        nombre: "Luxemburgo",
-        bandera: "lu.png",
-        capital: "Luxemburgo"
-    },
-    {
-        nombre: "Malta",
-        bandera: "mt.png",
-        capital: "La Valeta"
-    },
-    {
-        nombre: "Moldavia",
-        bandera: "md.png",
-        capital: "Chisináu"
-    },
-    {
-        nombre: "Mónaco",
-        bandera: "mc.png",
-        capital: "Mónaco"
-    },
-    {
-        nombre: "Montenegro",
-        bandera: "me.png",
-        capital: "Podgorica"
-    },
-    {
-        nombre: "Noruega",
-        bandera: "no.png",
-        capital: "Oslo"
-    },
-    {
-        nombre: "Países Bajos",
-        bandera: "nl.png",
-        capital: "Ámsterdam"
-    },
-    {
-        nombre: "Polonia",
-        bandera: "pl.png",
-        capital: "Varsovia"
-    },
-    {
-        nombre: "Portugal",
-        bandera: "pt.png",
-        capital: "Lisboa"
-    },
-    {
-        nombre: "Reino Unido",
-        bandera: "gb.png",
-        capital: "Londres"
-    },
-    {
-        nombre: "República Checa",
-        bandera: "cz.png",
-        capital: "Praga"
-    },
-    {
-        nombre: "Rumania",
-        bandera: "ro.png",
-        capital: "Bucarest"
-    },
-    {
-        nombre: "Rusia",
-        bandera: "ru.png",
-        capital: "Moscú"
-    },
-    {
-        nombre: "San Marino",
-        bandera: "sm.png",
-        capital: "San Marino"
-    },
-    {
-        nombre: "Serbia",
-        bandera: "rs.png",
-        capital: "Belgrado"
-    },
-    {
-        nombre: "Suecia",
-        bandera: "se.png",
-        capital: "Estocolmo"
-    },
-    {
-        nombre: "Suiza",
-        bandera: "ch.png",
-        capital: "Berna"
-    },
-    {
-        nombre: "Ucrania",
-        bandera: "ua.png",
-        capital: "Kiev"
-    },
-    {
-        nombre: "Vaticano",
-        bandera: "va.png",
-        capital: "Ciudad del Vaticano"
-    },
-]
-var americaLatina = [
-    {
-        nombre: "Argentina",
-        bandera: "argentina.png",
-        capital: "Buenos Aires"
-    },
-    {
-        nombre: "Bolivia",
-        bandera: "bolivia.png",
-        capital: "La Paz"
-    },
-    {
-        nombre: "Brasil",
-        bandera: "brasil.png",
-        capital: "Brasilia"
-    },
-    {
-        nombre: "Chile",
-        bandera: "chile.png",
-        capital: "Santiago"
-    },
-    {
-        nombre: "Colombia",
-        bandera: "colombia.png",
-        capital: "Bogotá"
-    },
-    {
-        nombre: "Costa Rica",
-        bandera: "costa-rica.png",
-        capital: "San José"
-    },
-    {
-        nombre: "Cuba",
-        bandera: "cuba.png",
-        capital: "La Habana"
-    },
-    {
-        nombre: "Ecuador",
-        bandera: "ecuador.png",
-        capital: "Quito"
-    },
-    {
-        nombre: "El Salvador",
-        bandera: "el-salvador.png",
-        capital: "San Salvador"
-    },
-    {
-        nombre: "Guatemala",
-        bandera: "guatemala.png",
-        capital: "Ciudad de Guatemala"
-    },
-    {
-        nombre: "Haití",
-        bandera: "haiti.png",
-        capital: "Puerto Príncipe"
-    },
-    {
-        nombre: "Honduras",
-        bandera: "honduras.png",
-        capital: "Tegucigalpa"
-    },
-    {
-        nombre: "Jamaica",
-        bandera: "jamaica.png",
-        capital: "Kingston"
-    },
-    {
-        nombre: "México",
-        bandera: "mexico.png",
-        capital: "Ciudad de México"
-    },
-    {
-        nombre: "Nicaragua",
-        bandera: "nicaragua.png",
-        capital: "Managua"
-    },
-    {
-        nombre: "Panamá",
-        bandera: "panama.png",
-        capital: "Ciudad de Panamá"
-    },
-    {
-        nombre: "Paraguay",
-        bandera: "paraguay.png",
-        capital: "Asunción"
-    },
-    {
-        nombre: "Perú",
-        bandera: "peru.png",
-        capital: "Lima"
-    },
-    {
-        nombre: "República Dominicana",
-        bandera: "republica-dominicana.png",
-        capital: "Santo Domingo"
-    },
-    {
-        nombre: "Uruguay",
-        bandera: "uruguay.png",
-        capital: "Montevideo"
-    },
-    {
-        nombre: "Venezuela",
-        bandera: "venezuela.png",
-        capital: "Caracas"
-    },
-
-    {
-        nombre: "Guyana",
-        bandera: "guyana.png",
-        capital: "Georgetown"
-    },
-    {
-        nombre: "Guyana Francesa",
-        bandera: "guyana-francesa.png",
-        capital: "Cayena"
-    },
-    {
-        nombre: "Surinam",
-        bandera: "surinam.png",
-        capital: "Paramaribo"
-    },
-    {
-        nombre: "Trinidad y Tobago",
-        bandera: "trinidad-tobago.png",
-        capital: "Puerto España"
-    },
-    {
-        nombre: "Belice",
-        bandera: "belice.png",
-        capital: "Belmopán"
-    },
-    {
-        nombre: "Puerto Rico",
-        bandera: "puerto-rico.png",
-        capital: "San Juan"
-    }
-];
-
-var americaDelNorte = [
-    {
-        nombre: "Canadá",
-        bandera: "canada.png",
-        capital: "Ottawa"
-    },
-    {
-        nombre: "Estados Unidos",
-        bandera: "estadosunidos.png",
-        capital: "Washington D.C."
-    },
-    {
-        nombre: "México",
-        bandera: "mexico.png",
-        capital: "Ciudad de México"
-    },
-    {
-        nombre: "Guatemala",
-        bandera: "guatemala.png",
-        capital: "Ciudad de Guatemala"
-    },
-    {
-        nombre: "Belice",
-        bandera: "belice.png",
-        capital: "Belmopán"
-    },
-    {
-        nombre: "Honduras",
-        bandera: "honduras.png",
-        capital: "Tegucigalpa"
-    },
-    {
-        nombre: "El Salvador",
-        bandera: "elsalvador.png",
-        capital: "San Salvador"
-    },
-    {
-        nombre: "Costa Rica",
-        bandera: "costarica.png",
-        capital: "San José"
-    },
-    {
-        nombre: "Nicaragua",
-        bandera: "nicaragua.png",
-        capital: "Managua"
-    },
-    {
-        nombre: "Panamá",
-        bandera: "panama.png",
-        capital: "Ciudad de Panamá"
-    },
-    {
-        nombre: "Cuba",
-        bandera: "cuba.png",
-        capital: "La Habana"
-    },
-    {
-        nombre: "Jamaica",
-        bandera: "jamaica.png",
-        capital: "Kingston"
-    },
-    {
-        nombre: "Haití",
-        bandera: "haiti.png",
-        capital: "Puerto Príncipe"
-    },
-    {
-        nombre: "República Dominicana",
-        bandera: "republicadominicana.png",
-        capital: "Santo Domingo"
-    },
-    {
-        nombre: "Bahamas",
-        bandera: "bahamas.png",
-        capital: "Nasáu"
-    },
-    {
-        nombre: "Trinidad y Tobago",
-        bandera: "trinidadytobago.png",
-        capital: "Puerto España"
-    },
-    {
-        nombre: "Barbados",
-        bandera: "barbados.png",
-        capital: "Bridgetown"
-    },
-    {
-        nombre: "Granada",
-        bandera: "granada.png",
-        capital: "Saint George's"
-    },
-    {
-        nombre: "San Cristóbal y Nieves",
-        bandera: "sancristobalynieves.png",
-        capital: "Basseterre"
-    },
-    {
-        nombre: "Santa Lucía",
-        bandera: "santalucia.png",
-        capital: "Castries"
-    },
-    {
-        nombre: "Antigua y Barbuda",
-        bandera: "antiguaybarbuda.png",
-        capital: "Saint John's"
-    },
-    {
-        nombre: "Dominica",
-        bandera: "dominica.png",
-        capital: "Roseau"
-    }
-
-];
-var africa = [
-    {
-        nombre: "Angola",
-        bandera: "angola.png",
-        capital: "Luanda"
-    },
-    {
-        nombre: "Argelia",
-        bandera: "argelia.png",
-        capital: "Argel"
-    },
-    {
-        nombre: "Benín",
-        bandera: "benin.png",
-        capital: "Porto Novo"
-    },
-    {
-        nombre: "Botsuana",
-        bandera: "botsuana.png",
-        capital: "Gaborone"
-    },
-    {
-        nombre: "Burkina Faso",
-        bandera: "burkina-faso.png",
-        capital: "Uagadugú"
-    },
-    {
-        nombre: "Camerún",
-        bandera: "camerun.png",
-        capital: "Yaundé"
-    },
-    {
-        nombre: "Costa de Marfil",
-        bandera: "costa-de-marfil.png",
-        capital: "Yamusukro"
-    },
-    {
-        nombre: "Egipto",
-        bandera: "egipto.png",
-        capital: "El Cairo"
-    },
-    {
-        nombre: "Etiopía",
-        bandera: "etiopia.png",
-        capital: "Adís Abeba"
-    },
-    {
-        nombre: "Gabón",
-        bandera: "gabon.png",
-        capital: "Libreville"
-    },
-    {
-        nombre: "Gambia",
-        bandera: "gambia.png",
-        capital: "Banjul"
-    },
-    {
-        nombre: "Ghana",
-        bandera: "ghana.png",
-        capital: "Acra"
-    },
-    {
-        nombre: "Kenia",
-        bandera: "kenia.png",
-        capital: "Nairobi"
-    },
-    {
-        nombre: "Madagascar",
-        bandera: "madagascar.png",
-        capital: "Antananarivo"
-    },
-    {
-        nombre: "Malí",
-        bandera: "mali.png",
-        capital: "Bamako"
-    },
-    {
-        nombre: "Marruecos",
-        bandera: "marruecos.png",
-        capital: "Rabat"
-    },
-    {
-        nombre: "Nigeria",
-        bandera: "nigeria.png",
-        capital: "Abuja"
-    },
-    {
-        nombre: "Ruanda",
-        bandera: "ruanda.png",
-        capital: "Kigali"
-    },
-    {
-        nombre: "Senegal",
-        bandera: "senegal.png",
-        capital: "Dakar"
-    },
-    {
-        nombre: "Tanzania",
-        bandera: "tanzania.png",
-        capital: "Dodoma"
-    },
-    {
-        nombre: "Cabo Verde",
-        bandera: "caboverde.png",
-        capital: "Praia"
-    },
-    {
-        nombre: "Chad",
-        bandera: "chad.png",
-        capital: "Yamena"
-    },
-    {
-        nombre: "Comoras",
-        bandera: "comoras.png",
-        capital: "Moroni"
-    },
-    {
-        nombre: "Congo",
-        bandera: "congo.png",
-        capital: "Brazzaville"
-    },
-    {
-        nombre: "Costa de Marfil",
-        bandera: "costademarfil.png",
-        capital: "Yamusukro"
-    },
-    {
-        nombre: "Djibouti",
-        bandera: "djibouti.png",
-        capital: "Djibouti"
-    },
-    {
-        nombre: "Eritrea",
-        bandera: "eritrea.png",
-        capital: "Asmara"
-    },
-    {
-        nombre: "Esuatini",
-        bandera: "esuatini.png",
-        capital: "Mbabane"
-    },
-    {
-        nombre: "Guinea",
-        bandera: "guinea.png",
-        capital: "Conakry"
-    },
-    {
-        nombre: "Lesoto",
-        bandera: "lesoto.png",
-        capital: "Maseru"
-    },
-    {
-        nombre: "Libia",
-        bandera: "libia.png",
-        capital: "Trípoli"
-    },
-    {
-        nombre: "Mauritania",
-        bandera: "mauritania.png",
-        capital: "Nuakchot"
-    },
-    {
-        nombre: "Namibia",
-        bandera: "namibia.png",
-        capital: "Windhoek"
-    },
-    {
-        nombre: "Níger",
-        bandera: "niger.png",
-        capital: "Niamey"
-    },
-    {
-        nombre: "República Centroafricana",
-        bandera: "rca.png",
-        capital: "Bangui"
-    },
-    {
-        nombre: "República Democrática del Congo",
-        bandera: "rdcongo.png",
-        capital: "Kinshasa"
-    },
-    {
-        nombre: "Santo Tomé y Príncipe",
-        bandera: "santotomeprincipe.png",
-        capital: "Santo Tomé"
-    },
-    {
-        nombre: "Sierra Leona",
-        bandera: "sierraleona.png",
-        capital: "Freetown"
-    },
-    {
-        nombre: "Somalia",
-        bandera: "somalia.png",
-        capital: "Mogadiscio"
-    },
-    {
-        nombre: "Suazilandia",
-        bandera: "suazilandia.png",
-        capital: "Lobamba"
-    },
-    {
-        nombre: "Yibuti",
-        bandera: "yibuti.png",
-        capital: "Yibuti"
-    }
-];
-var oceania = [
-    {
-        nombre: "Australia",
-        bandera: "au.png",
-        capital: "Canberra"
-    },
-    {
-        nombre: "Fiyi",
-        bandera: "fj.png",
-        capital: "Suva"
-    },
-    {
-        nombre: "Islas Marshall",
-        bandera: "mh.png",
-        capital: "Majuro"
-    },
-    {
-        nombre: "Islas Salomón",
-        bandera: "sb.png",
-        capital: "Honiara"
-    },
-    {
-        nombre: "Kiribati",
-        bandera: "ki.png",
-        capital: "Tarawa"
-    },
-    {
-        nombre: "Micronesia",
-        bandera: "fm.png",
-        capital: "Palikir"
-    },
-    {
-        nombre: "Nauru",
-        bandera: "nr.png",
-        capital: "Yaren"
-    },
-    {
-        nombre: "Nueva Zelanda",
-        bandera: "nz.png",
-        capital: "Wellington"
-    },
-    {
-        nombre: "Palaos",
-        bandera: "pw.png",
-        capital: "Ngerulmud"
-    },
-    {
-        nombre: "Papúa Nueva Guinea",
-        bandera: "pg.png",
-        capital: "Puerto Moresby"
-    },
-    {
-        nombre: "Samoa",
-        bandera: "ws.png",
-        capital: "Apia"
-    },
-    {
-        nombre: "Tonga",
-        bandera: "to.png",
-        capital: "Nukualofa"
-    },
-    {
-        nombre: "Tuvalu",
-        bandera: "tv.png",
-        capital: "Funafuti"
-    },
-    {
-        nombre: "Vanuatu",
-        bandera: "vu.png",
-        capital: "Port Vila"
-    }
-];
-var asia = [
-    {
-        nombre: "Afganistán",
-        bandera: "af.png",
-        capital: "Kabul"
-    },
-    {
-        nombre: "Arabia Saudita",
-        bandera: "sa.png",
-        capital: "Riad"
-    },
-    {
-        nombre: "Armenia",
-        bandera: "am.png",
-        capital: "Ereván"
-    },
-    {
-        nombre: "Azerbaiyán",
-        bandera: "az.png",
-        capital: "Bakú"
-    },
-    {
-        nombre: "Afganistán",
-        bandera: "af.png",
-        capital: "Kabul"
-    },
-    {
-        nombre: "Arabia Saudita",
-        bandera: "sa.png",
-        capital: "Riad"
-    },
-    {
-        nombre: "Armenia",
-        bandera: "am.png",
-        capital: "Ereván"
-    },
-    {
-        nombre: "Azerbaiyán",
-        bandera: "az.png",
-        capital: "Bakú"
-    },
-
-    {
-        nombre: "Bahréin",
-        bandera: "bh.png",
-        capital: "Manama"
-    },
-    {
-        nombre: "Bangladés",
-        bandera: "bd.png",
-        capital: "Daca"
-    },
-    {
-        nombre: "Bután",
-        bandera: "bt.png",
-        capital: "Timbu"
-    },
-    {
-        nombre: "Camboya",
-        bandera: "kh.png",
-        capital: "Nom Pen"
-    },
-    {
-        nombre: "China",
-        bandera: "cn.png",
-        capital: "Pekín"
-    },
-    {
-        nombre: "Corea del Norte",
-        bandera: "kp.png",
-        capital: "Pyongyang"
-    },
-    {
-        nombre: "Corea del Sur",
-        bandera: "kr.png",
-        capital: "Seúl"
-    },
-    {
-        nombre: "Emiratos Árabes Unidos",
-        bandera: "ae.png",
-        capital: "Abu Dabi"
-    },
-    {
-        nombre: "Filipinas",
-        bandera: "ph.png",
-        capital: "Manila"
-    },
-    {
-        nombre: "India",
-        bandera: "in.png",
-        capital: "Nueva Delhi"
-    },
-    {
-        nombre: "Indonesia",
-        bandera: "id.png",
-        capital: "Yakarta"
-    },
-    {
-        nombre: "Irak",
-        bandera: "iq.png",
-        capital: "Bagdad"
-    },
-    {
-        nombre: "Irán",
-        bandera: "ir.png",
-        capital: "Teherán"
-    },
-    {
-        nombre: "Israel",
-        bandera: "il.png",
-        capital: "Jerusalén"
-    },
-    {
-        nombre: "Japón",
-        bandera: "jp.png",
-        capital: "Tokio"
-    },
-    {
-        nombre: "Kazajistán",
-        bandera: "kz.png",
-        capital: "Nur-Sultán"
-    },
-    {
-        nombre: "Kirguistán",
-        bandera: "kg.png",
-        capital: "Biskek"
-    },
-    {
-        nombre: "Kuwait",
-        bandera: "kw.png",
-        capital: "Kuwait"
-    },
-    {
-        nombre: "Laos",
-        bandera: "la.png",
-        capital: "Vientián"
-    },
-    {
-        nombre: "Líbano",
-        bandera: "lb.png",
-        capital: "Beirut"
-    },
-    {
-        nombre: "Malasia",
-        bandera: "my.png",
-        capital: "Kuala Lumpur"
-    },
-    {
-        nombre: "Maldivas",
-        bandera: "mv.png",
-        capital: "Malé"
-    },
-    {
-        nombre: "Mongolia",
-        bandera: "mn.png",
-        capital: "Ulán Bator"
-    },
-    {
-        nombre: "Myanmar",
-        bandera: "mm.png",
-        capital: "Naipyidó"
-    },
-    {
-        nombre: "Nepal",
-        bandera: "np.png",
-        capital: "Katmandú"
-    },
-    {
-        nombre: "Omán",
-        bandera: "om.png",
-        capital: "Mascate"
-    },
-    {
-        nombre: "Pakistán",
-        bandera: "pk.png",
-        capital: "Islamabad"
-    },
-    {
-        nombre: "Singapur",
-        bandera: "sg.png",
-        capital: "Singapur"
-    },
-    {
-        nombre: "Sri Lanka",
-        bandera: "lk.png",
-        capital: "Sri Jayawardenepura Kotte"
-    },
-    {
-        nombre: "Siria",
-        bandera: "sy.png",
-        capital: "Damasco"
-    },
-    {
-        nombre: "Tailandia",
-        bandera: "th.png",
-        capital: "Bangkok"
-    },
-    {
-        nombre: "Taiwán",
-        bandera: "tw.png",
-        capital: "Taipéi"
-    },
-    {
-        nombre: "Tayikistán",
-        bandera: "tj.png",
-        capital: "Dusambé"
-    },
-    {
-        nombre: "Turkmenistán",
-        bandera: "tm.png",
-        capital: "Asjabad"
-    },
-    {
-        nombre: "Turquía",
-        bandera: "tr.png",
-        capital: "Ankara"
-    },
-    {
-        nombre: "Uzbekistán",
-        bandera: "uz.png",
-        capital: "Taskent"
-    },
-    {
-        nombre: "Vietnam",
-        bandera: "vn.png",
-        capital: "Hanói"
-    },
-    {
-        nombre: "Jordania",
-        bandera: "jo.png",
-        capital: "Amán"
-    },
-    {
-        nombre: "Yemen",
-        bandera: "ye.png",
-        capital: "Saná"
-    }
-];
-
 const preguntasGeografia = [
     {
         pregunta: "¿Cuál es el río más largo del mundo?",
@@ -1178,20 +151,2281 @@ const preguntasGeografia = [
     }
 ];
 
+const BANDERAS = [
+    {
+        pais: "Brasil",
+        bandera: "brasil.webp",
+        capital: "Brasilia",
+        continente: "América del Sur"
+    },
+    {
+        pais: "Estados Unidos",
+        bandera: "estadosunidos.webp",
+        capital: "Washington D.C.",
+        continente: "América del Norte"
+    },
+    {
+        pais: "Canadá",
+        bandera: "canada.webp",
+        capital: "Ottawa",
+        continente: "América del Norte"
+    },
+    {
+        pais: "México",
+        bandera: "mexico.webp",
+        capital: "Ciudad de México",
+        continente: "América del Norte"
+    },
+    {
+        pais: "Argentina",
+        bandera: "argentina.webp",
+        capital: "Buenos Aires",
+        continente: "América del Sur"
+    },
+    {
+        pais: "Colombia",
+        bandera: "colombia.webp",
+        capital: "Bogotá",
+        continente: "América del Sur"
+    },
+    {
+        pais: "Perú",
+        bandera: "peru.webp",
+        capital: "Lima",
+        continente: "América del Sur"
+    },
+    {
+        pais: "Venezuela",
+        bandera: "venezuela.webp",
+        capital: "Caracas",
+        continente: "América del Sur"
+    },
+    {
+        pais: "Chile",
+        bandera: "chile.webp",
+        capital: "Santiago",
+        continente: "América del Sur"
+    },
+    {
+        pais: "Ecuador",
+        bandera: "ecuador.webp",
+        capital: "Quito",
+        continente: "América del Sur"
+    },
+    {
+        pais: "Reino Unido",
+        bandera: "reinounido.webp",
+        capital: "Londres",
+        continente: "Europa"
+    },
+    {
+        pais: "Francia",
+        bandera: "francia.webp",
+        capital: "París",
+        continente: "Europa"
+    },
+    {
+        pais: "Alemania",
+        bandera: "alemania.webp",
+        capital: "Berlín",
+        continente: "Europa"
+    },
+    {
+        pais: "Italia",
+        bandera: "italia.webp",
+        capital: "Roma",
+        continente: "Europa"
+    },
+    {
+        pais: "España",
+        bandera: "espana.webp",
+        capital: "Madrid",
+        continente: "Europa"
+    },
+    {
+        pais: "Portugal",
+        bandera: "portugal.webp",
+        capital: "Lisboa",
+        continente: "Europa"
+    },
+    {
+        pais: "Suecia",
+        bandera: "suecia.webp",
+        capital: "Estocolmo",
+        continente: "Europa"
+    },
+    {
+        pais: "Noruega",
+        bandera: "noruega.webp",
+        capital: "Oslo",
+        continente: "Europa"
+    },
+    {
+        pais: "Suiza",
+        bandera: "suiza.webp",
+        capital: "Berna",
+        continente: "Europa"
+    },
+    {
+        pais: "Rusia",
+        bandera: "rusia.webp",
+        capital: "Moscú",
+        continente: "Europa/Asia"
+    },
+    {
+        pais: "China",
+        bandera: "china.webp",
+        capital: "Pekín",
+        continente: "Asia"
+    },
+    {
+        pais: "Japón",
+        bandera: "japon.webp",
+        capital: "Tokio",
+        continente: "Asia"
+    },
+    {
+        pais: "India",
+        bandera: "india.webp",
+        capital: "Nueva Delhi",
+        continente: "Asia"
+    },
+    {
+        pais: "Corea del Sur",
+        bandera: "coreadelsur.webp",
+        capital: "Seúl",
+        continente: "Asia"
+    },
+    {
+        pais: "Australia",
+        bandera: "australia.webp",
+        capital: "Canberra",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Nueva Zelanda",
+        bandera: "nuevazelanda.webp",
+        capital: "Wellington",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Brunei",
+        bandera: "brunei.webp",
+        capital: "Bandar Seri Begawan",
+        continente: "Asia"
+    },
+    {
+        pais: "Camboya",
+        bandera: "camboya.webp",
+        capital: "Nom Pen",
+        continente: "Asia"
+    },
+    {
+        pais: "Indonesia",
+        bandera: "indonesia.webp",
+        capital: "Yakarta",
+        continente: "Asia"
+    },
+    {
+        pais: "Malasia",
+        bandera: "malasia.webp",
+        capital: "Kuala Lumpur",
+        continente: "Asia"
+    },
+    {
+        pais: "Filipinas",
+        bandera: "filipinas.webp",
+        capital: "Manila",
+        continente: "Asia"
+    },
+    {
+        pais: "Singapur",
+        bandera: "singapur.webp",
+        capital: "Singapur",
+        continente: "Asia"
+    },
+    {
+        pais: "Tailandia",
+        bandera: "tailandia.webp",
+        capital: "Bangkok",
+        continente: "Asia"
+    },
+    {
+        pais: "Vietnam",
+        bandera: "vietnam.webp",
+        capital: "Hanói",
+        continente: "Asia"
+    },
+    {
+        pais: "Afganistán",
+        bandera: "afganistan.webp",
+        capital: "Kabul",
+        continente: "Asia"
+    },
+    {
+        pais: "Arabia Saudita",
+        bandera: "arabiasaudita.webp",
+        capital: "Riad",
+        continente: "Asia"
+    },
+    {
+        pais: "Bangladés",
+        bandera: "banglades.webp",
+        capital: "Daca",
+        continente: "Asia"
+    },
+    {
+        pais: "Emiratos Árabes Unidos",
+        bandera: "emiratosarabesunidos.webp",
+        capital: "Abu Dabi",
+        continente: "Asia"
+    },
+    {
+        pais: "Irak",
+        bandera: "irak.webp",
+        capital: "Bagdad",
+        continente: "Asia"
+    },
+    {
+        pais: "Irán",
+        bandera: "iran.webp",
+        capital: "Teherán",
+        continente: "Asia"
+    },
+    {
+        pais: "Israel",
+        bandera: "israel.webp",
+        capital: "Jerusalén",
+        continente: "Asia"
+    },
+    {
+        pais: "Jordania",
+        bandera: "jordania.webp",
+        capital: "Amán",
+        continente: "Asia"
+    },
+    {
+        pais: "Kuwait",
+        bandera: "kuwait.webp",
+        capital: "Kuwait",
+        continente: "Asia"
+    },
+    {
+        pais: "Líbano",
+        bandera: "libano.webp",
+        capital: "Beirut",
+        continente: "Asia"
+    },
+    {
+        pais: "Omán",
+        bandera: "oman.webp",
+        capital: "Mascate",
+        continente: "Asia"
+    },
+    {
+        pais: "Palestina",
+        bandera: "palestina.webp",
+        capital: "Jerusalén",
+        continente: "Asia"
+    },
+    {
+        pais: "Qatar",
+        bandera: "qatar.webp",
+        capital: "Doha",
+        continente: "Asia"
+    },
+    {
+        pais: "Siria",
+        bandera: "siria.webp",
+        capital: "Damasco",
+        continente: "Asia"
+    },
+    {
+        pais: "Turquía",
+        bandera: "turquia.webp",
+        capital: "Ankara",
+        continente: "Asia/Europa"
+    },
+    {
+        pais: "Yemen",
+        bandera: "yemen.webp",
+        capital: "Saná",
+        continente: "Asia"
+    },
+    {
+        pais: "Sudáfrica",
+        bandera: "sudafrica.webp",
+        capital: "Pretoria",
+        continente: "África"
+    },
+    {
+        pais: "Nigeria",
+        bandera: "nigeria.webp",
+        capital: "Abuya",
+        continente: "África"
+    },
+    {
+        pais: "Egipto",
+        bandera: "egipto.webp",
+        capital: "El Cairo",
+        continente: "África"
+    },
+    {
+        pais: "Argelia",
+        bandera: "argelia.webp",
+        capital: "Argel",
+        continente: "África"
+    },
+    {
+        pais: "Angola",
+        bandera: "angola.webp",
+        capital: "Luanda",
+        continente: "África"
+    },
+    {
+        pais: "Marruecos",
+        bandera: "marruecos.webp",
+        capital: "Rabat",
+        continente: "África"
+    },
+    {
+        pais: "Sudán",
+        bandera: "sudan.webp",
+        capital: "Jartum",
+        continente: "África"
+    },
+    {
+        pais: "Kenia",
+        bandera: "kenia.webp",
+        capital: "Nairobi",
+        continente: "África"
+    },
+    {
+        pais: "Etiopía",
+        bandera: "etiopia.webp",
+        capital: "Adís Abeba",
+        continente: "África"
+    },
+    {
+        pais: "Ghana",
+        bandera: "ghana.webp",
+        capital: "Acra",
+        continente: "África"
+    },
+    {
+        pais: "Congo",
+        bandera: "congo.webp",
+        capital: "Brazzaville",
+        continente: "África"
+    },
+    {
+        pais: "Tanzania",
+        bandera: "tanzania.webp",
+        capital: "Dodoma",
+        continente: "África"
+    },
+    {
+        pais: "Uganda",
+        bandera: "uganda.webp",
+        capital: "Kampala",
+        continente: "África"
+    },
+    {
+        pais: "Rwanda",
+        bandera: "rwanda.webp",
+        capital: "Kigali",
+        continente: "África"
+    },
+    {
+        pais: "Zambia",
+        bandera: "zambia.webp",
+        capital: "Lusaka",
+        continente: "África"
+    },
+    {
+        pais: "Zimbabwe",
+        bandera: "zimbabwe.webp",
+        capital: "Harare",
+        continente: "África"
+    },
+    {
+        pais: "Australia",
+        bandera: "australia.webp",
+        capital: "Canberra",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Nueva Zelanda",
+        bandera: "nuevazelanda.webp",
+        capital: "Wellington",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Fiyi",
+        bandera: "fiyi.webp",
+        capital: "Suva",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Samoa",
+        bandera: "samoa.webp",
+        capital: "Apia",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Tonga",
+        bandera: "tonga.webp",
+        capital: "Nukualofa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Vanuatu",
+        bandera: "vanuatu.webp",
+        capital: "Port Vila",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Kiribati",
+        bandera: "kiribati.webp",
+        capital: "Tarawa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Micronesia",
+        bandera: "micronesia.webp",
+        capital: "Palikir",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Papúa Nueva Guinea",
+        bandera: "papuanuevaguinea.webp",
+        capital: "Puerto Moresby",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Islas Salomón",
+        bandera: "islassalomon.webp",
+        capital: "Honiara",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Timor Oriental",
+        bandera: "timororiental.webp",
+        capital: "Dili",
+        continente: "Asia"
+    },
+    {
+        pais: "Austria",
+        bandera: "austria.webp",
+        capital: "Viena",
+        continente: "Europa"
+    },
+    {
+        pais: "Bélgica",
+        bandera: "belgica.webp",
+        capital: "Bruselas",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Dinamarca",
+        bandera: "dinamarca.webp",
+        capital: "Copenhague",
+        continente: "Europa"
+    },
+    {
+        pais: "Grecia",
+        bandera: "grecia.webp",
+        capital: "Atenas",
+        continente: "Europa"
+    },
+    {
+        pais: "Holanda",
+        bandera: "holanda.webp",
+        capital: "Ámsterdam",
+        continente: "Europa"
+    },
+    {
+        pais: "Hungría",
+        bandera: "hungria.webp",
+        capital: "Budapest",
+        continente: "Europa"
+    },
+    {
+        pais: "Irlanda",
+        bandera: "irlanda.webp",
+        capital: "Dublín",
+        continente: "Europa"
+    },
+    {
+        pais: "Polonia",
+        bandera: "polonia.webp",
+        capital: "Varsovia",
+        continente: "Europa"
+    },
+    {
+        pais: "Rumania",
+        bandera: "rumania.webp",
+        capital: "Bucarest",
+        continente: "Europa"
+    },
+    {
+        pais: "Suecia",
+        bandera: "suecia.webp",
+        capital: "Estocolmo",
+        continente: "Europa"
+    },
+    {
+        pais: "Ucrania",
+        bandera: "ucrania.webp",
+        capital: "Kiev",
+        continente: "Europa"
+    },
+    {
+        pais: "Finlandia",
+        bandera: "finlandia.webp",
+        capital: "Helsinki",
+        continente: "Europa"
+    },
+    {
+        pais: "Noruega",
+        bandera: "noruega.webp",
+        capital: "Oslo",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovenia",
+        bandera: "eslovenia.webp",
+        capital: "Liubliana",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovaquia",
+        bandera: "eslovaquia.webp",
+        capital: "Bratislava",
+        continente: "Europa"
+    },
+    {
+        pais: "Bulgaria",
+        bandera: "bulgaria.webp",
+        capital: "Sofía",
+        continente: "Europa"
+    },
+    {
+        pais: "Suiza",
+        bandera: "suiza.webp",
+        capital: "Berna",
+        continente: "Europa"
+    },
+    {
+        pais: "Chipre",
+        bandera: "chipre.webp",
+        capital: "Nicosia",
+        continente: "Europa"
+    },
+    {
+        pais: "Estonia",
+        bandera: "estonia.webp",
+        capital: "Tallin",
+        continente: "Europa"
+    },
+    {
+        pais: "Letonia",
+        bandera: "letonia.webp",
+        capital: "Riga",
+        continente: "Europa"
+    },
+    {
+        pais: "Lituania",
+        bandera: "lituania.webp",
+        capital: "Vilna",
+        continente: "Europa"
+    },
+    {
+        pais: "Moldavia",
+        bandera: "moldavia.webp",
+        capital: "Chisináu",
+        continente: "Europa"
+    },
+    {
+        pais: "Montenegro",
+        bandera: "montenegro.webp",
+        capital: "Podgorica",
+        continente: "Europa"
+    },
+    {
+        pais: "Serbia",
+        bandera: "serbia.webp",
+        capital: "Belgrado",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovenia",
+        bandera: "eslovenia.webp",
+        capital: "Liubliana",
+        continente: "Europa"
+    },
+    {
+        pais: "Albania",
+        bandera: "albania.webp",
+        capital: "Tirana",
+        continente: "Europa"
+    },
+    {
+        pais: "Bosnia y Herzegovina",
+        bandera: "bosniaherzegovina.webp",
+        capital: "Sarajevo",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Macedonia del Norte",
+        bandera: "macedoniadelnorte.webp",
+        capital: "Skopie",
+        continente: "Europa"
+    },
+    {
+        pais: "Montenegro",
+        bandera: "montenegro.webp",
+        capital: "Podgorica",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovaquia",
+        bandera: "eslovaquia.webp",
+        capital: "Bratislava",
+        continente: "Europa"
+    },
+    {
+        pais: "Alemania",
+        bandera: "alemania.webp",
+        capital: "Berlín",
+        continente: "Europa"
+    },
+    {
+        pais: "Italia",
+        bandera: "italia.webp",
+        capital: "Roma",
+        continente: "Europa"
+    },
+    {
+        pais: "Francia",
+        bandera: "francia.webp",
+        capital: "París",
+        continente: "Europa"
+    },
+    {
+        pais: "Reino Unido",
+        bandera: "reinounido.webp",
+        capital: "Londres",
+        continente: "Europa"
+    },
+    {
+        pais: "España",
+        bandera: "espana.webp",
+        capital: "Madrid",
+        continente: "Europa"
+    },
+    {
+        pais: "Portugal",
+        bandera: "portugal.webp",
+        capital: "Lisboa",
+        continente: "Europa"
+    },
+    {
+        pais: "Bielorrusia",
+        bandera: "bielorrusia.webp",
+        capital: "Minsk",
+        continente: "Europa"
+    },
+    {
+        pais: "Kazajistán",
+        bandera: "kazajistan.webp",
+        capital: "Nur-Sultán",
+        continente: "Asia"
+    },
+    {
+        pais: "Uzbekistán",
+        bandera: "uzbekistan.webp",
+        capital: "Taskent",
+        continente: "Asia"
+    },
+    {
+        pais: "Turkmenistán",
+        bandera: "turkmenistan.webp",
+        capital: "Asjabad",
+        continente: "Asia"
+    },
+    {
+        pais: "Tayikistán",
+        bandera: "tayikistan.webp",
+        capital: "Dusambé",
+        continente: "Asia"
+    },
+    {
+        pais: "Kirguistán",
+        bandera: "kirguistan.webp",
+        capital: "Biskek",
+        continente: "Asia"
+    },
+    {
+        pais: "Tailandia",
+        bandera: "tailandia.webp",
+        capital: "Bangkok",
+        continente: "Asia"
+    },
+    {
+        pais: "Malasia",
+        bandera: "malasia.webp",
+        capital: "Kuala Lumpur",
+        continente: "Asia"
+    },
+    {
+        pais: "Singapur",
+        bandera: "singapur.webp",
+        capital: "Singapur",
+        continente: "Asia"
+    },
+    {
+        pais: "Indonesia",
+        bandera: "indonesia.webp",
+        capital: "Yakarta",
+        continente: "Asia"
+    },
+    {
+        pais: "Filipinas",
+        bandera: "filipinas.webp",
+        capital: "Manila",
+        continente: "Asia"
+    },
+    {
+        pais: "Vietnam",
+        bandera: "vietnam.webp",
+        capital: "Hanói",
+        continente: "Asia"
+    },
+    {
+        pais: "Laos",
+        bandera: "laos.webp",
+        capital: "Vientián",
+        continente: "Asia"
+    },
+    {
+        pais: "Camboya",
+        bandera: "camboya.webp",
+        capital: "Nom Pen",
+        continente: "Asia"
+    },
+    {
+        pais: "Myanmar",
+        bandera: "myanmar.webp",
+        capital: "Naypyidaw",
+        continente: "Asia"
+    },
+    {
+        pais: "Bangladesh",
+        bandera: "bangladesh.webp",
+        capital: "Daca",
+        continente: "Asia"
+    },
+    {
+        pais: "Pakistán",
+        bandera: "pakistan.webp",
+        capital: "Islamabad",
+        continente: "Asia"
+    },
+    {
+        pais: "India",
+        bandera: "india.webp",
+        capital: "Nueva Delhi",
+        continente: "Asia"
+    },
+    {
+        pais: "Sri Lanka",
+        bandera: "srilanka.webp",
+        capital: "Colombo",
+        continente: "Asia"
+    },
+    {
+        pais: "Maldivas",
+        bandera: "maldivas.webp",
+        capital: "Malé",
+        continente: "Asia"
+    },
+    {
+        pais: "China",
+        bandera: "china.webp",
+        capital: "Pekín",
+        continente: "Asia"
+    },
+    {
+        pais: "Japón",
+        bandera: "japon.webp",
+        capital: "Tokio",
+        continente: "Asia"
+    },
+    {
+        pais: "Corea del Sur",
+        bandera: "coreadelsur.webp",
+        capital: "Seúl",
+        continente: "Asia"
+    },
+    {
+        pais: "Corea del Norte",
+        bandera: "coreadelnorte.webp",
+        capital: "Pionyang",
+        continente: "Asia"
+    },
+    {
+        pais: "Australia",
+        bandera: "australia.webp",
+        capital: "Canberra",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Nueva Zelanda",
+        bandera: "nuevazelanda.webp",
+        capital: "Wellington",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Fiyi",
+        bandera: "fiyi.webp",
+        capital: "Suva",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Samoa",
+        bandera: "samoa.webp",
+        capital: "Apia",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Tonga",
+        bandera: "tonga.webp",
+        capital: "Nukualofa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Vanuatu",
+        bandera: "vanuatu.webp",
+        capital: "Port Vila",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Kiribati",
+        bandera: "kiribati.webp",
+        capital: "Tarawa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Micronesia",
+        bandera: "micronesia.webp",
+        capital: "Palikir",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Papúa Nueva Guinea",
+        bandera: "papuanuevaguinea.webp",
+        capital: "Puerto Moresby",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Islas Salomón",
+        bandera: "islassalomon.webp",
+        capital: "Honiara",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Timor Oriental",
+        bandera: "timororiental.webp",
+        capital: "Dili",
+        continente: "Asia"
+    },
+    {
+        pais: "Austria",
+        bandera: "austria.webp",
+        capital: "Viena",
+        continente: "Europa"
+    },
+    {
+        pais: "Bélgica",
+        bandera: "belgica.webp",
+        capital: "Bruselas",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Dinamarca",
+        bandera: "dinamarca.webp",
+        capital: "Copenhague",
+        continente: "Europa"
+    },
+    {
+        pais: "Grecia",
+        bandera: "grecia.webp",
+        capital: "Atenas",
+        continente: "Europa"
+    },
+    {
+        pais: "Holanda",
+        bandera: "holanda.webp",
+        capital: "Ámsterdam",
+        continente: "Europa"
+    },
+    {
+        pais: "Hungría",
+        bandera: "hungria.webp",
+        capital: "Budapest",
+        continente: "Europa"
+    },
+    {
+        pais: "Irlanda",
+        bandera: "irlanda.webp",
+        capital: "Dublín",
+        continente: "Europa"
+    },
+    {
+        pais: "Polonia",
+        bandera: "polonia.webp",
+        capital: "Varsovia",
+        continente: "Europa"
+    },
+    {
+        pais: "Rumania",
+        bandera: "rumania.webp",
+        capital: "Bucarest",
+        continente: "Europa"
+    },
+    {
+        pais: "Suecia",
+        bandera: "suecia.webp",
+        capital: "Estocolmo",
+        continente: "Europa"
+    },
+    {
+        pais: "Ucrania",
+        bandera: "ucrania.webp",
+        capital: "Kiev",
+        continente: "Europa"
+    },
+    {
+        pais: "Finlandia",
+        bandera: "finlandia.webp",
+        capital: "Helsinki",
+        continente: "Europa"
+    },
+    {
+        pais: "Noruega",
+        bandera: "noruega.webp",
+        capital: "Oslo",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovenia",
+        bandera: "eslovenia.webp",
+        capital: "Liubliana",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovaquia",
+        bandera: "eslovaquia.webp",
+        capital: "Bratislava",
+        continente: "Europa"
+    },
+    {
+        pais: "Bulgaria",
+        bandera: "bulgaria.webp",
+        capital: "Sofía",
+        continente: "Europa"
+    },
+    {
+        pais: "Suiza",
+        bandera: "suiza.webp",
+        capital: "Berna",
+        continente: "Europa"
+    },
+    {
+        pais: "Chipre",
+        bandera: "chipre.webp",
+        capital: "Nicosia",
+        continente: "Europa"
+    },
+    {
+        pais: "Estonia",
+        bandera: "estonia.webp",
+        capital: "Tallin",
+        continente: "Europa"
+    },
+    {
+        pais: "Letonia",
+        bandera: "letonia.webp",
+        capital: "Riga",
+        continente: "Europa"
+    },
+    {
+        pais: "Lituania",
+        bandera: "lituania.webp",
+        capital: "Vilna",
+        continente: "Europa"
+    },
+    {
+        pais: "Moldavia",
+        bandera: "moldavia.webp",
+        capital: "Chisináu",
+        continente: "Europa"
+    },
+    {
+        pais: "Montenegro",
+        bandera: "montenegro.webp",
+        capital: "Podgorica",
+        continente: "Europa"
+    },
+    {
+        pais: "Serbia",
+        bandera: "serbia.webp",
+        capital: "Belgrado",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovenia",
+        bandera: "eslovenia.webp",
+        capital: "Liubliana",
+        continente: "Europa"
+    },
+    {
+        pais: "Albania",
+        bandera: "albania.webp",
+        capital: "Tirana",
+        continente: "Europa"
+    },
+    {
+        pais: "Bosnia y Herzegovina",
+        bandera: "bosniaherzegovina.webp",
+        capital: "Sarajevo",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Macedonia del Norte",
+        bandera: "macedoniadelnorte.webp",
+        capital: "Skopie",
+        continente: "Europa"
+    },
+    {
+        pais: "Montenegro",
+        bandera: "montenegro.webp",
+        capital: "Podgorica",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovaquia",
+        bandera: "eslovaquia.webp",
+        capital: "Bratislava",
+        continente: "Europa"
+    },
+    {
+        pais: "Alemania",
+        bandera: "alemania.webp",
+        capital: "Berlín",
+        continente: "Europa"
+    },
+    {
+        pais: "Italia",
+        bandera: "italia.webp",
+        capital: "Roma",
+        continente: "Europa"
+    },
+    {
+        pais: "Francia",
+        bandera: "francia.webp",
+        capital: "París",
+        continente: "Europa"
+    },
+    {
+        pais: "Reino Unido",
+        bandera: "reinounido.webp",
+        capital: "Londres",
+        continente: "Europa"
+    },
+    {
+        pais: "España",
+        bandera: "espana.webp",
+        capital: "Madrid",
+        continente: "Europa"
+    },
+    {
+        pais: "Portugal",
+        bandera: "portugal.webp",
+        capital: "Lisboa",
+        continente: "Europa"
+    },
+    {
+        pais: "Bielorrusia",
+        bandera: "bielorrusia.webp",
+        capital: "Minsk",
+        continente: "Europa"
+    },
+    {
+        pais: "Kazajistán",
+        bandera: "kazajistan.webp",
+        capital: "Nur-Sultán",
+        continente: "Asia"
+    },
+    {
+        pais: "Uzbekistán",
+        bandera: "uzbekistan.webp",
+        capital: "Taskent",
+        continente: "Asia"
+    },
+    {
+        pais: "Turkmenistán",
+        bandera: "turkmenistan.webp",
+        capital: "Asjabad",
+        continente: "Asia"
+    },
+    {
+        pais: "Tayikistán",
+        bandera: "tayikistan.webp",
+        capital: "Dusambé",
+        continente: "Asia"
+    },
+    {
+        pais: "Kirguistán",
+        bandera: "kirguistan.webp",
+        capital: "Biskek",
+        continente: "Asia"
+    },
+    {
+        pais: "Tailandia",
+        bandera: "tailandia.webp",
+        capital: "Bangkok",
+        continente: "Asia"
+    },
+    {
+        pais: "Malasia",
+        bandera: "malasia.webp",
+        capital: "Kuala Lumpur",
+        continente: "Asia"
+    },
+    {
+        pais: "Singapur",
+        bandera: "singapur.webp",
+        capital: "Singapur",
+        continente: "Asia"
+    },
+    {
+        pais: "Indonesia",
+        bandera: "indonesia.webp",
+        capital: "Yakarta",
+        continente: "Asia"
+    },
+    {
+        pais: "Filipinas",
 
-console.log(continentes[0].paises.length + continentes[1].paises.length + continentes[2].paises.length)
 
-console.log("asia " + asia.length)
-console.log("europa " + europa.length)
-console.log("america latina " + americaLatina.length)
-console.log("america del norte " + americaDelNorte.length)
-console.log("africa " + africa.length)
-console.log("oceania " + oceania.length)
+        bandera: "filipinas.webp",
+        capital: "Manila",
+        continente: "Asia"
+    },
+    {
+        pais: "Australia",
+        bandera: "australia.webp",
+        capital: "Canberra",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Nueva Zelanda",
+        bandera: "nuevazelanda.webp",
+        capital: "Wellington",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Fiyi",
+        bandera: "fiyi.webp",
+        capital: "Suva",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Samoa",
+        bandera: "samoa.webp",
+        capital: "Apia",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Tonga",
+        bandera: "tonga.webp",
+        capital: "Nukualofa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Vanuatu",
+        bandera: "vanuatu.webp",
+        capital: "Port Vila",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Kiribati",
+        bandera: "kiribati.webp",
+        capital: "Tarawa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Micronesia",
+        bandera: "micronesia.webp",
+        capital: "Palikir",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Papúa Nueva Guinea",
+        bandera: "papuanuevaguinea.webp",
+        capital: "Puerto Moresby",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Islas Salomón",
+        bandera: "islassalomon.webp",
+        capital: "Honiara",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Timor Oriental",
+        bandera: "timororiental.webp",
+        capital: "Dili",
+        continente: "Asia"
+    },
+    {
+        pais: "Austria",
+        bandera: "austria.webp",
+        capital: "Viena",
+        continente: "Europa"
+    },
+    {
+        pais: "Bélgica",
+        bandera: "belgica.webp",
+        capital: "Bruselas",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Dinamarca",
+        bandera: "dinamarca.webp",
+        capital: "Copenhague",
+        continente: "Europa"
+    },
+    {
+        pais: "Grecia",
+        bandera: "grecia.webp",
+        capital: "Atenas",
+        continente: "Europa"
+    },
+    {
+        pais: "Holanda",
+        bandera: "holanda.webp",
+        capital: "Ámsterdam",
+        continente: "Europa"
+    },
+    {
+        pais: "Hungría",
+        bandera: "hungria.webp",
+        capital: "Budapest",
+        continente: "Europa"
+    },
+    {
+        pais: "Irlanda",
+        bandera: "irlanda.webp",
+        capital: "Dublín",
+        continente: "Europa"
+    },
 
 
-// asia tem 47 e deveria ter 51
-// europa tem 48 e deveria ter 50
-// america latina tem 27 e deveria ter 33
-// america del norte tem 22 e deveria ter 23    a america deberia ter 50 paises en total
-// africa tem 41 e deveria ter 54
-// oceania tem 14 e deveria ter 14
+    {
+        pais: "Polonia",
+        bandera: "polonia.webp",
+        capital: "Varsovia",
+        continente: "Europa"
+    },
+    {
+        pais: "Rumania",
+        bandera: "rumania.webp",
+        capital: "Bucarest",
+        continente: "Europa"
+    },
+    {
+        pais: "Suecia",
+        bandera: "suecia.webp",
+        capital: "Estocolmo",
+        continente: "Europa"
+    },
+    {
+        pais: "Ucrania",
+        bandera: "ucrania.webp",
+        capital: "Kiev",
+        continente: "Europa"
+    },
+    {
+        pais: "Finlandia",
+        bandera: "finlandia.webp",
+        capital: "Helsinki",
+        continente: "Europa"
+    },
+    {
+        pais: "Noruega",
+        bandera: "noruega.webp",
+        capital: "Oslo",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovenia",
+        bandera: "eslovenia.webp",
+        capital: "Liubliana",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovaquia",
+        bandera: "eslovaquia.webp",
+        capital: "Bratislava",
+        continente: "Europa"
+    },
+    {
+        pais: "Bulgaria",
+        bandera: "bulgaria.webp",
+        capital: "Sofía",
+        continente: "Europa"
+    },
+    {
+        pais: "Suiza",
+        bandera: "suiza.webp",
+        capital: "Berna",
+        continente: "Europa"
+    },
+    {
+        pais: "Chipre",
+        bandera: "chipre.webp",
+        capital: "Nicosia",
+        continente: "Europa"
+    },
+    {
+        pais: "Estonia",
+        bandera: "estonia.webp",
+        capital: "Tallin",
+        continente: "Europa"
+    },
+    {
+        pais: "Letonia",
+        bandera: "letonia.webp",
+        capital: "Riga",
+        continente: "Europa"
+    },
+    {
+        pais: "Lituania",
+        bandera: "lituania.webp",
+        capital: "Vilna",
+        continente: "Europa"
+    },
+    {
+        pais: "Moldavia",
+        bandera: "moldavia.webp",
+        capital: "Chisináu",
+        continente: "Europa"
+    },
+    {
+        pais: "Serbia",
+        bandera: "serbia.webp",
+        capital: "Belgrado",
+        continente: "Europa"
+    },
+    {
+        pais: "Albania",
+        bandera: "albania.webp",
+        capital: "Tirana",
+        continente: "Europa"
+    },
+    {
+        pais: "Bosnia y Herzegovina",
+        bandera: "bosniaherzegovina.webp",
+        capital: "Sarajevo",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Macedonia del Norte",
+        bandera: "macedoniadelnorte.webp",
+        capital: "Skopie",
+        continente: "Europa"
+    },
+    {
+        pais: "Alemania",
+        bandera: "alemania.webp",
+        capital: "Berlín",
+        continente: "Europa"
+    },
+    {
+        pais: "Italia",
+        bandera: "italia.webp",
+        capital: "Roma",
+        continente: "Europa"
+    },
+    {
+        pais: "Francia",
+        bandera: "francia.webp",
+        capital: "París",
+        continente: "Europa"
+    },
+    {
+        pais: "Reino Unido",
+        bandera: "reinounido.webp",
+        capital: "Londres",
+        continente: "Europa"
+    },
+    {
+        pais: "España",
+        bandera: "espana.webp",
+        capital: "Madrid",
+        continente: "Europa"
+    },
+    {
+        pais: "Portugal",
+        bandera: "portugal.webp",
+        capital: "Lisboa",
+        continente: "Europa"
+    },
+    {
+        pais: "Bielorrusia",
+        bandera: "bielorrusia.webp",
+        capital: "Minsk",
+        continente: "Europa"
+    },
+    {
+        pais: "Kazajistán",
+        bandera: "kazajistan.webp",
+        capital: "Nur-Sultán",
+        continente: "Asia"
+    },
+    {
+        pais: "Uzbekistán",
+        bandera: "uzbekistan.webp",
+        capital: "Taskent",
+        continente: "Asia"
+    },
+    {
+        pais: "Turkmenistán",
+        bandera: "turkmenistan.webp",
+        capital: "Asjabad",
+        continente: "Asia"
+    },
+    {
+        pais: "Tayikistán",
+        bandera: "tayikistan.webp",
+        capital: "Dusambé",
+        continente: "Asia"
+    },
+    {
+        pais: "Kirguistán",
+        bandera: "kirguistan.webp",
+        capital: "Biskek",
+        continente: "Asia"
+    },
+    {
+        pais: "Tailandia",
+        bandera: "tailandia.webp",
+        capital: "Bangkok",
+        continente: "Asia"
+    },
+    {
+        pais: "Malasia",
+        bandera: "malasia.webp",
+        capital: "Kuala Lumpur",
+        continente: "Asia"
+    },
+    {
+        pais: "Singapur",
+        bandera: "singapur.webp",
+        capital: "Singapur",
+        continente: "Asia"
+    },
+    {
+        pais: "Indonesia",
+        bandera: "indonesia.webp",
+        capital: "Yakarta",
+        continente: "Asia"
+    },
+    {
+        pais: "Filipinas",
+        bandera: "filipinas.webp",
+        capital: "Manila",
+        continente: "Asia"
+    },
+    {
+        pais: "Australia",
+        bandera: "australia.webp",
+        capital: "Canberra",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Nueva Zelanda",
+        bandera: "nuevazelanda.webp",
+        capital: "Wellington",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Fiyi",
+        bandera: "fiyi.webp",
+        capital: "Suva",
+
+
+        continente: "Oceanía"
+    },
+    {
+        pais: "Samoa",
+        bandera: "samoa.webp",
+        capital: "Apia",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Tonga",
+        bandera: "tonga.webp",
+        capital: "Nukualofa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Vanuatu",
+        bandera: "vanuatu.webp",
+        capital: "Port Vila",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Kiribati",
+        bandera: "kiribati.webp",
+        capital: "Tarawa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Micronesia",
+        bandera: "micronesia.webp",
+        capital: "Palikir",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Papúa Nueva Guinea",
+        bandera: "papuanuevaguinea.webp",
+        capital: "Puerto Moresby",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Islas Salomón",
+        bandera: "islassalomon.webp",
+        capital: "Honiara",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Timor Oriental",
+        bandera: "timororiental.webp",
+        capital: "Dili",
+        continente: "Asia"
+    },
+    {
+        pais: "Austria",
+        bandera: "austria.webp",
+        capital: "Viena",
+        continente: "Europa"
+    },
+    {
+        pais: "Bélgica",
+        bandera: "belgica.webp",
+        capital: "Bruselas",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Dinamarca",
+        bandera: "dinamarca.webp",
+        capital: "Copenhague",
+        continente: "Europa"
+    },
+    {
+        pais: "Grecia",
+        bandera: "grecia.webp",
+        capital: "Atenas",
+        continente: "Europa"
+    },
+    {
+        pais: "Holanda",
+        bandera: "holanda.webp",
+        capital: "Ámsterdam",
+        continente: "Europa"
+    },
+    {
+        pais: "Hungría",
+        bandera: "hungria.webp",
+        capital: "Budapest",
+        continente: "Europa"
+    },
+    {
+        pais: "Irlanda",
+        bandera: "irlanda.webp",
+        capital: "Dublín",
+        continente: "Europa"
+    },
+    {
+        pais: "Polonia",
+        bandera: "polonia.webp",
+        capital: "Varsovia",
+        continente: "Europa"
+    },
+    {
+        pais: "Rumania",
+        bandera: "rumania.webp",
+        capital: "Bucarest",
+        continente: "Europa"
+    },
+    {
+        pais: "Suecia",
+        bandera: "suecia.webp",
+        capital: "Estocolmo",
+        continente: "Europa"
+    },
+    {
+        pais: "Ucrania",
+        bandera: "ucrania.webp",
+        capital: "Kiev",
+        continente: "Europa"
+    },
+    {
+        pais: "Finlandia",
+        bandera: "finlandia.webp",
+        capital: "Helsinki",
+        continente: "Europa"
+    },
+    {
+        pais: "Noruega",
+        bandera: "noruega.webp",
+        capital: "Oslo",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovenia",
+        bandera: "eslovenia.webp",
+        capital: "Liubliana",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovaquia",
+        bandera: "eslovaquia.webp",
+        capital: "Bratislava",
+        continente: "Europa"
+    },
+    {
+        pais: "Bulgaria",
+        bandera: "bulgaria.webp",
+        capital: "Sofía",
+        continente: "Europa"
+    },
+    {
+        pais: "Suiza",
+        bandera: "suiza.webp",
+        capital: "Berna",
+        continente: "Europa"
+    },
+    {
+        pais: "Chipre",
+        bandera: "chipre.webp",
+        capital: "Nicosia",
+        continente: "Europa"
+    },
+    {
+        pais: "Estonia",
+        bandera: "estonia.webp",
+        capital: "Tallin",
+        continente: "Europa"
+    },
+    {
+        pais: "Letonia",
+        bandera: "letonia.webp",
+        capital: "Riga",
+        continente: "Europa"
+    },
+    {
+        pais: "Lituania",
+        bandera: "lituania.webp",
+        capital: "Vilna",
+        continente: "Europa"
+    },
+    {
+        pais: "Moldavia",
+        bandera: "moldavia.webp",
+        capital: "Chisináu",
+        continente: "Europa"
+    },
+    {
+        pais: "Serbia",
+        bandera: "serbia.webp",
+        capital: "Belgrado",
+        continente: "Europa"
+    },
+    {
+        pais: "Albania",
+        bandera: "albania.webp",
+        capital: "Tirana",
+        continente: "Europa"
+    },
+    {
+        pais: "Bosnia y Herzegovina",
+        bandera: "bosniaherzegovina.webp",
+        capital: "Sarajevo",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Macedonia del Norte",
+        bandera: "macedoniadelnorte.webp",
+        capital: "Skopje",
+        continente: "Europa"
+    },
+    {
+        pais: "Alemania",
+        bandera: "alemania.webp",
+        capital: "Berlín",
+        continente: "Europa"
+    },
+    {
+        pais: "Italia",
+        bandera: "italia.webp",
+        capital: "Roma",
+        continente: "Europa"
+    },
+    {
+        pais: "Francia",
+        bandera: "francia.webp",
+        capital: "París",
+        continente: "Europa"
+    },
+    {
+        pais: "Reino Unido",
+
+
+        bandera: "reinounido.webp",
+        capital: "Londres",
+        continente: "Europa"
+    },
+    {
+        pais: "España",
+        bandera: "espana.webp",
+        capital: "Madrid",
+        continente: "Europa"
+    },
+    {
+        pais: "Portugal",
+        bandera: "portugal.webp",
+        capital: "Lisboa",
+        continente: "Europa"
+    },
+    {
+        pais: "Bielorrusia",
+        bandera: "bielorrusia.webp",
+        capital: "Minsk",
+        continente: "Europa"
+    },
+    {
+        pais: "Kazajistán",
+        bandera: "kazajistan.webp",
+        capital: "Nur-Sultán",
+        continente: "Asia"
+    },
+    {
+        pais: "Uzbekistán",
+        bandera: "uzbekistan.webp",
+        capital: "Taskent",
+        continente: "Asia"
+    },
+    {
+        pais: "Turkmenistán",
+        bandera: "turkmenistan.webp",
+        capital: "Asjabad",
+        continente: "Asia"
+    },
+    {
+        pais: "Tayikistán",
+        bandera: "tayikistan.webp",
+        capital: "Dusambé",
+        continente: "Asia"
+    },
+    {
+        pais: "Kirguistán",
+        bandera: "kirguistan.webp",
+        capital: "Biskek",
+        continente: "Asia"
+    },
+    {
+        pais: "Tailandia",
+        bandera: "tailandia.webp",
+        capital: "Bangkok",
+        continente: "Asia"
+    },
+    {
+        pais: "Malasia",
+        bandera: "malasia.webp",
+        capital: "Kuala Lumpur",
+        continente: "Asia"
+    },
+    {
+        pais: "Singapur",
+        bandera: "singapur.webp",
+        capital: "Singapur",
+        continente: "Asia"
+    },
+    {
+        pais: "Indonesia",
+        bandera: "indonesia.webp",
+        capital: "Yakarta",
+        continente: "Asia"
+    },
+    {
+        pais: "Filipinas",
+        bandera: "filipinas.webp",
+        capital: "Manila",
+        continente: "Asia"
+    },
+    {
+        pais: "Australia",
+        bandera: "australia.webp",
+        capital: "Canberra",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Nueva Zelanda",
+        bandera: "nuevazelanda.webp",
+        capital: "Wellington",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Fiyi",
+        bandera: "fiyi.webp",
+        capital: "Suva",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Samoa",
+        bandera: "samoa.webp",
+        capital: "Apia",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Tonga",
+        bandera: "tonga.webp",
+        capital: "Nukualofa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Vanuatu",
+        bandera: "vanuatu.webp",
+        capital: "Port Vila",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Kiribati",
+
+
+        bandera: "kiribati.webp",
+        capital: "Tarawa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Micronesia",
+        bandera: "micronesia.webp",
+        capital: "Palikir",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Papúa Nueva Guinea",
+        bandera: "papuanuevaguinea.webp",
+        capital: "Puerto Moresby",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Islas Salomón",
+        bandera: "islassalomon.webp",
+        capital: "Honiara",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Timor Oriental",
+        bandera: "timororiental.webp",
+        capital: "Dili",
+        continente: "Asia"
+    },
+    {
+        pais: "Austria",
+        bandera: "austria.webp",
+        capital: "Viena",
+        continente: "Europa"
+    },
+    {
+        pais: "Bélgica",
+        bandera: "belgica.webp",
+        capital: "Bruselas",
+        continente: "Europa"
+    },
+    {
+        pais: "Dinamarca",
+        bandera: "dinamarca.webp",
+        capital: "Copenhague",
+        continente: "Europa"
+    },
+    {
+        pais: "Grecia",
+        bandera: "grecia.webp",
+        capital: "Atenas",
+        continente: "Europa"
+    },
+    {
+        pais: "Holanda",
+        bandera: "holanda.webp",
+        capital: "Ámsterdam",
+        continente: "Europa"
+    },
+    {
+        pais: "Hungría",
+        bandera: "hungria.webp",
+        capital: "Budapest",
+        continente: "Europa"
+    },
+    {
+        pais: "Irlanda",
+        bandera: "irlanda.webp",
+        capital: "Dublín",
+        continente: "Europa"
+    },
+    {
+        pais: "Polonia",
+        bandera: "polonia.webp",
+        capital: "Varsovia",
+        continente: "Europa"
+    },
+    {
+        pais: "Rumania",
+        bandera: "rumania.webp",
+        capital: "Bucarest",
+        continente: "Europa"
+    },
+    {
+        pais: "Suecia",
+        bandera: "suecia.webp",
+        capital: "Estocolmo",
+        continente: "Europa"
+    },
+    {
+        pais: "Ucrania",
+        bandera: "ucrania.webp",
+        capital: "Kiev",
+        continente: "Europa"
+    },
+    {
+        pais: "Finlandia",
+        bandera: "finlandia.webp",
+        capital: "Helsinki",
+        continente: "Europa"
+    },
+    {
+        pais: "Noruega",
+        bandera: "noruega.webp",
+        capital: "Oslo",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovenia",
+        bandera: "eslovenia.webp",
+        capital: "Liubliana",
+        continente: "Europa"
+    },
+    {
+        pais: "Eslovaquia",
+        bandera: "eslovaquia.webp",
+        capital: "Bratislava",
+
+
+        continente: "Europa"
+    },
+    {
+        pais: "Bulgaria",
+        bandera: "bulgaria.webp",
+        capital: "Sofía",
+        continente: "Europa"
+    },
+    {
+        pais: "Suiza",
+        bandera: "suiza.webp",
+        capital: "Berna",
+        continente: "Europa"
+    },
+    {
+        pais: "Chipre",
+        bandera: "chipre.webp",
+        capital: "Nicosia",
+        continente: "Europa"
+    },
+    {
+        pais: "Estonia",
+        bandera: "estonia.webp",
+        capital: "Tallin",
+        continente: "Europa"
+    },
+    {
+        pais: "Letonia",
+        bandera: "letonia.webp",
+        capital: "Riga",
+        continente: "Europa"
+    },
+    {
+        pais: "Lituania",
+        bandera: "lituania.webp",
+        capital: "Vilna",
+        continente: "Europa"
+    },
+    {
+        pais: "Moldavia",
+        bandera: "moldavia.webp",
+        capital: "Chisináu",
+        continente: "Europa"
+    },
+    {
+        pais: "Serbia",
+        bandera: "serbia.webp",
+        capital: "Belgrado",
+        continente: "Europa"
+    },
+    {
+        pais: "Albania",
+        bandera: "albania.webp",
+        capital: "Tirana",
+        continente: "Europa"
+    },
+    {
+        pais: "Bosnia y Herzegovina",
+        bandera: "bosniaherzegovina.webp",
+        capital: "Sarajevo",
+        continente: "Europa"
+    },
+    {
+        pais: "Croacia",
+        bandera: "croacia.webp",
+        capital: "Zagreb",
+        continente: "Europa"
+    },
+    {
+        pais: "Macedonia del Norte",
+        bandera: "macedoniadelnorte.webp",
+        capital: "Skopje",
+        continente: "Europa"
+    },
+    {
+        pais: "Alemania",
+        bandera: "alemania.webp",
+        capital: "Berlín",
+        continente: "Europa"
+    },
+    {
+        pais: "Italia",
+        bandera: "italia.webp",
+        capital: "Roma",
+        continente: "Europa"
+    },
+    {
+        pais: "Francia",
+        bandera: "francia.webp",
+        capital: "París",
+        continente: "Europa"
+    },
+    {
+        pais: "Reino Unido",
+        bandera: "reinounido.webp",
+        capital: "Londres",
+        continente: "Europa"
+    },
+    {
+        pais: "España",
+        bandera: "espana.webp",
+        capital: "Madrid",
+        continente: "Europa"
+    },
+    {
+        pais: "Portugal",
+        bandera: "portugal.webp",
+        capital: "Lisboa",
+        continente: "Europa"
+    },
+    {
+        pais: "Bielorrusia",
+        bandera: "bielorrusia.webp",
+        capital: "Minsk",
+        continente: "Europa"
+    },
+    {
+        pais: "Kazajistán",
+        bandera: "kazajistan.webp",
+
+
+        capital: "Nur-Sultán",
+        continente: "Asia"
+    },
+    {
+        pais: "Uzbekistán",
+        bandera: "uzbekistan.webp",
+        capital: "Taskent",
+        continente: "Asia"
+    },
+    {
+        pais: "Turkmenistán",
+        bandera: "turkmenistan.webp",
+        capital: "Asjabad",
+        continente: "Asia"
+    },
+    {
+        pais: "Tayikistán",
+        bandera: "tayikistan.webp",
+        capital: "Dusambé",
+        continente: "Asia"
+    },
+    {
+        pais: "Kirguistán",
+        bandera: "kirguistan.webp",
+        capital: "Biskek",
+        continente: "Asia"
+    },
+    {
+        pais: "Tailandia",
+        bandera: "tailandia.webp",
+        capital: "Bangkok",
+        continente: "Asia"
+    },
+    {
+        pais: "Malasia",
+        bandera: "malasia.webp",
+        capital: "Kuala Lumpur",
+        continente: "Asia"
+    },
+    {
+        pais: "Singapur",
+        bandera: "singapur.webp",
+        capital: "Singapur",
+        continente: "Asia"
+    },
+    {
+        pais: "Indonesia",
+        bandera: "indonesia.webp",
+        capital: "Yakarta",
+        continente: "Asia"
+    },
+    {
+        pais: "Filipinas",
+        bandera: "filipinas.webp",
+        capital: "Manila",
+        continente: "Asia"
+    },
+    {
+        pais: "Australia",
+        bandera: "australia.webp",
+        capital: "Canberra",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Nueva Zelanda",
+        bandera: "nuevazelanda.webp",
+        capital: "Wellington",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Fiyi",
+        bandera: "fiyi.webp",
+        capital: "Suva",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Samoa",
+        bandera: "samoa.webp",
+        capital: "Apia",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Tonga",
+        bandera: "tonga.webp",
+        capital: "Nukualofa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Vanuatu",
+        bandera: "vanuatu.webp",
+        capital: "Port Vila",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Kiribati",
+        bandera: "kiribati.webp",
+        capital: "Tarawa",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Micronesia",
+        bandera: "micronesia.webp",
+        capital: "Palikir",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Papúa Nueva Guinea",
+        bandera: "papuanuevaguinea.webp",
+        capital: "Puerto Moresby",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Islas Salomón",
+        bandera: "islassalomon.webp",
+        capital: "Honiara",
+        continente: "Oceanía"
+    },
+    {
+        pais: "Timor Oriental",
+        bandera: "timororiental.webp",
+        capital: "Dili",
+        continente: "Asia"
+    }
+];
