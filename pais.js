@@ -1025,6 +1025,160 @@ var asia = [
     }
 ];
 
+const preguntasGeografia = [
+    {
+        pregunta: "¿Cuál es el río más largo del mundo?",
+        respuestaCorrecta: "El río Amazonas",
+        respuestasFalsas: ["El río Nilo", "El río Yangtsé", "El río Misisipi"]
+    },
+    {
+        pregunta: "¿Cuál es el país más pequeño del mundo?",
+        respuestaCorrecta: "El Vaticano",
+        respuestasFalsas: ["Mónaco", "Nauru", "Tuvalu"]
+    },
+    {
+        pregunta: "¿Cuál es la montaña más alta de África?",
+        respuestaCorrecta: "El monte Kilimanjaro",
+        respuestasFalsas: ["El monte Everest", "El monte Aconcagua", "El monte Denali"]
+    },
+    {
+        pregunta: "¿Cuál es el país más grande del mundo en términos de área?",
+        respuestaCorrecta: "Rusia",
+        respuestasFalsas: ["Canadá", "China", "Estados Unidos"]
+    },
+    {
+        pregunta: "¿Cuál es el país con más islas en el mundo?",
+        respuestaCorrecta: "Suecia",
+        respuestasFalsas: ["Filipinas", "Indonesia", "Grecia"]
+    },
+    {
+        pregunta: "¿Cuál es el país con la población más grande del mundo?",
+        respuestaCorrecta: "China",
+        respuestasFalsas: ["India", "Estados Unidos", "Indonesia"]
+    },
+    {
+        pregunta: "¿Cuál es el océano más grande del mundo?",
+        respuestaCorrecta: "El océano Pacífico",
+        respuestasFalsas: ["El océano Atlántico", "El océano Índico", "El océano Ártico"]
+    },
+    {
+        pregunta: "¿Cuál es el desierto más grande del mundo?",
+        respuestaCorrecta: "El desierto del Sahara",
+        respuestasFalsas: ["El desierto de Gobi", "El desierto de Atacama", "El desierto de Kalahari"]
+    },
+    {
+        pregunta: "¿Cuál es la ciudad más poblada del mundo?",
+        respuestaCorrecta: "Tokio",
+        respuestasFalsas: ["Delhi", "Shanghái", "Ciudad de México"]
+    },
+    {
+        pregunta: "¿Cuál es el país con la mayor cantidad de volcanes?",
+        respuestaCorrecta: "Indonesia",
+        respuestasFalsas: ["Japón", "Italia", "Chile"]
+    },
+    {
+        pregunta: "¿Cuál es el país más poblado de Europa?",
+        respuestaCorrecta: "Rusia",
+        respuestasFalsas: ["Alemania", "Reino Unido", "Francia"]
+    },
+    {
+        pregunta: "¿Cuál es el lago más profundo del mundo?",
+        respuestaCorrecta: "El lago Baikal",
+        respuestasFalsas: ["El lago Victoria", "El lago Tanganica", "El lago Superior"]
+    },
+    {
+        pregunta: "¿Cuál es la capital de Australia?",
+        respuestaCorrecta: "Canberra",
+        respuestasFalsas: ["Sídney", "Melbourne", "Brisbane"]
+    },
+    {
+        pregunta: "¿Cuál es el país con la mayor cantidad de islas volcánicas?",
+        respuestaCorrecta: "Indonesia",
+        respuestasFalsas: ["Japón", "Filipinas", "Nueva Zelanda"]
+    },
+    {
+        pregunta: "¿Cuál es el país más grande de Sudamérica?",
+        respuestaCorrecta: "Brasil",
+        respuestasFalsas: ["Argentina", "Perú", "Colombia"]
+    },
+    {
+        pregunta: "¿Cuál es el país con más ríos en el mundo?",
+        respuestaCorrecta: "Brasil",
+        respuestasFalsas: ["China", "Rusia", "Estados Unidos"]
+    },
+    {
+        pregunta: "¿Cuál es el archipiélago más grande del mundo?",
+        respuestaCorrecta: "Indonesia",
+        respuestasFalsas: ["Filipinas", "Maldivas", "Japón"]
+    },
+    {
+        pregunta: "¿Cuál es el país con más Patrimonios de la Humanidad según la UNESCO?",
+        respuestaCorrecta: "Italia",
+        respuestasFalsas: ["España", "China", "México"]
+    },
+    {
+        pregunta: "¿Cuál es el país con el mayor número de fronteras terrestres?",
+        respuestaCorrecta: "China",
+        respuestasFalsas: ["Rusia", "Brasil", "India"]
+    },
+    {
+        pregunta: "¿Cuál es el país más llano del mundo?",
+        respuestaCorrecta: "Maldivas",
+        respuestasFalsas: ["Países Bajos", "Bangladesh", "Qatar"]
+    },
+    {
+        pregunta: "¿Cuál es el país más grande de África?",
+        respuestaCorrecta: "Argelia",
+        respuestasFalsas: ["Sudáfrica", "República Democrática del Congo", "Nigeria"]
+    },
+    {
+        pregunta: "¿Cuál es el punto más alto de América del Norte?",
+        respuestaCorrecta: "El monte McKinley (Denali)",
+        respuestasFalsas: ["El monte Rainier", "El monte Orizaba", "El monte Logan"]
+    },
+    {
+        pregunta: "¿Cuál es la capital de Canadá?",
+        respuestaCorrecta: "Ottawa",
+        respuestasFalsas: ["Toronto", "Vancouver", "Montreal"]
+    },
+    {
+        pregunta: "¿Cuál es el país con más volcanes activos en el mundo?",
+        respuestaCorrecta: "Indonesia",
+        respuestasFalsas: ["Japón", "Italia", "Chile"]
+    },
+    {
+        pregunta: "¿Cuál es la cascada más alta del mundo?",
+        respuestaCorrecta: "El Salto Ángel",
+        respuestasFalsas: ["Las Cataratas del Iguazú", "Las Cataratas del Niágara", "La Cascada del Velo de la Novia"]
+    },
+    {
+        pregunta: "¿Cuál es el país más pequeño de América del Sur?",
+        respuestaCorrecta: "Surinam",
+        respuestasFalsas: ["Uruguay", "Guyana", "Ecuador"]
+    },
+    {
+        pregunta: "¿Cuál es el golfo más grande del mundo?",
+        respuestaCorrecta: "Golfo de México",
+        respuestasFalsas: ["Golfo de Bengala", "Golfo Pérsico", "Golfo de Guinea"]
+    },
+    {
+        pregunta: "¿Cuál es el país con más Patrimonios de la Humanidad según la UNESCO?",
+        respuestaCorrecta: "Italia",
+        respuestasFalsas: ["España", "China", "México"]
+    },
+    {
+        pregunta: "¿Cuál es la ciudad más alta del mundo?",
+        respuestaCorrecta: "La Paz",
+        respuestasFalsas: ["Cuzco", "Kathmandú", "El Alto"]
+    },
+    {
+        pregunta: "¿Cuál es la isla más grande del mundo?",
+        respuestaCorrecta: "Groenlandia",
+        respuestasFalsas: ["Borneo", "Madagascar", "Sumatra"]
+    }
+];
+
+
 console.log(continentes[0].paises.length + continentes[1].paises.length + continentes[2].paises.length)
 
 console.log("asia " + asia.length)

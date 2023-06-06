@@ -1,14 +1,12 @@
 # GeoQuiz
 
 ## Sobre nosotros
-Somos [tu nombre] y Joao Carlos, dos entusiastas de la geografía y desarrolladores de software. 
-Este es nuestro proyecto de juego de Quiz de Geografía desarrollado como parte de curso de desarrollo web de IronHack.
+Somos Ana Medina y Joao Carlos, dos entusiastas de la geografía y  
+dos alumnos del Bootcamp de Full Stack Development de Ironhack Barcelona y
+este es el primer proyecto que ambos hemos desarrollado.
 
 ## Deployment
 Puedes jugar al juego [aquí]
-
-## Estructura de trabajo
-Utilizamos Trello para organizar nuestro flujo de trabajo y gestionar las tareas durante el desarrollo del proyecto.
 
 ## Sobre el juego
 En este juego de Quiz de Geografía, pondrás a prueba tus conocimientos sobre países, capitales, banderas y otros aspectos relacionados con la geografía mundial. El objetivo es responder correctamente la mayor cantidad de preguntas en el menor tiempo posible.
