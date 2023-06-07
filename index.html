@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeoQuiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <div id="game">
+
+        <!-- vidas, aciertos y recuento -->
+        <div id="header">
+            <div id="vidas">
+                <input type="image" src="corazones.img" alt="corazones">
+            </div>
+            <div id="aciertos">
+                <p>Aciertos: <span id="aciertos-text">0</span></p>
+            </div>
+            <div id="recuento">
+                <p><span> 1 / 10</span></p>
+            </div>
+        </div>
+
+        <!-- imagen de la bandera -->
+        <div id="bandera">
+            <h1>GeoQuiz</h1>
+            <input id="imgBandera" type="image" src="imagenes/brasil.webp" alt="brasil">
+            <p>¿Esta bandera pertenence a cual pais?</p>
+            <div id="cronometro">
+                <p id="tiempo"></p>
+            </div>
+        </div>
+
+        <!-- opciones -->
+        <div id="opciones">
+
+            <button class="opition">
+                <strong>A)</strong>
+                <span>Brasil</span>
+            </button>
+
+            <button class="opition">
+                <strong>B)</strong>
+                <span>México</span>
+            </button>
+
+            <button class="opition">
+                <strong>C)</strong>
+                <span>Argentina</span>
+            </button>
+
+            <button class="opition">
+                <strong>D)</strong>
+                <span>Colombia</span>
+            </button>
+        </div>
+    </div>
+
+
+
+    <script src="arrayPaises.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
