@@ -16,24 +16,34 @@ class Jugador {
 // Clase Juego
 class Juego {
   constructor() {
-    this.banderas = [];
-    this.preguntaActual = 0;
+    this.banderas = []; // Arreglo para almacenar las preguntas
+    this.preguntaActual = 0; // Índice de la pregunta actual
     this.tiempoPregunta = 8000; // Tiempo para responder cada pregunta
     this.intervalId = null; // ID del intervalo de tiempo para la pregunta actual
     this.jugador = new Jugador(); // Instancia de la clase Jugador
   }
-
   // Método para iniciar el juego
-  iniciarJuego() { // joao
-    // generar el array de opciones
+  iniciarJuego() {
 
   }
-  verificarRespuesta(respuesta) { //ana
+  verificarRespuesta(respuesta) {
+    const bandera = this.banderass[this.preguntaActual];
+    const result = document.getElementById('result');
+    const nextButton = document.getElementById('next-button');
+
+    // Comprobar si la respuesta es correcta
+    if (respuesta === pregunta.respuesta) {
+      result.textContent = '¡Respuesta correcta!';
+    } else {
+      result.textContent = 'Respuesta incorrecta';
+      this.jugador.restarVida(); // Restar una vida al jugador
+    }
+
 
 
   }
   // Método para iniciar el temporizador de cada pregunta
-  startTimer() { // ana 
+  startTimer() {
     const progressBar = document.getElementById('progress-bar');
     let timeLeft = this.tiempoPregunta / 1000;
     progressBar.style.width = '100%';
@@ -47,14 +57,21 @@ class Juego {
         clearInterval(this.intervalId);
         this.verificarRespuesta(null);
       }
-    }, 1000);
+    }, 1000)
   }
-
-
-  finalizarJuego() { // joao
+  // Método para finalizar el juego
+  finalizarJuego() {
   }
 }
 
+// Crear una instancia del juego
+const juego = new Juego();
+
+
+
+function banderas() {
+  alert("has seleccionado banderas")
+}
 
 
 
