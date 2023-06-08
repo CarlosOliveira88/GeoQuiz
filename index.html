@@ -4,22 +4,35 @@
 <head>
     <title>GeoQuiz</title>
     <script src="quiz.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- pantalla de inicio -->
+    <div class="inicio">
 
+
+        <div id="game-type-container">
+            <h2>Selecciona el tipo de juego:</h2>
+            <button onclick="banderas()" id="banderas-button">Banderas</button>
+            <button id="preguntas-button">Curiosidades</button>
+        </div>
+    </div>
+
+    <!-- pantalla de juego -->
     <div id="game">
 
         <!-- vidas, aciertos y recuento -->
         <div id="header">
             <div id="vidas">
-                <input type="image" src="corazones.img" alt="corazones">
+                <img id="vida-1" src="corazones.img" alt="corazones">
+                <img id="vida-2" src="corazones.img" alt="corazones">
             </div>
             <div id="aciertos">
                 <p>Aciertos: <span id="aciertos-text">0</span></p>
             </div>
-            <div id="recuento">
-                <p><span> 1 / 10</span></p>
+            <div>
+                <p><span id="recuento"> 1 / 10</span></p>
             </div>
         </div>
 
@@ -27,6 +40,9 @@
         <div id="bandera">
             <h1>GeoQuiz</h1>
             <input id="imgBandera" type="image" src="imagenes/brasil.webp" alt="brasil">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
             <p>¿Esta bandera pertenence a cual pais?</p>
             <div id="cronometro">
                 <p id="tiempo"></p>
@@ -38,44 +54,27 @@
 
             <button class="opition">
                 <strong>A)</strong>
-                <span>Brasil</span>
+                <span class="span-opciones">Brasil</span>
             </button>
 
             <button class="opition">
                 <strong>B)</strong>
-                <span>México</span>
+                <span class="span-opciones">México</span>
             </button>
 
             <button class="opition">
                 <strong>C)</strong>
-                <span>Argentina</span>
+                <span class="span-opciones">Argentina</span>
             </button>
 
             <button class="opition">
                 <strong>D)</strong>
-                <span>Colombia</span>
+                <span class="span-opciones">Colombia</span>
             </button>
         </div>
-        =======
-        <!-- <div id="game-container">
-    <h1>GeoQuiz</h1>
-    <div id="question-container">
-      <img id="flag-image" src="">
-      <ul id="options-list"></ul> -->
-        >>>>>>> 64f1097d2ae740ba470cdb2b302f19c89084498f
-    </div>
-    <div id="result"></div>
-    <button id="next-button">Siguiente</button>
-    </div>
-    <div id="progress-container">
-        <div id="progress-bar"></div>
+
     </div>
 
-    <div id="game-type-container">
-        <h2>Selecciona el tipo de juego:</h2>
-        <button id="banderas-button">Banderas</button>
-        <button id="preguntas-button">Preguntas generales</button>
-    </div>
 </body>
 
 </html>

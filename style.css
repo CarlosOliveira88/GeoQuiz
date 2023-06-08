@@ -11,9 +11,14 @@ body {
     text-align: center;
 }
 
+.inicio {
+    display: none;
+}
+
 #game {
     width: 300px;
     height: 300px;
+    /* display: none; */
 }
 
 h1 {
@@ -40,8 +45,21 @@ h1 {
 
 #bandera {
     border: 2px solid #05812c;
-
     background-color: #20af0e3d;
+}
+
+#progress-container {
+    width: 200px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 10px auto;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #69b542;
+    transition: width 1s linear;
 }
 
 #opciones {
@@ -62,4 +80,8 @@ button:hover {
     color: white;
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.span-opciones {
+    padding-left: 14px;
 }
