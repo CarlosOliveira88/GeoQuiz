@@ -22,16 +22,18 @@ class Juego {
     this.intervalId = null; // ID del intervalo de tiempo para la pregunta actual
     this.jugador = new Jugador(); // Instancia de la clase Jugador
   }
+
   // Método para iniciar el juego
-  iniciarJuego() {
+  iniciarJuego() { // joao
+    // generar el array de opciones
 
   }
-  verificarRespuesta(respuesta) {
+  verificarRespuesta(respuesta) { //ana
 
 
   }
   // Método para iniciar el temporizador de cada pregunta
-  startTimer() {
+  startTimer() { // ana 
     const progressBar = document.getElementById('progress-bar');
     let timeLeft = this.tiempoPregunta / 1000;
     progressBar.style.width = '100%';
@@ -49,7 +51,7 @@ class Juego {
   }
 
 
-  finalizarJuego() {
+  finalizarJuego() { // joao
   }
 }
 
