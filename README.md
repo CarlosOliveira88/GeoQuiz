@@ -2,51 +2,6 @@
 
 # GeoQuiz
 
-
-## Sobre nosotros ✒️
-Somos Carlos Oliveira y Ana Medina, dos alumnos del Bootcamp de Full Stack Development de **Ironhack Barcelona** y este es el primer proyecto combinando `CSS`, `HTML` y `JavaScript` que ambos hemos desarrollado.
-
-
-
-
-## Deployment 🚀
-
-
-Puedes jugar al juego []
-
-
-## Estructura de trabajo 📋
-
-
-Desarrollamos este proyecto usando [Trello](http://trello.com/home) para organizar nuestro flujo de trabajo.
-
-
-## Sobre el juego 
-
-
-....
-
-
-## Controles ⚙️
-
-
-Debes presionar la barra espaciadora para saltar.
-
-
-## Condición de victoria
-
-
-....
-
-## Condición de derrota
-
-
-
-
-
-
-
-
 ## Sobre nosotros ✒️
 Somos Ana Medina y Joao Carlos, dos entusiastas de la geografía y  
 dos alumnos del Bootcamp de Full Stack Development de  **Ironhack Barcelona** y
