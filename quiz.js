@@ -75,73 +75,24 @@ class Juego {
   }
 
   // Método para verificar la respuesta seleccionada por el jugador
-  verificarRespuesta(respuesta) {
-    const pregunta = this.preguntas[this.preguntaActual];
-    const result = document.getElementById('result');
-    const nextButton = document.getElementById('next-button');
-
-    clearInterval(this.intervalId); // Detener el temporizador
+ 
 
     // Comprobar si la respuesta es correcta
-    if (respuesta === pregunta.respuesta) {
-      result.textContent = '¡Respuesta correcta!';
-    } else {
-      result.textContent = 'Respuesta incorrecta';
-      this.jugador.restarVida(); // Restar una vida al jugador
-    }
+    
 
     // Mostrar el botón de siguiente si no hay más preguntas o vidas
-    if (this.preguntaActual === this.preguntas.length - 1 || this.jugador.vidas === 0) {
-      nextButton.textContent = 'Finalizar';
-    }
+    
 
-    nextButton.style.display = 'block';
-  }
+    
 
   // Método para pasar a la siguiente pregunta o finalizar el juego
-  siguientePregunta() {
-    const nextButton = document.getElementById('next-button');
-    nextButton.style.display = 'none';
+  
 
     // Comprobar si hay más preguntas o vidas disponibles
-    if (this.preguntaActual < this.preguntas.length - 1 && this.jugador.vidas > 0) {
-      this.preguntaActual++;
-      this.mostrarPregunta();
-      this.startTimer();
-    } else {
-      this.finalizarJuego();
-    }
-  }
+   
 
   // Método para iniciar el temporizador de cada pregunta
-  startTimer() {
-    const progressBar = document.getElementById('progress-bar');
 
-    let timeLeft = this.tiempoPregunta / 1000;
-
-    progressBar.style.width = '100%';
-    progressBar.style.transition = `width ${timeLeft}s linear`;
-
-    this.intervalId = setInterval(() => {
-      timeLeft--;
-      progressBar.style.width = `${(timeLeft / (this.tiempoPregunta / 1000)) * 100}%`;
-
-      if (timeLeft === 0) {
-        clearInterval(this.intervalId);
-        this.verificarRespuesta(null);
-      }
-    }, 1000);
-  }
-
-  // Método para finalizar el juego
-  finalizarJuego() {
-    const gameContainer = document.getElementById('game-container');
-    gameContainer.innerHTML = '<h2>Juego terminado</h2>';
-  }
-}
-
-// Crear una instancia del juego
-const juego = new Juego();
 
 // Agregar preguntas al juego
 juego.preguntas = [
@@ -180,3 +131,4 @@ const nextButton = document.getElementById('next-button');
 nextButton.addEventListener('click', () => {
   juego.siguientePregunta();
 });
+}
