@@ -1,80 +1,13 @@
-// import { BANDERAS } from "./arrayPaises";
-let newBanderas = [
-  {
-    pais: "Brasil",
-    bandera: "imagenes/brasil.webp",
-    capital: "Brasilia",
-    continente: "América del Sur"
-  },
-  {
-    pais: "Estados Unidos",
-    bandera: "imagenes/estados-unidos.webp",
-    capital: "Washington D.C.",
-    continente: "América del Norte"
-  },
-  {
-    pais: "Canadá",
-    bandera: "imagenes/canada.webp",
-    capital: "Ottawa",
-    continente: "América del Norte"
-  },
-  {
-    pais: "México",
-    bandera: "imagenes/mexico.webp",
-    capital: "Ciudad de México",
-    continente: "América del Norte"
-  },
-  {
-    pais: "Argentina",
-    bandera: "imagenes/argentina.webp",
-    capital: "Buenos Aires",
-    continente: "América del Sur"
-  },
-  {
-    pais: "Colombia",
-    bandera: "imagenes/colombia.webp",
-    capital: "Bogotá",
-    continente: "América del Sur"
-  },
-  {
-    pais: "Perú",
-    bandera: "imagenes/peru.webp",
-    capital: "Lima",
-    continente: "América del Sur"
-  },
-  {
-    pais: "Venezuela",
-    bandera: "imagenes/venezuela.webp",
-    capital: "Caracas",
-    continente: "América del Sur"
-  },
-  {
-    pais: "Chile",
-    bandera: "imagenes/chile.webp",
-    capital: "Santiago",
-    continente: "América del Sur"
-  },
-  {
-    pais: "Reino Unido",
-    bandera: "imagenes/reino-unido.webp",
-    capital: "Londres",
-    continente: "Europa"
-  },
-]
-
 // Clase Jugador
 class Jugador {
   constructor() {
-    this.vida1 = document.getElementById("vida-1");
-    this.vida2 = document.getElementById("vida-2");
-    this.totalVidas = 2;
-    this.aciertos = 0;
+    this.vidas = 2; // Vidas del jugador
   }
+
+
+  // Método para restar una vida al jugador
   restarVida() {
     this.vidas--;
-  }
-  sumarAcierto() {
-    this.aciertos++;
   }
 }
 
@@ -82,68 +15,135 @@ class Jugador {
 // Clase Juego
 class Juego {
   constructor() {
-    this.imageBandera = document.getElementById("imgBandera");
-    this.banderas = [];
-    this.preguntaActual = 0;
+    this.preguntas = []; // Arreglo para almacenar las preguntas
+    this.preguntaActual = 0; // Índice de la pregunta actual
     this.tiempoPregunta = 8000; // Tiempo para responder cada pregunta
     this.intervalId = null; // ID del intervalo de tiempo para la pregunta actual
     this.jugador = new Jugador(); // Instancia de la clase Jugador
   }
 
+
   // Método para iniciar el juego
-  iniciarJuego() { // joao
-    // generar el array de opciones
-    let preguntaAleatoria = a()
-    function a() {
-      const indiceAleatorio = Math.floor(Math.random() * newBanderas.length);
-      return newBanderas[indiceAleatorio]
+  iniciarJuego(tipoJuego) {
+    this.cargarPreguntas(tipoJuego);
+    this.mostrarPregunta();
+    this.startTimer();
+  }
+
+
+  // Método para cargar las preguntas según el tipo de juego seleccionado
+  cargarPreguntas(tipoJuego) {
+    if (tipoJuego === 'banderas') {
+      // Filtrar el arreglo de preguntas original para obtener solo las preguntas de banderas
+      this.preguntas = this.preguntas.filter(pregunta => pregunta.tipo === 'bandera');
+    } else if (tipoJuego === 'preguntas') {
+      // Filtrar el arreglo de preguntas original para obtener solo las preguntas de preguntas generales
+      this.preguntas = this.preguntas.filter(pregunta => pregunta.tipo === 'pregunta');
+    }
+  }
+
+
+  // Método para mostrar la pregunta actual
+  mostrarPregunta() {
+    const pregunta = this.preguntas[this.preguntaActual];
+    const flagImage = document.getElementById('flag-image');
+    const optionsList = document.getElementById('options-list');
+    const result = document.getElementById('result');
+    const nextButton = document.getElementById('next-button');
+
+
+    // Reiniciar el resultado y el botón de siguiente
+    result.textContent = '';
+    nextButton.style.display = 'none';
+
+
+    // Mostrar la imagen de la bandera o preguntas generales de la pregunta actual
+    if (pregunta.tipo === 'bandera') {
+      flagImage.src = pregunta.imagen;
+      flagImage.style.display = 'block';
+    } else {
+      flagImage.style.display = 'none';
+      // Mostrar la pregunta de texto en su lugar
+      // Código para mostrar la pregunta de texto en el DOM
     }
 
-    console.log(preguntaAleatoria)
-    this.imageBandera.src = preguntaAleatoria.bandera;
-    this.banderas.push(preguntaAleatoria.pais);
-    this.banderas.push(a().pais)
-    this.banderas.push(a().pais)
-    this.banderas.push(a().pais)
-    console.log(this.banderas)
 
-    let botonA = document.getElementById('span-a');
-    botonA.innerHTML = this.banderas[0];
-    let botonB = document.getElementById('span-b');
-    botonB.innerHTML = this.banderas[1];
-    let botonC = document.getElementById('span-c');
-    botonC.innerHTML = this.banderas[2];
-    let botonD = document.getElementById('span-d');
-    botonD.innerHTML = this.banderas[3];
+    // Limpiar la lista de opciones
+    optionsList.innerHTML = '';
+
+
+    // Crear elementos de lista para las opciones
+    pregunta.opciones.forEach(opcion => {
+      const li = document.createElement('li');
+      const button = document.createElement('button');
+      button.textContent = opcion;
+      button.addEventListener('click', () => this.verificarRespuesta(opcion));
+      li.appendChild(button);
+      optionsList.appendChild(li);
+    });
   }
+  // Método para verificar la respuesta seleccionada por el jugador
   verificarRespuesta(respuesta) {
-    clearInterval(this.intervalId); //detener el temporizador de la pregunta actual
-  
-    if (respuesta === this.banderas[0]) { //Se verifica si la respuesta x es igual a la primera opción de respuesta
-      this.jugador.sumarAcierto(); //si todo es ok, se llama al método sumarAcierto
-      console.log('Respuesta correcta!');
+    const pregunta = this.preguntas[this.preguntaActual];
+    const result = document.getElementById('result');
+    const nextButton = document.getElementById('next-button');
+
+
+    clearInterval(this.intervalId); // Detener el temporizador
+
+
+    // Comprobar si la respuesta es correcta
+    if (respuesta === pregunta.respuesta) {
+      result.textContent = '¡Respuesta correcta!';
     } else {
-      this.jugador.restarVida(); //si no , se llama al método restarvida
-      console.log('Respuesta incorrecta!');
+      result.textContent = 'Respuesta incorrecta';
+      this.jugador.restarVida(); // Restar una vida al jugador
     }
-  
-    if (this.jugador.vidas <= 0) { //verificamos si la cantidad de vidas del jugador es menor o igual a cero
-      this.finalizarJuego(); //Si el jugador se queda sin vidas, llamomos al método finalizarJuego
+
+
+    // Mostrar el botón de siguiente si no hay más preguntas o vidas
+    if (this.preguntaActual === this.preguntas.length - 1 || this.jugador.vidas === 0) {
+      nextButton.textContent = 'Finalizar';
+    }
+
+
+    nextButton.style.display = 'block';
+  }
+
+
+  // Método para pasar a la siguiente pregunta o finalizar el juego
+  siguientePregunta() {
+    const nextButton = document.getElementById('next-button');
+    nextButton.style.display = 'none';
+
+
+    // Comprobar si hay más preguntas o vidas disponibles
+    if (this.preguntaActual < this.preguntas.length - 1 && this.jugador.vidas > 0) {
+      this.preguntaActual++;
+      this.mostrarPregunta();
+      this.startTimer();
     } else {
-      this.iniciarJuego();
+      this.finalizarJuego();
     }
   }
-  
+
+
   // Método para iniciar el temporizador de cada pregunta
-  startTimer() { // ana 
+  startTimer() {
     const progressBar = document.getElementById('progress-bar');
+
+
     let timeLeft = this.tiempoPregunta / 1000;
+
+
     progressBar.style.width = '100%';
     progressBar.style.transition = `width ${timeLeft}s linear`;
+
 
     this.intervalId = setInterval(() => {
       timeLeft--;
       progressBar.style.width = `${(timeLeft / (this.tiempoPregunta / 1000)) * 100}%`;
+
 
       if (timeLeft === 0) {
         clearInterval(this.intervalId);
@@ -153,15 +153,56 @@ class Juego {
   }
 
 
-  finalizarJuego() { // joao
+  // Método para finalizar el juego
+  finalizarJuego() {
+    const gameContainer = document.getElementById('game-container');
+    gameContainer.innerHTML = '<h2>Juego terminado</h2>';
   }
 }
 
-let a = new Juego
-a.iniciarJuego()
+
+// Crear una instancia del juego
+const juego = new Juego();
 
 
+// Agregar preguntas al juego
+juego.preguntas = [
+  {
+    tipo: 'bandera',
+    imagen: 'ruta-a-la-imagen-1',
+    opciones: ['Opción 1', 'Opción 2', 'Opción 3'],
+    respuesta: 'Opción 1'
+  },
+  {
+    tipo: 'pregunta',
+    pregunta: '¿Cuál es la capital de Francia?',
+    opciones: ['París', 'Londres', 'Roma'],
+    respuesta: 'París'
+  },
+  // Agregar más preguntas...
+];
 
 
+// Iniciar el juego cuando se carga la página
+document.addEventListener('DOMContentLoaded', () => {
+  // Lógica para permitir al jugador seleccionar el tipo de juego
+  const banderasButton = document.getElementById('banderas-button');
+  const preguntasButton = document.getElementById('preguntas-button');
 
 
+  banderasButton.addEventListener('click', () => {
+    juego.iniciarJuego('banderas');
+  });
+
+
+  preguntasButton.addEventListener('click', () => {
+    juego.iniciarJuego('preguntas');
+  });
+});
+
+
+// Asignar el evento click al botón de siguiente
+const nextButton = document.getElementById('next-button');
+nextButton.addEventListener('click', () => {
+  juego.siguientePregunta();
+});
