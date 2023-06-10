@@ -127,19 +127,8 @@ class Juego {
     this.botonD.innerHTML = this.banderas[2];
   }
   verificarRespuesta(respuesta) { //ana
-    this.botonA.addEventListener('click', () => { });
+    // this.botonA.addEventListener('click', () => { });
 
-    const bandera = this.banderass[this.preguntaActual];
-    const result = document.getElementById('result');
-    const nextButton = document.getElementById('next-button');
-
-    // Comprobar si la respuesta es correcta
-    if (respuesta === pregunta.respuesta) {
-      result.textContent = '¡Respuesta correcta!';
-    } else {
-      result.textContent = 'Respuesta incorrecta';
-      this.jugador.restarVida(); // Restar una vida al jugador
-    }
 
   }
   // Método para iniciar el temporizador de cada pregunta
