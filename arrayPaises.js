@@ -151,6 +151,7 @@ const preguntasGeografia = [
     }
 ];
 
+// export 
 const BANDERAS = [
     {
         pais: "Brasil",
