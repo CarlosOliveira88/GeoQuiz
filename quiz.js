@@ -83,6 +83,10 @@ class Jugador {
 class Juego {
   constructor() {
     this.imageBandera = document.getElementById("imgBandera");
+    this.botonA = document.getElementById('span-a');
+    this.botonB = document.getElementById('span-b');
+    this.botonC = document.getElementById('span-c');
+    this.botonD = document.getElementById('span-d');
     this.banderas = [];
     this.preguntaActual = 0;
     this.tiempoPregunta = 8000; // Tiempo para responder cada pregunta
@@ -92,32 +96,38 @@ class Juego {
 
   // Método para iniciar el juego
   iniciarJuego() { // joao
-    // generar el array de opciones
-    let preguntaAleatoria = a()
-    function a() {
+
+    function objetoAleatorio() {
       const indiceAleatorio = Math.floor(Math.random() * newBanderas.length);
       return newBanderas[indiceAleatorio]
     }
-
+    let preguntaAleatoria = objetoAleatorio()
     console.log(preguntaAleatoria)
+
     this.imageBandera.src = preguntaAleatoria.bandera;
     this.banderas.push(preguntaAleatoria.pais);
-    this.banderas.push(a().pais)
-    this.banderas.push(a().pais)
-    this.banderas.push(a().pais)
-    console.log(this.banderas)
 
-    let botonA = document.getElementById('span-a');
-    botonA.innerHTML = this.banderas[0];
-    let botonB = document.getElementById('span-b');
-    botonB.innerHTML = this.banderas[1];
-    let botonC = document.getElementById('span-c');
-    botonC.innerHTML = this.banderas[2];
-    let botonD = document.getElementById('span-d');
-    botonD.innerHTML = this.banderas[3];
+    const opciones = (x) => {
+      let preguntaAleatoria = x()
+      if (!this.banderas.includes(preguntaAleatoria.pais)) {
+        this.banderas.push(preguntaAleatoria.pais);
+      } else {
+        opciones(objetoAleatorio)
+      }
+    };
+    opciones(objetoAleatorio)
+    opciones(objetoAleatorio)
+    opciones(objetoAleatorio)
+    console.log(this.banderas);
+
+
+    this.botonA.innerHTML = this.banderas[3];
+    this.botonB.innerHTML = this.banderas[1];
+    this.botonC.innerHTML = this.banderas[0];
+    this.botonD.innerHTML = this.banderas[2];
   }
   verificarRespuesta(respuesta) { //ana
-
+    this.botonA.addEventListener('click', () => { })
 
   }
   // Método para iniciar el temporizador de cada pregunta
@@ -140,6 +150,7 @@ class Juego {
 
 
   finalizarJuego() { // joao
+
   }
 }
 
