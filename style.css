@@ -23,13 +23,14 @@ body {
 #game {
     width: 300px;
     height: 300px;
-    display: none;
+    /* display: none; */
 }
 
-#game-over {
+#game-over,
+#game-victoria {
     width: 300px;
     height: 600px;
-    /* display: none; */
+    display: none;
     background-color: #080808;
     color: white;
     margin-top: 37px;
