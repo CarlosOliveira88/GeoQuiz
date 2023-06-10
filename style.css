@@ -9,6 +9,11 @@ body {
     justify-content: center;
     height: 50vh;
     text-align: center;
+    background-image: url(imagenes/01-geo.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
 }
 
 .inicio {
@@ -18,7 +23,16 @@ body {
 #game {
     width: 300px;
     height: 300px;
+    display: none;
+}
+
+#game-over {
+    width: 300px;
+    height: 600px;
     /* display: none; */
+    background-color: #080808;
+    color: white;
+    margin-top: 37px;
 }
 
 h1 {
@@ -43,9 +57,15 @@ h1 {
     padding-left: 20px;
 }
 
+.vida1,
+.vida2 {
+    width: 15px;
+}
+
+
 #bandera {
     border: 2px solid #05812c;
-    background-color: #20af0e3d;
+    background-color: #a6f6a6;
 }
 
 #progress-container {
@@ -82,6 +102,36 @@ button:hover {
     transform: scale(1.1);
 }
 
-.span-opciones {
+.span {
     padding-left: 14px;
+}
+
+#imgBandera {
+    width: 270px;
+    height: 150px;
+}
+
+#play-again {
+    width: 110px;
+    margin-left: 95px;
+    background-color: ivory;
+}
+
+#play-again:hover {
+    color: #fefdfd;
+    background-color: #05812c;
+    transform: scale(1.5);
+}
+
+
+
+#over {
+    color: rgb(255, 255, 255);
+    /* text-shadow: -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700; */
+    /* background: linear-gradient(to right, #ffd700 50%, #ed1515 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(250, 22, 22);
+    font-size: 46px;
 }
