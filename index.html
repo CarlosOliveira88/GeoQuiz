@@ -14,7 +14,7 @@
 
         <div id="game-type-container">
             <h2>Selecciona el tipo de juego:</h2>
-            <button onclick="banderas()" id="banderas-button">Banderas</button>
+            <button onclick="" id="banderas-button">Banderas</button>
             <button id="preguntas-button">Curiosidades</button>
         </div>
     </div>
@@ -40,9 +40,11 @@
         <div class="bandera" id="bandera">
             <h1>GeoQuiz</h1>
             <img id="imgBandera" src="" alt="">
-            <div id="progress-container">
-                <div id="progress-bar"></div>
+            <div id="progress-bar">
+                <div class="progress"></div>
+
             </div>
+
             <p>¿Esta bandera pertenence a cual pais?</p>
             <div id="cronometro">
                 <p id="tiempo"></p>
@@ -52,22 +54,22 @@
         <!-- opciones -->
         <div id="opciones">
 
-            <button class="opition">
+            <button id="btn-a" class="opition">
                 <strong>A)</strong>
                 <span class="span" id="span-a">Brasil</span>
             </button>
 
-            <button class="opition">
+            <button id="btn-b" class="opition">
                 <strong>B)</strong>
                 <span class="span" id="span-b">México</span>
             </button>
 
-            <button class="opition">
+            <button id="btn-c" class="opition">
                 <strong>C)</strong>
                 <span class="span" id="span-c">Argentina</span>
             </button>
 
-            <button class="opition">
+            <button id="btn-d" class="opition">
                 <strong>D)</strong>
                 <span class="span" id="span-d">Colombia</span>
             </button>
@@ -91,9 +93,9 @@
         <button id="play-again">Jugar de nuevo</button>
     </div>
 
+    <script src="main.js"></script>
+    <!-- <script src="quiz.js"></script> -->
 
-    <script src="quiz.js"></script>
-    <script src="arrayPaises.js"></script>
 </body>
 
 </html>

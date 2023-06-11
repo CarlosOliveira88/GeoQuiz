@@ -1,157 +1,3 @@
-const preguntasGeografia = [
-    {
-        pregunta: "¿Cuál es el río más largo del mundo?",
-        respuestaCorrecta: "El río Amazonas",
-        respuestasFalsas: ["El río Nilo", "El río Yangtsé", "El río Misisipi"]
-    },
-    {
-        pregunta: "¿Cuál es el país más pequeño del mundo?",
-        respuestaCorrecta: "El Vaticano",
-        respuestasFalsas: ["Mónaco", "Nauru", "Tuvalu"]
-    },
-    {
-        pregunta: "¿Cuál es la montaña más alta de África?",
-        respuestaCorrecta: "El monte Kilimanjaro",
-        respuestasFalsas: ["El monte Everest", "El monte Aconcagua", "El monte Denali"]
-    },
-    {
-        pregunta: "¿Cuál es el país más grande del mundo en términos de área?",
-        respuestaCorrecta: "Rusia",
-        respuestasFalsas: ["Canadá", "China", "Estados Unidos"]
-    },
-    {
-        pregunta: "¿Cuál es el país con más islas en el mundo?",
-        respuestaCorrecta: "Suecia",
-        respuestasFalsas: ["Filipinas", "Indonesia", "Grecia"]
-    },
-    {
-        pregunta: "¿Cuál es el país con la población más grande del mundo?",
-        respuestaCorrecta: "China",
-        respuestasFalsas: ["India", "Estados Unidos", "Indonesia"]
-    },
-    {
-        pregunta: "¿Cuál es el océano más grande del mundo?",
-        respuestaCorrecta: "El océano Pacífico",
-        respuestasFalsas: ["El océano Atlántico", "El océano Índico", "El océano Ártico"]
-    },
-    {
-        pregunta: "¿Cuál es el desierto más grande del mundo?",
-        respuestaCorrecta: "El desierto del Sahara",
-        respuestasFalsas: ["El desierto de Gobi", "El desierto de Atacama", "El desierto de Kalahari"]
-    },
-    {
-        pregunta: "¿Cuál es la ciudad más poblada del mundo?",
-        respuestaCorrecta: "Tokio",
-        respuestasFalsas: ["Delhi", "Shanghái", "Ciudad de México"]
-    },
-    {
-        pregunta: "¿Cuál es el país con la mayor cantidad de volcanes?",
-        respuestaCorrecta: "Indonesia",
-        respuestasFalsas: ["Japón", "Italia", "Chile"]
-    },
-    {
-        pregunta: "¿Cuál es el país más poblado de Europa?",
-        respuestaCorrecta: "Rusia",
-        respuestasFalsas: ["Alemania", "Reino Unido", "Francia"]
-    },
-    {
-        pregunta: "¿Cuál es el lago más profundo del mundo?",
-        respuestaCorrecta: "El lago Baikal",
-        respuestasFalsas: ["El lago Victoria", "El lago Tanganica", "El lago Superior"]
-    },
-    {
-        pregunta: "¿Cuál es la capital de Australia?",
-        respuestaCorrecta: "Canberra",
-        respuestasFalsas: ["Sídney", "Melbourne", "Brisbane"]
-    },
-    {
-        pregunta: "¿Cuál es el país con la mayor cantidad de islas volcánicas?",
-        respuestaCorrecta: "Indonesia",
-        respuestasFalsas: ["Japón", "Filipinas", "Nueva Zelanda"]
-    },
-    {
-        pregunta: "¿Cuál es el país más grande de Sudamérica?",
-        respuestaCorrecta: "Brasil",
-        respuestasFalsas: ["Argentina", "Perú", "Colombia"]
-    },
-    {
-        pregunta: "¿Cuál es el país con más ríos en el mundo?",
-        respuestaCorrecta: "Brasil",
-        respuestasFalsas: ["China", "Rusia", "Estados Unidos"]
-    },
-    {
-        pregunta: "¿Cuál es el archipiélago más grande del mundo?",
-        respuestaCorrecta: "Indonesia",
-        respuestasFalsas: ["Filipinas", "Maldivas", "Japón"]
-    },
-    {
-        pregunta: "¿Cuál es el país con más Patrimonios de la Humanidad según la UNESCO?",
-        respuestaCorrecta: "Italia",
-        respuestasFalsas: ["España", "China", "México"]
-    },
-    {
-        pregunta: "¿Cuál es el país con el mayor número de fronteras terrestres?",
-        respuestaCorrecta: "China",
-        respuestasFalsas: ["Rusia", "Brasil", "India"]
-    },
-    {
-        pregunta: "¿Cuál es el país más llano del mundo?",
-        respuestaCorrecta: "Maldivas",
-        respuestasFalsas: ["Países Bajos", "Bangladesh", "Qatar"]
-    },
-    {
-        pregunta: "¿Cuál es el país más grande de África?",
-        respuestaCorrecta: "Argelia",
-        respuestasFalsas: ["Sudáfrica", "República Democrática del Congo", "Nigeria"]
-    },
-    {
-        pregunta: "¿Cuál es el punto más alto de América del Norte?",
-        respuestaCorrecta: "El monte McKinley (Denali)",
-        respuestasFalsas: ["El monte Rainier", "El monte Orizaba", "El monte Logan"]
-    },
-    {
-        pregunta: "¿Cuál es la capital de Canadá?",
-        respuestaCorrecta: "Ottawa",
-        respuestasFalsas: ["Toronto", "Vancouver", "Montreal"]
-    },
-    {
-        pregunta: "¿Cuál es el país con más volcanes activos en el mundo?",
-        respuestaCorrecta: "Indonesia",
-        respuestasFalsas: ["Japón", "Italia", "Chile"]
-    },
-    {
-        pregunta: "¿Cuál es la cascada más alta del mundo?",
-        respuestaCorrecta: "El Salto Ángel",
-        respuestasFalsas: ["Las Cataratas del Iguazú", "Las Cataratas del Niágara", "La Cascada del Velo de la Novia"]
-    },
-    {
-        pregunta: "¿Cuál es el país más pequeño de América del Sur?",
-        respuestaCorrecta: "Surinam",
-        respuestasFalsas: ["Uruguay", "Guyana", "Ecuador"]
-    },
-    {
-        pregunta: "¿Cuál es el golfo más grande del mundo?",
-        respuestaCorrecta: "Golfo de México",
-        respuestasFalsas: ["Golfo de Bengala", "Golfo Pérsico", "Golfo de Guinea"]
-    },
-    {
-        pregunta: "¿Cuál es el país con más Patrimonios de la Humanidad según la UNESCO?",
-        respuestaCorrecta: "Italia",
-        respuestasFalsas: ["España", "China", "México"]
-    },
-    {
-        pregunta: "¿Cuál es la ciudad más alta del mundo?",
-        respuestaCorrecta: "La Paz",
-        respuestasFalsas: ["Cuzco", "Kathmandú", "El Alto"]
-    },
-    {
-        pregunta: "¿Cuál es la isla más grande del mundo?",
-        respuestaCorrecta: "Groenlandia",
-        respuestasFalsas: ["Borneo", "Madagascar", "Sumatra"]
-    }
-];
-
-
 const newBanderas = [
     {
         pais: "Brasil",
@@ -1270,817 +1116,480 @@ const newBanderas = [
         capital: "Canberra",
         continente: "Oceanía"
     },
-
-
-    {
-        pais: "Vanuatu",
-        bandera: "vanuatu.webp",
-        capital: "Port Vila",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Kiribati",
-        bandera: "kiribati.webp",
-        capital: "Tarawa",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Micronesia",
-        bandera: "micronesia.webp",
-        capital: "Palikir",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Austria",
-        bandera: "austria.webp",
-        capital: "Viena",
-        continente: "Europa"
-    },
-    {
-        pais: "Bélgica",
-        bandera: "belgica.webp",
-        capital: "Bruselas",
-        continente: "Europa"
-    },
-    {
-        pais: "Croacia",
-        bandera: "croacia.webp",
-        capital: "Zagreb",
-        continente: "Europa"
-    },
-    {
-        pais: "Dinamarca",
-        bandera: "dinamarca.webp",
-        capital: "Copenhague",
-        continente: "Europa"
-    },
-    {
-        pais: "Grecia",
-        bandera: "grecia.webp",
-        capital: "Atenas",
-        continente: "Europa"
-    },
-    {
-        pais: "Holanda",
-        bandera: "holanda.webp",
-        capital: "Ámsterdam",
-        continente: "Europa"
-    },
-    {
-        pais: "Hungría",
-        bandera: "hungria.webp",
-        capital: "Budapest",
-        continente: "Europa"
-    },
-    {
-        pais: "Irlanda",
-        bandera: "irlanda.webp",
-        capital: "Dublín",
-        continente: "Europa"
-    },
-
-
-    {
-        pais: "Polonia",
-        bandera: "polonia.webp",
-        capital: "Varsovia",
-        continente: "Europa"
-    },
-    {
-        pais: "Rumania",
-        bandera: "rumania.webp",
-        capital: "Bucarest",
-        continente: "Europa"
-    },
-    {
-        pais: "Suecia",
-        bandera: "suecia.webp",
-        capital: "Estocolmo",
-        continente: "Europa"
-    },
-    {
-        pais: "Ucrania",
-        bandera: "ucrania.webp",
-        capital: "Kiev",
-        continente: "Europa"
-    },
-    {
-        pais: "Finlandia",
-        bandera: "finlandia.webp",
-        capital: "Helsinki",
-        continente: "Europa"
-    },
-    {
-        pais: "Noruega",
-        bandera: "noruega.webp",
-        capital: "Oslo",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovenia",
-        bandera: "eslovenia.webp",
-        capital: "Liubliana",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovaquia",
-        bandera: "eslovaquia.webp",
-        capital: "Bratislava",
-        continente: "Europa"
-    },
-    {
-        pais: "Bulgaria",
-        bandera: "bulgaria.webp",
-        capital: "Sofía",
-        continente: "Europa"
-    },
-    {
-        pais: "Suiza",
-        bandera: "suiza.webp",
-        capital: "Berna",
-        continente: "Europa"
-    },
-    {
-        pais: "Chipre",
-        bandera: "chipre.webp",
-        capital: "Nicosia",
-        continente: "Europa"
-    },
-    {
-        pais: "Estonia",
-        bandera: "estonia.webp",
-        capital: "Tallin",
-        continente: "Europa"
-    },
-    {
-        pais: "Letonia",
-        bandera: "letonia.webp",
-        capital: "Riga",
-        continente: "Europa"
-    },
-    {
-        pais: "Lituania",
-        bandera: "lituania.webp",
-        capital: "Vilna",
-        continente: "Europa"
-    },
-    {
-        pais: "Moldavia",
-        bandera: "moldavia.webp",
-        capital: "Chisináu",
-        continente: "Europa"
-    },
-    {
-        pais: "Serbia",
-        bandera: "serbia.webp",
-        capital: "Belgrado",
-        continente: "Europa"
-    },
-    {
-        pais: "Albania",
-        bandera: "albania.webp",
-        capital: "Tirana",
-        continente: "Europa"
-    },
-    {
-        pais: "Bosnia y Herzegovina",
-        bandera: "bosniaherzegovina.webp",
-        capital: "Sarajevo",
-        continente: "Europa"
-    },
-    {
-        pais: "Croacia",
-        bandera: "croacia.webp",
-        capital: "Zagreb",
-        continente: "Europa"
-    },
-    {
-        pais: "Macedonia del Norte",
-        bandera: "macedoniadelnorte.webp",
-        capital: "Skopie",
-        continente: "Europa"
-    },
-    {
-        pais: "Alemania",
-        bandera: "alemania.webp",
-        capital: "Berlín",
-        continente: "Europa"
-    },
     {
         pais: "Italia",
-        bandera: "italia.webp",
+        bandera: "imagenes/italia.webp",
         capital: "Roma",
         continente: "Europa"
     },
     {
         pais: "Francia",
-        bandera: "francia.webp",
+        bandera: "imagenes/francia.webp",
         capital: "París",
         continente: "Europa"
     },
     {
         pais: "Reino Unido",
-        bandera: "reinounido.webp",
+        bandera: "imagenes/reino-unido.webp",
         capital: "Londres",
         continente: "Europa"
     },
     {
         pais: "España",
-        bandera: "espana.webp",
+        bandera: "imagenes/espana.webp",
         capital: "Madrid",
         continente: "Europa"
     },
     {
         pais: "Portugal",
-        bandera: "portugal.webp",
+        bandera: "imagenes/portugal.webp",
         capital: "Lisboa",
         continente: "Europa"
     },
     {
         pais: "Bielorrusia",
-        bandera: "bielorrusia.webp",
+        bandera: "imagenes/bielorrusia.webp",
         capital: "Minsk",
         continente: "Europa"
     },
     {
         pais: "Kazajistán",
-        bandera: "kazajistan.webp",
+        bandera: "imagenes/kazajistan.webp",
         capital: "Nur-Sultán",
         continente: "Asia"
     },
     {
         pais: "Uzbekistán",
-        bandera: "uzbekistan.webp",
+        bandera: "imagenes/uzbekistan.webp",
         capital: "Taskent",
         continente: "Asia"
     },
     {
         pais: "Turkmenistán",
-        bandera: "turkmenistan.webp",
+        bandera: "imagenes/turkmenistan.webp",
         capital: "Asjabad",
         continente: "Asia"
     },
     {
         pais: "Tayikistán",
-        bandera: "tayikistan.webp",
+        bandera: "imagenes/tayikistan.webp",
         capital: "Dusambé",
         continente: "Asia"
     },
     {
         pais: "Kirguistán",
-        bandera: "kirguistan.webp",
+        bandera: "imagenes/kirguistan.webp",
         capital: "Biskek",
         continente: "Asia"
     },
     {
         pais: "Tailandia",
-        bandera: "tailandia.webp",
+        bandera: "imagenes/tailandia.webp",
         capital: "Bangkok",
         continente: "Asia"
     },
     {
         pais: "Malasia",
-        bandera: "malasia.webp",
-        capital: "Kuala Lumpur",
-        continente: "Asia"
-    },
-    {
-        pais: "Singapur",
-        bandera: "singapur.webp",
-        capital: "Singapur",
-        continente: "Asia"
-    },
-    {
-        pais: "Indonesia",
-        bandera: "indonesia.webp",
-        capital: "Yakarta",
-        continente: "Asia"
-    },
-    {
-        pais: "Filipinas",
-        bandera: "filipinas.webp",
-        capital: "Manila",
-        continente: "Asia"
-    },
-    {
-        pais: "Australia",
-        bandera: "australia.webp",
-        capital: "Canberra",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Nueva Zelanda",
-        bandera: "nuevazelanda.webp",
-        capital: "Wellington",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Fiyi",
-        bandera: "fiyi.webp",
-        capital: "Suva",
-
-
-        continente: "Oceanía"
-    },
-    {
-        pais: "Samoa",
-        bandera: "samoa.webp",
-        capital: "Apia",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Vanuatu",
-        bandera: "vanuatu.webp",
-        capital: "Port Vila",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Kiribati",
-        bandera: "kiribati.webp",
-        capital: "Tarawa",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Micronesia",
-        bandera: "micronesia.webp",
-        capital: "Palikir",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Ucrania",
-        bandera: "ucrania.webp",
-        capital: "Kiev",
-        continente: "Europa"
-    },
-    {
-        pais: "Finlandia",
-        bandera: "finlandia.webp",
-        capital: "Helsinki",
-        continente: "Europa"
-    },
-    {
-        pais: "Noruega",
-        bandera: "noruega.webp",
-        capital: "Oslo",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovenia",
-        bandera: "eslovenia.webp",
-        capital: "Liubliana",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovaquia",
-        bandera: "eslovaquia.webp",
-        capital: "Bratislava",
-        continente: "Europa"
-    },
-    {
-        pais: "Bulgaria",
-        bandera: "bulgaria.webp",
-        capital: "Sofía",
-        continente: "Europa"
-    },
-    {
-        pais: "Suiza",
-        bandera: "suiza.webp",
-        capital: "Berna",
-        continente: "Europa"
-    },
-    {
-        pais: "Chipre",
-        bandera: "chipre.webp",
-        capital: "Nicosia",
-        continente: "Europa"
-    },
-    {
-        pais: "Estonia",
-        bandera: "estonia.webp",
-        capital: "Tallin",
-        continente: "Europa"
-    },
-    {
-        pais: "Letonia",
-        bandera: "letonia.webp",
-        capital: "Riga",
-        continente: "Europa"
-    },
-    {
-        pais: "Lituania",
-        bandera: "lituania.webp",
-        capital: "Vilna",
-        continente: "Europa"
-    },
-    {
-        pais: "Moldavia",
-        bandera: "moldavia.webp",
-        capital: "Chisináu",
-        continente: "Europa"
-    },
-    {
-        pais: "Serbia",
-        bandera: "serbia.webp",
-        capital: "Belgrado",
-        continente: "Europa"
-    },
-    {
-        pais: "Albania",
-        bandera: "albania.webp",
-        capital: "Tirana",
-        continente: "Europa"
-    },
-    {
-        pais: "Bosnia y Herzegovina",
-        bandera: "bosniaherzegovina.webp",
-        capital: "Sarajevo",
-        continente: "Europa"
-    },
-    {
-        pais: "Croacia",
-        bandera: "croacia.webp",
-        capital: "Zagreb",
-        continente: "Europa"
-    },
-    {
-        pais: "Macedonia del Norte",
-        bandera: "macedoniadelnorte.webp",
-        capital: "Skopje",
-        continente: "Europa"
-    },
-    {
-        pais: "Alemania",
-        bandera: "alemania.webp",
-        capital: "Berlín",
-        continente: "Europa"
-    },
-    {
-        pais: "Italia",
-        bandera: "italia.webp",
-        capital: "Roma",
-        continente: "Europa"
-    },
-    {
-        pais: "Francia",
-        bandera: "francia.webp",
-        capital: "París",
-        continente: "Europa"
-    },
-    {
-        pais: "Reino Unido",
-
-
-        bandera: "reinounido.webp",
-        capital: "Londres",
-        continente: "Europa"
-    },
-    {
-        pais: "España",
-        bandera: "espana.webp",
-        capital: "Madrid",
-        continente: "Europa"
-    },
-    {
-        pais: "Portugal",
-        bandera: "portugal.webp",
-        capital: "Lisboa",
-        continente: "Europa"
-    },
-    {
-        pais: "Bielorrusia",
-        bandera: "bielorrusia.webp",
-        capital: "Minsk",
-        continente: "Europa"
-    },
-    {
-        pais: "Kazajistán",
-        bandera: "kazajistan.webp",
-        capital: "Nur-Sultán",
-        continente: "Asia"
-    },
-    {
-        pais: "Uzbekistán",
-        bandera: "uzbekistan.webp",
-        capital: "Taskent",
-        continente: "Asia"
-    },
-    {
-        pais: "Turkmenistán",
-        bandera: "turkmenistan.webp",
-        capital: "Asjabad",
-        continente: "Asia"
-    },
-    {
-        pais: "Tayikistán",
-        bandera: "tayikistan.webp",
-        capital: "Dusambé",
-        continente: "Asia"
-    },
-    {
-        pais: "Kirguistán",
-        bandera: "kirguistan.webp",
-        capital: "Biskek",
-        continente: "Asia"
-    },
-    {
-        pais: "Tailandia",
-        bandera: "tailandia.webp",
-        capital: "Bangkok",
-        continente: "Asia"
-    },
-    {
-        pais: "Malasia",
-        bandera: "malasia.webp",
+        bandera: "imagenes/malasia.webp",
         capital: "Kuala Lumpur",
         continente: "Asia"
     },
 
     {
         pais: "Austria",
-        bandera: "austria.webp",
+        bandera: "imagenes/austria.webp",
         capital: "Viena",
         continente: "Europa"
     },
     {
         pais: "Bélgica",
-        bandera: "belgica.webp",
+        bandera: "imagenes/belgica.webp",
         capital: "Bruselas",
         continente: "Europa"
     },
     {
         pais: "Dinamarca",
-        bandera: "dinamarca.webp",
+        bandera: "imagenes/dinamarca.webp",
         capital: "Copenhague",
         continente: "Europa"
     },
     {
         pais: "Grecia",
-        bandera: "grecia.webp",
+        bandera: "imagenes/grecia.webp",
         capital: "Atenas",
         continente: "Europa"
     },
     {
         pais: "Holanda",
-        bandera: "holanda.webp",
+        bandera: "imagenes/holanda.webp",
         capital: "Ámsterdam",
         continente: "Europa"
     },
     {
         pais: "Hungría",
-        bandera: "hungria.webp",
+        bandera: "imagenes/hungria.webp",
         capital: "Budapest",
         continente: "Europa"
     },
     {
         pais: "Irlanda",
-        bandera: "irlanda.webp",
+        bandera: "imagenes/irlanda.webp",
         capital: "Dublín",
         continente: "Europa"
     },
     {
         pais: "Polonia",
-        bandera: "polonia.webp",
+        bandera: "imagenes/polonia.webp",
         capital: "Varsovia",
         continente: "Europa"
     },
     {
         pais: "Rumania",
-        bandera: "rumania.webp",
+        bandera: "imagenes/rumania.webp",
         capital: "Bucarest",
         continente: "Europa"
     },
     {
         pais: "Suecia",
-        bandera: "suecia.webp",
+        bandera: "imagenes/suecia.webp",
         capital: "Estocolmo",
         continente: "Europa"
     },
     {
         pais: "Ucrania",
-        bandera: "ucrania.webp",
+        bandera: "imagenes/ucrania.webp",
         capital: "Kiev",
         continente: "Europa"
     },
     {
         pais: "Finlandia",
-        bandera: "finlandia.webp",
+        bandera: "imagenes/finlandia.webp",
         capital: "Helsinki",
         continente: "Europa"
     },
     {
         pais: "Noruega",
-        bandera: "noruega.webp",
+        bandera: "imagenes/noruega.webp",
         capital: "Oslo",
         continente: "Europa"
     },
     {
         pais: "Eslovenia",
-        bandera: "eslovenia.webp",
+        bandera: "imagenes/eslovenia.webp",
         capital: "Liubliana",
         continente: "Europa"
     },
     {
         pais: "Eslovaquia",
-        bandera: "eslovaquia.webp",
+        bandera: "imagenes/eslovaquia.webp",
         capital: "Bratislava",
-
-
         continente: "Europa"
     },
     {
         pais: "Bulgaria",
-        bandera: "bulgaria.webp",
+        bandera: "imagenes/bulgaria.webp",
         capital: "Sofía",
         continente: "Europa"
     },
     {
         pais: "Suiza",
-        bandera: "suiza.webp",
+        bandera: "imagenes/suiza.webp",
         capital: "Berna",
         continente: "Europa"
     },
     {
         pais: "Chipre",
-        bandera: "chipre.webp",
+        bandera: "imagenes/chipre.webp",
         capital: "Nicosia",
         continente: "Europa"
     },
     {
         pais: "Estonia",
-        bandera: "estonia.webp",
+        bandera: "imagenes/estonia.webp",
         capital: "Tallin",
         continente: "Europa"
     },
     {
         pais: "Letonia",
-        bandera: "letonia.webp",
+        bandera: "imagenes/letonia.webp",
         capital: "Riga",
         continente: "Europa"
     },
     {
         pais: "Lituania",
-        bandera: "lituania.webp",
+        bandera: "imagenes/lituania.webp",
         capital: "Vilna",
         continente: "Europa"
     },
-    {
-        pais: "Moldavia",
-        bandera: "moldavia.webp",
-        capital: "Chisináu",
-        continente: "Europa"
-    },
-    {
-        pais: "Serbia",
-        bandera: "serbia.webp",
-        capital: "Belgrado",
-        continente: "Europa"
-    },
-    {
-        pais: "Albania",
-        bandera: "albania.webp",
-        capital: "Tirana",
-        continente: "Europa"
-    },
-    {
-        pais: "Bosnia y Herzegovina",
-        bandera: "bosniaherzegovina.webp",
-        capital: "Sarajevo",
-        continente: "Europa"
-    },
-    {
-        pais: "Croacia",
-        bandera: "croacia.webp",
-        capital: "Zagreb",
-        continente: "Europa"
-    },
-    {
-        pais: "Macedonia del Norte",
-        bandera: "macedoniadelnorte.webp",
-        capital: "Skopje",
-        continente: "Europa"
-    },
-    {
-        pais: "Alemania",
-        bandera: "alemania.webp",
-        capital: "Berlín",
-        continente: "Europa"
-    },
-    {
-        pais: "Italia",
-        bandera: "italia.webp",
-        capital: "Roma",
-        continente: "Europa"
-    },
-    {
-        pais: "Francia",
-        bandera: "francia.webp",
-        capital: "París",
-        continente: "Europa"
-    },
-    {
-        pais: "Reino Unido",
-        bandera: "reinounido.webp",
-        capital: "Londres",
-        continente: "Europa"
-    },
-    {
-        pais: "España",
-        bandera: "espana.webp",
-        capital: "Madrid",
-        continente: "Europa"
-    },
-    {
-        pais: "Portugal",
-        bandera: "portugal.webp",
-        capital: "Lisboa",
-        continente: "Europa"
-    },
-    {
-        pais: "Bielorrusia",
-        bandera: "bielorrusia.webp",
-        capital: "Minsk",
-        continente: "Europa"
-    },
-    {
-        pais: "Kazajistán",
-        bandera: "kazajistan.webp",
 
-
-        capital: "Nur-Sultán",
-        continente: "Asia"
-    },
-    {
-        pais: "Uzbekistán",
-        bandera: "uzbekistan.webp",
-        capital: "Taskent",
-        continente: "Asia"
-    },
-    {
-        pais: "Turkmenistán",
-        bandera: "turkmenistan.webp",
-        capital: "Asjabad",
-        continente: "Asia"
-    },
-    {
-        pais: "Tayikistán",
-        bandera: "tayikistan.webp",
-        capital: "Dusambé",
-        continente: "Asia"
-    },
-    {
-        pais: "Kirguistán",
-        bandera: "kirguistan.webp",
-        capital: "Biskek",
-        continente: "Asia"
-    },
-    {
-        pais: "Tailandia",
-        bandera: "tailandia.webp",
-        capital: "Bangkok",
-        continente: "Asia"
-    },
-    {
-        pais: "Malasia",
-        bandera: "malasia.webp",
-        capital: "Kuala Lumpur",
-        continente: "Asia"
-    },
-    {
-        pais: "Singapur",
-        bandera: "singapur.webp",
-        capital: "Singapur",
-        continente: "Asia"
-    },
-    {
-        pais: "Indonesia",
-        bandera: "indonesia.webp",
-        capital: "Yakarta",
-        continente: "Asia"
-    },
-    {
-        pais: "Micronesia",
-        bandera: "micronesia.webp",
-        capital: "Palikir",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Papúa Nueva Guinea",
-        bandera: "papuanuevaguinea.webp",
-        capital: "Puerto Moresby",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Islas Salomón",
-        bandera: "islassalomon.webp",
-        capital: "Honiara",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Timor Oriental",
-        bandera: "timororiental.webp",
-        capital: "Dili",
-        continente: "Asia"
-    }
 ];
 
+// Clase Jugador
+class Jugador {
+    constructor() {
+        this.vida1 = document.getElementById("vida-1");
+        this.vida2 = document.getElementById("vida-2");
+        this.totalVidas = 2;
+        this.aciertos = 0;
+    }
+    restarVida() {
+        this.vidas--;
+        if (this.totalVidas < 0) {
+            alert("game over")
+        }
+    }
+    sumarAcierto() {
+        this.aciertos++;
+    }
+}
 
+// Clase Juego
+class Juego {
+    constructor() {
+        this.imageBandera = document.getElementById("imgBandera");
+        this.spanA = document.getElementById('span-a');
+        this.spanB = document.getElementById('span-b');
+        this.spanC = document.getElementById('span-c');
+        this.spanD = document.getElementById('span-d');
+
+        this.banderas = [];       // guardar las banderas
+        this.preguntaTotal = 10;
+        this.preguntaActual = 0;
+        this.jugador = new Jugador();
+        // this.respuesta = this.banderas[this.preguntaActual].pais
+        // this.imageBandera.src = this.banderas[this.preguntaActual].bandera;
+    }
+
+    objetoAleatorio() {
+        const indiceAleatorio = Math.floor(Math.random() * newBanderas.length);
+        // console.log("i = " + indiceAleatorio)
+        return newBanderas[indiceAleatorio]
+    }
+
+    validarObjeto() {
+        let objeto = this.objetoAleatorio()
+        // console.log("objeto = " + objeto)
+
+        if (!this.banderas.includes(objeto)) {
+            // console.log(this.banderas)
+            this.banderas.push(objeto);
+        } else {
+            this.validarObjeto()
+        }
+    };
+
+    arrayOpiciones() {
+        let respuesta = this.banderas[this.preguntaActual].pais
+        let array = [];
+        // console.log("array = " + array)
+        array.push(respuesta);
+        // console.log("array = " + array)
+        for (let i = 1; i < 4; i++) {
+
+            const opciones = () => {
+                let objeto = this.objetoAleatorio()
+                // console.log("objeto aleatorio = " + objeto)
+
+
+                if (!array.includes(objeto.pais)) {
+                    // console.log("objeto.pais = " + objeto.pais)
+                    array.push(objeto.pais);
+                } else {
+                    // console.log("buscar un nuevo objeto aleatorio ")
+                    opciones()
+                }
+            };
+
+            opciones();
+        }
+        console.log("array despues del for: " + array);
+
+        this.imageBandera.src = this.banderas[this.preguntaActual].bandera;
+        document.getElementById('span-a').innerHTML = array[0];
+        document.getElementById('span-b').innerHTML = array[1];
+        document.getElementById('span-c').innerHTML = array[2];
+        document.getElementById('span-d').innerHTML = array[3];
+        // this.startTimer()
+        this.verificarRespuesta() // so pra ver o console.log de resposta
+    }
+
+    startTimer() {
+        // console.log("estoy en el start timer")
+        const progressBar = document.getElementsByClassName('progress');
+        const progress = progressBar[0]
+
+        let width = 110;
+        const intervalId = setInterval(() => {
+            width -= 10; // Disminuye la barra en un 10% cada segundo
+            progress.style.width = width + '%';
+
+            if (width <= -1) {
+                clearInterval(intervalId);
+                // Aquí puedo realizar alguna acción cuando la barra llegue a cero
+
+                this.jugador.restarVida();
+                this.preguntaActual++;
+
+                // passar a la siguiente pregunta
+                if (this.preguntaActual == this.banderas.length) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    this.startTimer();
+
+                }
+            }
+        }, 1000);
+    }
+
+
+    iniciarJuego() {
+        for (let i = 0; i < 10; i++) {
+            this.validarObjeto();
+        }
+        console.log("array banderas length = " + this.banderas.length)
+        this.objetoAleatorio();
+        this.arrayOpiciones();
+        this.startTimer();
+        this.verificarRespuesta();
+    }
+
+    verificarRespuesta() {
+        let respuesta = this.banderas[this.preguntaActual].pais
+        console.log("estoy en verificar respuesta y respuesta vale =>  " + respuesta)
+
+        // clic boton a 
+        document.getElementById('btn-a').addEventListener('click', () => {
+
+
+            if (this.spanA.innerHTML == respuesta) {
+                console.log("la opcion a es la respuesta correcta")
+                this.jugador.aciertos++;
+                this.preguntaActual++; //usar como indice
+                document.getElementById('btn-a').style.backgroundColor = "green";
+                console.log(this.preguntaActual)
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    // document.getElementById('btn-a').style.backgroundColor = "#ccc";
+                }
+
+            } else {
+                this.jugador.restarVida();
+                document.getElementById('btn-a').style.backgroundColor = "red";
+                alert("la opcion correcta es " + respuesta);
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+
+                }
+            }
+
+        });
+
+        // clic boton b
+        document.getElementById('btn-b').addEventListener('click', () => {
+            if (this.spanB.innerHTML == respuesta) {
+                console.log("la opcion a es la respuesta correcta")
+                this.jugador.aciertos++;
+                this.preguntaActual++; //usar como indice
+                document.getElementById('btn-b').style.backgroundColor = "green";
+                console.log(this.preguntaActual)
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    // this.startTimer();
+                }
+
+            } else {
+                this.jugador.restarVida();
+                document.getElementById('btn-b').style.backgroundColor = "red";
+                alert("la opcion correcta es " + respuesta);
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    // this.startTimer();
+                }
+            }
+        });
+
+        // clic boton c
+        document.getElementById('btn-c').addEventListener('click', () => {
+            if (this.spanC.innerHTML == respuesta) {
+                console.log("la opcion a es la respuesta correcta")
+                this.jugador.aciertos++;
+                this.preguntaActual++; //usar como indice
+                document.getElementById('btn-c').style.backgroundColor = "green";
+                console.log(this.preguntaActual)
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    // this.startTimer();
+                }
+
+            } else {
+                this.jugador.restarVida();
+                document.getElementById('btn-c').style.backgroundColor = "red";
+                alert("la opcion correcta es " + respuesta);
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    // this.startTimer();
+                }
+            }
+        });
+
+        // clic boton d
+        document.getElementById('btn-d').addEventListener('click', () => {
+            if (this.spanD.innerHTML == respuesta) {
+                console.log("la opcion a es la respuesta correcta")
+                this.jugador.aciertos++;
+                this.preguntaActual++; //usar como indice
+                document.getElementById('btn-d').style.backgroundColor = "green";
+                console.log(this.preguntaActual)
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    // this.startTimer();
+                }
+
+            } else {
+                this.jugador.restarVida();
+                document.getElementById('btn-d').style.backgroundColor = "red";
+                alert("la opcion correcta es " + respuesta);
+                if (this.preguntaActual == 10) {
+                    this.finalizarJuego();
+                } else {
+                    this.arrayOpiciones();
+                    // this.startTimer();
+                }
+            }
+        });
+
+
+    }
+
+    iniciarPregunta() { }
+
+    finalizarJuego() {
+        let game = document.getElementById("game");
+        let gameOver = document.getElementById("game-over");
+        game.style.display = "none"
+        gameOver.style.display = "block"
+    }
+
+
+}
+
+let a = new Juego
+a.iniciarJuego()
+// a.objetoAleatorio()
+// a.opciones()
+// a.arrayOpiciones()

@@ -69,19 +69,19 @@ h1 {
     background-color: #a6f6a6;
 }
 
-#progress-container {
-    width: 200px;
+#progress-bar {
+    width: 90%;
     height: 10px;
-    background-color: #ccc;
-    margin: 10px auto;
+    background-color: #fd060600;
+    margin-left: 5%;
 }
 
-#progress-bar {
-    width: 100%;
+.progress {
     height: 100%;
-    background-color: #69b542;
+    background-color: #4caf50;
     transition: width 1s linear;
 }
+
 
 #opciones {
     display: flex;
@@ -94,13 +94,30 @@ button {
     display: flex;
     width: 200px;
     margin: 10px 38px 3px 40px;
+    background-color: #ccc;
 }
 
 button:hover {
-    background-color: #2a2929b4;
-    color: white;
+    /* background-color: #ffffff;
+    color: white; */
     cursor: pointer;
     transform: scale(1.1);
+}
+
+#btn-a {
+    background-color: #ccc;
+}
+
+#btn-b {
+    background-color: #ccc;
+}
+
+#btn-c {
+    background-color: #ccc;
+}
+
+#btn-d {
+    background-color: #ccc;
 }
 
 .span {
