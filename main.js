@@ -83,18 +83,8 @@ const newBanderas = [
         capital: "Roma",
         continente: "Europa"
     },
-    {
-        pais: "España",
-        bandera: "imagenes/espana.webp",
-        capital: "Madrid",
-        continente: "Europa"
-    },
-    {
-        pais: "Portugal",
-        bandera: "imagenes/portugal.webp",
-        capital: "Lisboa",
-        continente: "Europa"
-    },
+
+
     {
         pais: "Suecia",
         bandera: "imagenes/suecia.webp",
@@ -107,12 +97,7 @@ const newBanderas = [
         capital: "Oslo",
         continente: "Europa"
     },
-    {
-        pais: "Suiza",
-        bandera: "imagenes/suiza.webp",
-        capital: "Berna",
-        continente: "Europa"
-    },
+
     {
         pais: "Rusia",
         bandera: "imagenes/rusia.webp",
@@ -486,12 +471,6 @@ const newBanderas = [
         continente: "Europa"
     },
     {
-        pais: "Hungría",
-        bandera: "imagenes/hungria.webp",
-        capital: "Budapest",
-        continente: "Europa"
-    },
-    {
         pais: "Irlanda",
         bandera: "imagenes/irlanda.webp",
         capital: "Dublín",
@@ -547,21 +526,9 @@ const newBanderas = [
         continente: "Europa"
     },
     {
-        pais: "Suiza",
-        bandera: "imagenes/suiza.webp",
-        capital: "Berna",
-        continente: "Europa"
-    },
-    {
         pais: "Chipre",
         bandera: "imagenes/chipre.webp",
         capital: "Nicosia",
-        continente: "Europa"
-    },
-    {
-        pais: "Estonia",
-        bandera: "imagenes/.webp",
-        capital: "Tallin",
         continente: "Europa"
     },
     {
@@ -583,21 +550,9 @@ const newBanderas = [
         continente: "Europa"
     },
     {
-        pais: "Montenegro",
-        bandera: "imagenes/montenegro.webp",
-        capital: "Podgorica",
-        continente: "Europa"
-    },
-    {
         pais: "Serbia",
         bandera: "imagenes/serbia.webp",
         capital: "Belgrado",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovenia",
-        bandera: "imagenes/eslovenia.webp",
-        capital: "Liubliana",
         continente: "Europa"
     },
     {
@@ -631,93 +586,15 @@ const newBanderas = [
         continente: "Europa"
     },
     {
-        pais: "Eslovaquia",
-        bandera: "imagenes/eslovaquia.webp",
-        capital: "Bratislava",
-        continente: "Europa"
-    },
-    {
-        pais: "Alemania",
-        bandera: "imagenes/alemania.webp",
-        capital: "Berlín",
-        continente: "Europa"
-    },
-    {
-        pais: "Italia",
-        bandera: "imagenes/italia.webp",
-        capital: "Roma",
-        continente: "Europa"
-    },
-    {
-        pais: "Francia",
-        bandera: "imagenes/.webp",
-        capital: "París",
-        continente: "Europa"
-    },
-    {
-        pais: "Reino Unido",
-        bandera: "imagenes/reino-unido.webp",
-        capital: "Londres",
-        continente: "Europa"
-    },
-    {
         pais: "España",
         bandera: "imagenes/espana.webp",
         capital: "Madrid",
         continente: "Europa"
     },
     {
-        pais: "Portugal",
-        bandera: "imagenes/portugal.webp",
-        capital: "Lisboa",
-        continente: "Europa"
-    },
-    {
-        pais: "Bielorrusia",
-        bandera: "imagenes/bielorrusia.webp",
-        capital: "Minsk",
-        continente: "Europa"
-    },
-    {
-        pais: "Kazajistán",
-        bandera: "imagenes/kazajistan.webp",
-        capital: "Nur-Sultán",
-        continente: "Asia"
-    },
-    {
-        pais: "Uzbekistán",
-        bandera: "imagenes/uzbekistan.webp",
-        capital: "Taskent",
-        continente: "Asia"
-    },
-    {
-        pais: "Turkmenistán",
-        bandera: "imagenes/turkmenistan.webp",
-        capital: "Asjabad",
-        continente: "Asia"
-    },
-    {
-        pais: "Tayikistán",
-        bandera: "imagenes/tayikistan.webp",
-        capital: "Dusambé",
-        continente: "Asia"
-    },
-    {
         pais: "Kirguistán",
         bandera: "imagenes/kirguistan.webp",
         capital: "Biskek",
-        continente: "Asia"
-    },
-    {
-        pais: "Tailandia",
-        bandera: "imagenes/tailandia.webp",
-        capital: "Bangkok",
-        continente: "Asia"
-    },
-    {
-        pais: "Malasia",
-        bandera: "imagenes/malasia.webp",
-        capital: "Kuala Lumpur",
         continente: "Asia"
     },
     {
@@ -859,24 +736,6 @@ const newBanderas = [
         continente: "Oceanía"
     },
     {
-        pais: "Islas Salomón",
-        bandera: "imagenes/islas-salomon.webp",
-        capital: "Honiara",
-        continente: "Oceanía"
-    },
-    {
-        pais: "Austria",
-        bandera: "imagenes/austria.webp",
-        capital: "Viena",
-        continente: "Europa"
-    },
-    {
-        pais: "Bélgica",
-        bandera: "imagenes/belgica.webp",
-        capital: "Bruselas",
-        continente: "Europa"
-    },
-    {
         pais: "Croacia",
         bandera: "imagenes/croacia.webp",
         capital: "Zagreb",
@@ -943,75 +802,15 @@ const newBanderas = [
         continente: "Europa"
     },
     {
-        pais: "Eslovenia",
-        bandera: "imagenes/eslovenia.webp",
-        capital: "Liubliana",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovaquia",
-        bandera: "imagenes/eslovaquia.webp",
-        capital: "Bratislava",
-        continente: "Europa"
-    },
-    {
-        pais: "Bulgaria",
-        bandera: "imagenes/bulgaria.webp",
-        capital: "Sofía",
-        continente: "Europa"
-    },
-    {
-        pais: "Suiza",
-        bandera: "imagenes/suiza.webp",
-        capital: "Berna",
-        continente: "Europa"
-    },
-    {
-        pais: "Chipre",
-        bandera: "imagenes/chipre.webp",
-        capital: "Nicosia",
-        continente: "Europa"
-    },
-    {
-        pais: "Estonia",
-        bandera: "imagenes/estonia.webp",
-        capital: "Tallin",
-        continente: "Europa"
-    },
-    {
-        pais: "Letonia",
-        bandera: "imagenes/letonia.webp",
-        capital: "Riga",
-        continente: "Europa"
-    },
-    {
-        pais: "Lituania",
-        bandera: "imagenes/lituania.webp",
-        capital: "Vilna",
-        continente: "Europa"
-    },
-    {
         pais: "Moldavia",
         bandera: "imagenes/moldavia.webp",
         capital: "Chisináu",
         continente: "Europa"
     },
     {
-        pais: "Montenegro",
-        bandera: "imagenes/montenegro.webp",
-        capital: "Podgorica",
-        continente: "Europa"
-    },
-    {
         pais: "Serbia",
         bandera: "imagenes/serbia.webp",
         capital: "Belgrado",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovenia",
-        bandera: "imagenes/eslovenia.webp",
-        capital: "Liubliana",
         continente: "Europa"
     },
     {
@@ -1027,29 +826,12 @@ const newBanderas = [
         continente: "Europa"
     },
     {
-        pais: "Macedonia del Norte",
-        bandera: "imagenes/macedonia-del-norte.webp",
-        capital: "Skopie",
-        continente: "Europa"
-    },
-    {
-        pais: "Montenegro",
-        bandera: "imagenes/montenegro.webp",
-        capital: "Podgorica",
-        continente: "Europa"
-    },
-    {
         pais: "Portugal",
         bandera: "imagenes/portugal.webp",
         capital: "Lisboa",
         continente: "Europa"
     },
-    {
-        pais: "Bielorrusia",
-        bandera: "imagenes/bielorrusia.webp",
-        capital: "Minsk",
-        continente: "Europa"
-    },
+
     {
         pais: "Kazajistán",
         bandera: "imagenes/kazajistan.webp",
@@ -1066,30 +848,6 @@ const newBanderas = [
         pais: "Turkmenistán",
         bandera: "imagenes/turkmenistan.webp",
         capital: "Asjabad",
-        continente: "Asia"
-    },
-    {
-        pais: "Tayikistán",
-        bandera: "imagenes/tayikistan.webp",
-        capital: "Dusambé",
-        continente: "Asia"
-    },
-    {
-        pais: "Kirguistán",
-        bandera: "imagenes/kirguistan.webp",
-        capital: "Biskek",
-        continente: "Asia"
-    },
-    {
-        pais: "Tailandia",
-        bandera: "imagenes/tailandia.webp",
-        capital: "Bangkok",
-        continente: "Asia"
-    },
-    {
-        pais: "Malasia",
-        bandera: "imagenes/malasia.webp",
-        capital: "Kuala Lumpur",
         continente: "Asia"
     },
     {
@@ -1116,36 +874,8 @@ const newBanderas = [
         capital: "Canberra",
         continente: "Oceanía"
     },
-    {
-        pais: "Italia",
-        bandera: "imagenes/italia.webp",
-        capital: "Roma",
-        continente: "Europa"
-    },
-    {
-        pais: "Francia",
-        bandera: "imagenes/francia.webp",
-        capital: "París",
-        continente: "Europa"
-    },
-    {
-        pais: "Reino Unido",
-        bandera: "imagenes/reino-unido.webp",
-        capital: "Londres",
-        continente: "Europa"
-    },
-    {
-        pais: "España",
-        bandera: "imagenes/espana.webp",
-        capital: "Madrid",
-        continente: "Europa"
-    },
-    {
-        pais: "Portugal",
-        bandera: "imagenes/portugal.webp",
-        capital: "Lisboa",
-        continente: "Europa"
-    },
+
+
     {
         pais: "Bielorrusia",
         bandera: "imagenes/bielorrusia.webp",
@@ -1177,37 +907,6 @@ const newBanderas = [
         continente: "Asia"
     },
     {
-        pais: "Kirguistán",
-        bandera: "imagenes/kirguistan.webp",
-        capital: "Biskek",
-        continente: "Asia"
-    },
-    {
-        pais: "Tailandia",
-        bandera: "imagenes/tailandia.webp",
-        capital: "Bangkok",
-        continente: "Asia"
-    },
-    {
-        pais: "Malasia",
-        bandera: "imagenes/malasia.webp",
-        capital: "Kuala Lumpur",
-        continente: "Asia"
-    },
-
-    {
-        pais: "Austria",
-        bandera: "imagenes/austria.webp",
-        capital: "Viena",
-        continente: "Europa"
-    },
-    {
-        pais: "Bélgica",
-        bandera: "imagenes/belgica.webp",
-        capital: "Bruselas",
-        continente: "Europa"
-    },
-    {
         pais: "Dinamarca",
         bandera: "imagenes/dinamarca.webp",
         capital: "Copenhague",
@@ -1217,18 +916,6 @@ const newBanderas = [
         pais: "Grecia",
         bandera: "imagenes/grecia.webp",
         capital: "Atenas",
-        continente: "Europa"
-    },
-    {
-        pais: "Holanda",
-        bandera: "imagenes/holanda.webp",
-        capital: "Ámsterdam",
-        continente: "Europa"
-    },
-    {
-        pais: "Hungría",
-        bandera: "imagenes/hungria.webp",
-        capital: "Budapest",
         continente: "Europa"
     },
     {
@@ -1274,33 +961,9 @@ const newBanderas = [
         continente: "Europa"
     },
     {
-        pais: "Eslovenia",
-        bandera: "imagenes/eslovenia.webp",
-        capital: "Liubliana",
-        continente: "Europa"
-    },
-    {
-        pais: "Eslovaquia",
-        bandera: "imagenes/eslovaquia.webp",
-        capital: "Bratislava",
-        continente: "Europa"
-    },
-    {
-        pais: "Bulgaria",
-        bandera: "imagenes/bulgaria.webp",
-        capital: "Sofía",
-        continente: "Europa"
-    },
-    {
         pais: "Suiza",
         bandera: "imagenes/suiza.webp",
         capital: "Berna",
-        continente: "Europa"
-    },
-    {
-        pais: "Chipre",
-        bandera: "imagenes/chipre.webp",
-        capital: "Nicosia",
         continente: "Europa"
     },
     {
@@ -1308,19 +971,7 @@ const newBanderas = [
         bandera: "imagenes/estonia.webp",
         capital: "Tallin",
         continente: "Europa"
-    },
-    {
-        pais: "Letonia",
-        bandera: "imagenes/letonia.webp",
-        capital: "Riga",
-        continente: "Europa"
-    },
-    {
-        pais: "Lituania",
-        bandera: "imagenes/lituania.webp",
-        capital: "Vilna",
-        continente: "Europa"
-    },
+    }
 
 ];
 
@@ -1329,12 +980,20 @@ class Jugador {
     constructor() {
         this.vida1 = document.getElementById("vida-1");
         this.vida2 = document.getElementById("vida-2");
-        this.totalVidas = 2;
+        this.vidas = 2;
         this.aciertos = 0;
     }
     restarVida() {
         this.vidas--;
+        if (this.vidas == 1) {
+            document.getElementById("corazon").innerHTML = "&#x1F90D; &#x2661;"
+            return
+        }
+        if (this.vidas == 0) {
+            document.getElementById("corazon").innerHTML = "&#x2661; &#x2661;"
+        }
         if (this.totalVidas < 0) {
+            document.getElementById("corazon").innerHTML = "&#x1F90D; &#x1F90D;"
             alert("game over")
         }
     }
@@ -1356,22 +1015,22 @@ class Juego {
         this.preguntaTotal = 10;
         this.preguntaActual = 0;
         this.jugador = new Jugador();
-        // this.respuesta = this.banderas[this.preguntaActual].pais
-        // this.imageBandera.src = this.banderas[this.preguntaActual].bandera;
+        this.intervalId = null;
+        this.width = 110;
+
     }
 
     objetoAleatorio() {
         const indiceAleatorio = Math.floor(Math.random() * newBanderas.length);
-        // console.log("i = " + indiceAleatorio)
+
         return newBanderas[indiceAleatorio]
     }
 
     validarObjeto() {
         let objeto = this.objetoAleatorio()
-        // console.log("objeto = " + objeto)
 
         if (!this.banderas.includes(objeto)) {
-            // console.log(this.banderas)
+
             this.banderas.push(objeto);
         } else {
             this.validarObjeto()
@@ -1381,57 +1040,51 @@ class Juego {
     arrayOpiciones() {
         let respuesta = this.banderas[this.preguntaActual].pais
         let array = [];
-        // console.log("array = " + array)
+        console.log("respuesta = " + respuesta)
         array.push(respuesta);
-        // console.log("array = " + array)
+
+
         for (let i = 1; i < 4; i++) {
 
             const opciones = () => {
                 let objeto = this.objetoAleatorio()
-                // console.log("objeto aleatorio = " + objeto)
-
-
                 if (!array.includes(objeto.pais)) {
-                    // console.log("objeto.pais = " + objeto.pais)
                     array.push(objeto.pais);
                 } else {
-                    // console.log("buscar un nuevo objeto aleatorio ")
                     opciones()
                 }
             };
 
             opciones();
         }
-        console.log("array despues del for: " + array);
+        // console.log(array)
+        // array.sort(() => Math.random() - 0.5);
+        console.log(array)
+        console.log("respuesta = " + respuesta)
 
         this.imageBandera.src = this.banderas[this.preguntaActual].bandera;
         document.getElementById('span-a').innerHTML = array[0];
         document.getElementById('span-b').innerHTML = array[1];
         document.getElementById('span-c').innerHTML = array[2];
         document.getElementById('span-d').innerHTML = array[3];
-        // this.startTimer()
-        this.verificarRespuesta() // so pra ver o console.log de resposta
+        this.actualizarPlacar()
     }
 
     startTimer() {
-        // console.log("estoy en el start timer")
         const progressBar = document.getElementsByClassName('progress');
         const progress = progressBar[0]
-
-        let width = 110;
-        const intervalId = setInterval(() => {
-            width -= 10; // Disminuye la barra en un 10% cada segundo
+        let width = this.width;
+        this.intervalId = setInterval(() => {
+            width -= 10;
             progress.style.width = width + '%';
 
             if (width <= -1) {
-                clearInterval(intervalId);
-                // Aquí puedo realizar alguna acción cuando la barra llegue a cero
-
+                clearInterval(this.intervalId);
                 this.jugador.restarVida();
                 this.preguntaActual++;
 
                 // passar a la siguiente pregunta
-                if (this.preguntaActual == this.banderas.length) {
+                if (this.preguntaActual == this.banderas.length || this.jugador.vidas < 0) {
                     this.finalizarJuego();
                 } else {
                     this.arrayOpiciones();
@@ -1439,157 +1092,152 @@ class Juego {
 
                 }
             }
+            let but = document.getElementsByClassName("opition")
+            but = [...but]
+            for (let i = 0; i < but.length; i++) {
+                but[i].style = "gray"
+            }
+
         }, 1000);
     }
-
+    stopTimer() {
+        clearInterval(this.intervalId); // Detiene el temporizador utilizando el intervalId almacenado
+    }
 
     iniciarJuego() {
         for (let i = 0; i < 10; i++) {
             this.validarObjeto();
         }
-        console.log("array banderas length = " + this.banderas.length)
+
         this.objetoAleatorio();
         this.arrayOpiciones();
         this.startTimer();
         this.verificarRespuesta();
     }
 
+
     verificarRespuesta() {
-        let respuesta = this.banderas[this.preguntaActual].pais
-        console.log("estoy en verificar respuesta y respuesta vale =>  " + respuesta)
+
+        let respuesta = this.banderas[this.preguntaActual].pais;
+        let respuestaJugador = "";
+        let boton;
+        // console.log("estoy en verificar respuesta y respuesta vale =>  " + respuesta)
 
         // clic boton a 
         document.getElementById('btn-a').addEventListener('click', () => {
-
-
-            if (this.spanA.innerHTML == respuesta) {
-                console.log("la opcion a es la respuesta correcta")
-                this.jugador.aciertos++;
-                this.preguntaActual++; //usar como indice
-                document.getElementById('btn-a').style.backgroundColor = "green";
-                console.log(this.preguntaActual)
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-                    // document.getElementById('btn-a').style.backgroundColor = "#ccc";
-                }
-
-            } else {
-                this.jugador.restarVida();
-                document.getElementById('btn-a').style.backgroundColor = "red";
-                alert("la opcion correcta es " + respuesta);
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-
-                }
-            }
-
+            respuestaJugador = this.spanA.innerHTML;
+            boton = document.getElementById('btn-a');
+            respuesta = this.banderas[this.preguntaActual].pais;
+            this.stopTimer();
+            verificar(boton);
         });
-
-        // clic boton b
+        // clic boton b 
         document.getElementById('btn-b').addEventListener('click', () => {
-            if (this.spanB.innerHTML == respuesta) {
-                console.log("la opcion a es la respuesta correcta")
-                this.jugador.aciertos++;
-                this.preguntaActual++; //usar como indice
-                document.getElementById('btn-b').style.backgroundColor = "green";
-                console.log(this.preguntaActual)
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-                    // this.startTimer();
-                }
-
-            } else {
-                this.jugador.restarVida();
-                document.getElementById('btn-b').style.backgroundColor = "red";
-                alert("la opcion correcta es " + respuesta);
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-                    // this.startTimer();
-                }
-            }
+            respuestaJugador = this.spanB.innerHTML;
+            boton = document.getElementById('btn-b');
+            this.stopTimer();
+            verificar(boton);
         });
-
-        // clic boton c
+        // clic boton c 
         document.getElementById('btn-c').addEventListener('click', () => {
-            if (this.spanC.innerHTML == respuesta) {
-                console.log("la opcion a es la respuesta correcta")
-                this.jugador.aciertos++;
-                this.preguntaActual++; //usar como indice
-                document.getElementById('btn-c').style.backgroundColor = "green";
-                console.log(this.preguntaActual)
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-                    // this.startTimer();
-                }
-
-            } else {
-                this.jugador.restarVida();
-                document.getElementById('btn-c').style.backgroundColor = "red";
-                alert("la opcion correcta es " + respuesta);
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-                    // this.startTimer();
-                }
-            }
+            respuestaJugador = this.spanC.innerHTML;
+            boton = document.getElementById('btn-c');
+            this.stopTimer();
+            verificar(boton);
         });
-
-        // clic boton d
+        // clic boton d 
         document.getElementById('btn-d').addEventListener('click', () => {
-            if (this.spanD.innerHTML == respuesta) {
-                console.log("la opcion a es la respuesta correcta")
-                this.jugador.aciertos++;
-                this.preguntaActual++; //usar como indice
-                document.getElementById('btn-d').style.backgroundColor = "green";
-                console.log(this.preguntaActual)
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-                    // this.startTimer();
-                }
-
-            } else {
-                this.jugador.restarVida();
-                document.getElementById('btn-d').style.backgroundColor = "red";
-                alert("la opcion correcta es " + respuesta);
-                if (this.preguntaActual == 10) {
-                    this.finalizarJuego();
-                } else {
-                    this.arrayOpiciones();
-                    // this.startTimer();
-                }
-            }
+            respuestaJugador = this.spanD.innerHTML;
+            boton = document.getElementById('btn-d');
+            this.stopTimer();
+            verificar(boton);
         });
 
+
+        const verificar = (boton) => {
+
+            if (respuesta == respuestaJugador) {
+                boton.style.backgroundImage = "linear-gradient(to right, #0ebb00 0%, #45b68f 51%, #DCE35B 100%)"
+                this.jugador.sumarAcierto()
+                this.actualizarPlacar()
+            } else {
+                boton.style.backgroundImage = "linear-gradient(to right, rgb(241 11 11) 0%, rgb(231 116 35) 77%, #ee0979 100%)";
+                this.jugador.restarVida();
+                if (this.jugador.vidas < 0) {
+                    this.finalizarJuego()
+                }
+            }
+            this.preguntaActual++;
+
+            // passar a la siguiente pregunta
+            if (this.preguntaActual == this.banderas.length) {
+                this.finalizarJuego();
+            } else {
+                this.arrayOpiciones();
+                this.startTimer();
+            }
+        }
 
     }
 
-    iniciarPregunta() { }
+    actualizarPlacar() {
+
+        let aciertos = document.getElementById("aciertos-text")
+        let recuento = document.getElementById("recuento")
+        aciertos.innerHTML = this.jugador.aciertos
+        recuento.innerHTML = `${this.preguntaActual + 1} / ${this.preguntaTotal}`
+
+    }
 
     finalizarJuego() {
+        this.actualizarPlacar()
         let game = document.getElementById("game");
         let gameOver = document.getElementById("game-over");
-        game.style.display = "none"
-        gameOver.style.display = "block"
+        let vitoria = document.getElementById("game-victoria");
+
+        if (this.jugador.vidas < 0) {
+            this.jugador.vidas = 2;
+            game.style.display = "none";
+            gameOver.style.display = "block";
+            document.getElementById("gameOverScore").innerHTML = this.jugador.aciertos + ".000"
+        }
+        if (this.preguntaActual >= 10) {
+
+            this.jugador.vidas = 2;
+            game.style.display = "none";
+            gameOver.style.display = "none";
+            vitoria.style.display = "block"
+            document.getElementById("victoriaScore").innerHTML = this.jugador.aciertos + ".000"
+        }
+        this.clear()
+    }
+
+    clear() {
+        this.jugador.vidas = 2;
+        this.jugador.aciertos = 0;
+        this.preguntaActual = 0;
+        this.banderas = [];
+        this.intervalId = null;
+        this.width = 110;
     }
 
 
 }
+function play() {
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("game").style.display = "block";
+    let newPartida = new Juego;
+    newPartida.iniciarJuego()
+}
 
-let a = new Juego
-a.iniciarJuego()
-// a.objetoAleatorio()
-// a.opciones()
-// a.arrayOpiciones()
+document.getElementById('banderas-button').addEventListener('click', () => {
+    play();
+})
+
+document.getElementById('play-again-vitoria').addEventListener('click', () => {
+    play();
+})
+document.getElementById('play-again-derrota').addEventListener('click', () => {
+    play();
+})
+

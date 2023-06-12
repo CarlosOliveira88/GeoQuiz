@@ -9,13 +9,11 @@
 
 <body>
     <!-- pantalla de inicio -->
-    <div class="inicio">
-
-
+    <div id="inicio">
         <div id="game-type-container">
-            <h2>Selecciona el tipo de juego:</h2>
-            <button onclick="" id="banderas-button">Banderas</button>
-            <button id="preguntas-button">Curiosidades</button>
+            <h2>Elija una opción</h2>
+            <button id="banderas-button" class="inicio-btn">Banderas</button>
+            <button id="preguntas-button" class="inicio-btn">Curiosidades</button>
         </div>
     </div>
 
@@ -25,8 +23,7 @@
         <!-- vidas, aciertos y recuento -->
         <div id="header">
             <div id="vidas">
-                <img class="vida1" id="vida-1" src="imagenes/00-corazon-lleno.png" alt="corazones">
-                <img class="vida2" id="vida-2" src="imagenes/01-corazon-vacio.png" alt="corazones">
+                <div id="corazon" class="vida1">&#x1F90D; &#x1F90D;</div>
             </div>
             <div id="aciertos">
                 <p>Aciertos: <span id="aciertos-text">0</span></p>
@@ -38,8 +35,8 @@
 
         <!-- imagen de la bandera -->
         <div class="bandera" id="bandera">
-            <h1>GeoQuiz</h1>
-            <img id="imgBandera" src="" alt="">
+            <h1> &#x1F30D; GeoQuiz &#127758; </h1>
+            <img id="imgBandera" src="imagenes/brasil.webp" alt="">
             <div id="progress-bar">
                 <div class="progress"></div>
 
@@ -80,17 +77,17 @@
     <!-- pantalla de game over -->
     <div id="game-over">
         <h1 id="over">Game Over</h1>
-        <h2 id="score-final">SCORE: <span class="span02" id="gameOverScore">137</span> puntos</h2>
-        <h2 id="imgNivel">NIVEL: <span class="span02" id="nivelDerrota">Estudiante</span></h2>
-        <button id="play-again">Jugar de nuevo</button>
+        <h2 id="score-derrota">SCORE: <span class="span02" id="gameOverScore"></span></h2>
+
+        <button id="play-again-derrota" class="play-again">Jugar de nuevo</button>
     </div>
 
     <!-- pantalla de Victoria -->
     <div id="game-victoria">
-        <h1 id="victoria">Haz Ganado!</h1>
-        <h2 id="score-victora">SCORE: <span class="span02" id="victoriaScore">137</span> puntos</h2>
-        <h2 id="imgNivel">NIVEL: <span class="span02" id="nivelVictoria">Estudiante</span></h2>
-        <button id="play-again">Jugar de nuevo</button>
+        <h1 id="victoria">¡Ganaste!</h1>
+        <h2 id="score-victora">SCORE: <span class="span02" id="victoriaScore"></span></h2>
+
+        <button id="play-again-vitoria" class="play-again">Jugar de nuevo</button>
     </div>
 
     <script src="main.js"></script>
