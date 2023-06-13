@@ -196,7 +196,7 @@ const newBanderas = [
     },
     {
         pais: "Arabia Saudita",
-        bandera: "imagenes/arabiasaudita.webp",
+        bandera: "imagenes/arabia-saudita.webp",
         capital: "Riad",
         continente: "Asia"
     },
@@ -587,7 +587,7 @@ const newBanderas = [
     },
     {
         pais: "España",
-        bandera: "imagenes/espana.webp",
+        bandera: "imagenes/españa.webp",
         capital: "Madrid",
         continente: "Europa"
     },
@@ -991,12 +991,14 @@ class Jugador {
         }
         if (this.vidas == 0) {
             document.getElementById("corazon").innerHTML = "&#x2661; &#x2661;"
+            return
         }
         if (this.totalVidas < 0) {
             document.getElementById("corazon").innerHTML = "&#x1F90D; &#x1F90D;"
-            alert("game over")
+            return
         }
     }
+
     sumarAcierto() {
         this.aciertos++;
     }
@@ -1030,10 +1032,11 @@ class Juego {
         let objeto = this.objetoAleatorio()
 
         if (!this.banderas.includes(objeto)) {
-
             this.banderas.push(objeto);
+            return
         } else {
             this.validarObjeto()
+            return
         }
     };
 
@@ -1050,15 +1053,18 @@ class Juego {
                 let objeto = this.objetoAleatorio()
                 if (!array.includes(objeto.pais)) {
                     array.push(objeto.pais);
+
                 } else {
                     opciones()
                 }
+
             };
 
             opciones();
+
         }
         // console.log(array)
-        // array.sort(() => Math.random() - 0.5);
+        // array.sort(() => Math.random() - 0.5); cuando lo utilizo, a cada 3 una sale errada aun que este correcta
         console.log(array)
         console.log("respuesta = " + respuesta)
 
@@ -1067,6 +1073,7 @@ class Juego {
         document.getElementById('span-b').innerHTML = array[1];
         document.getElementById('span-c').innerHTML = array[2];
         document.getElementById('span-d').innerHTML = array[3];
+
         this.actualizarPlacar()
     }
 
@@ -1214,6 +1221,7 @@ class Juego {
 
     clear() {
         this.jugador.vidas = 2;
+        document.getElementById("corazon").innerHTML = "&#x1F90D; &#x1F90D;"
         this.jugador.aciertos = 0;
         this.preguntaActual = 0;
         this.banderas = [];
@@ -1226,6 +1234,8 @@ class Juego {
 function play() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("game").style.display = "block";
+    document.getElementById("game-over").style.display = "none";
+    document.getElementById("game-victoria").style.display = "none";
     let newPartida = new Juego;
     newPartida.iniciarJuego()
 }
@@ -1241,3 +1251,9 @@ document.getElementById('play-again-derrota').addEventListener('click', () => {
     play();
 })
 
+const JOAO = {
+    fullName: " Joao Carlos Oliveira",
+    location: "Barcelona",
+    from: "Brasil",
+
+}
