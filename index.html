@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>GeoQuiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <!-- pantalla de inicio -->
+    <div class="inicio">
+
+
+
+
+        <div id="game-type-container">
+            <h2>Selecciona el tipo de juego:</h2>
+            <button onclick="banderas()" id="banderas-button">Banderas</button>
+            <button id="preguntas-button">Curiosidades</button>
+        </div>
+    </div>
+
+
+    <!-- pantalla de juego -->
+    <div id="game">
+
+
+        <!-- vidas, aciertos y recuento -->
+        <div id="header">
+            <div id="vidas">
+                <img id="vida-1" src="corazones.img" alt="corazones">
+                <img id="vida-2" src="corazones.img" alt="corazones">
+            </div>
+            <div id="aciertos">
+                <p>Aciertos: <span id="aciertos-text">0</span></p>
+            </div>
+            <div>
+                <p><span id="recuento"> 1 / 10</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- imagen de la bandera -->
+        <div id="bandera">
+            <h1>GeoQuiz</h1>
+            <input id="imgBandera" type="image" src="" alt="brasil">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p>¿Esta bandera pertenence a cual pais?</p>
+            <div id="cronometro">
+                <p id="tiempo"></p>
+            </div>
+        </div>
+
+
+        <!-- opciones -->
+        <div id="opciones">
+            <button class="option" onclick="botonVerificarRespuesta(0 )">
+                <strong>A) </strong>
+                <span id="option0" class="span-opciones"></span>
+            </button>
+
+            <button class="option" onclick="botonVerificarRespuesta(1)">
+                <strong>B) </strong>
+                <span id="option1" class="span-opciones"></span>
+            </button>
+
+            <button class="option" onclick="botonVerificarRespuesta(2)">
+                <strong>C) </strong>
+                <span id="option2" class="span-opciones"></span>
+            </button>
+
+            <button class="option" onclick="botonVerificarRespuesta(3)">
+                <strong>D) </strong>
+                <span id="option3" class="span-opciones"></span>
+            </button>
+        </div>
+        <button onclick="volverAJugar()">Reiniciar juego</button>
+
+    </div>
+    <script src="quiz.js"></script>
+
+
+</body>
+
+
 </html>
