@@ -61,6 +61,13 @@ let newBanderas = [
   },
 ]
 
+//devuelve la ruta de la imagen de la bandera correspondiente
+function getBanderaPorNombre(nom) {
+  let banderaObj = newBanderas.find(bandera => bandera.pais == nom)
+  return banderaObj.bandera
+}
+
+
 // Clase Jugador
 class Jugador {
   constructor() {
@@ -68,17 +75,25 @@ class Jugador {
     this.vida2 = document.getElementById("vida-2");
     this.totalVidas = 2;
     this.aciertos = 0;
+
   }
   restarVida() {
-    this.vidas--;
-    if (this.totalVidas < 0) {
-      alert("game over")
-    }
+    this.totalVidas--;
   }
   sumarAcierto() {
     this.aciertos++;
   }
 }
+
+
+setInterval(() => {
+  if (juego.seguirAnimando) {
+    document.querySelector("#progress-bar").style.width = juego.barraProgresso + "%"
+    juego.barraProgresso += 12.5  //juego.barraProgresso += 100 / 8 ;alcanzando el 100% después de 8 segundos.
+    //La propiedad "barraProgresso" del objeto "juego" se incrementa en 12.5 en cada iteración (equivalente a aumentar en 12.5% en cada segundo),
+
+  }
+}, 1000)
 
 
 // Clase Juego
@@ -92,18 +107,106 @@ class Juego {
     this.banderas = [];// guardar las preguntas
     this.preguntaTotal = 10;
     this.preguntaActual = 0;
-    this.tiempoPregunta = 8000; // Tiempo para responder cada pregunta
+    //this.tiempoPregunta = 8000; // Tiempo para responder cada pregunta
     this.intervalId = null; // ID del intervalo de tiempo para la pregunta actual
     this.jugador = new Jugador(); // Instancia de la clase Jugador
-
+    // this.tiempoRestante = 0;
+    this.timer = undefined
+    // this.aciertos = 0;
+    // this.aciertos = 0;
+    this.bloquear = false
+    this.preguntas = []
+    this.barraProgresso = 0
+    this.seguirAnimando = true
   }
 
-  // Método para iniciar el juego
-  iniciarJuego() { // joao
 
-    function objetoAleatorio() {
-      const indiceAleatorio = Math.floor(Math.random() * newBanderas.length);
-      return newBanderas[indiceAleatorio]
+  generarPreguntas() {
+    let quiz = []
+
+
+    let paises = newBanderas.map(item => item.pais)
+    for (let i = 0; i < 10; i++) {
+      let ramdomIndex = Math.floor(Math.random() * paises.length)
+      let paisActual = paises[ramdomIndex]
+
+
+      let respuestasIncorrectas = []
+      while (respuestasIncorrectas.length < 3) {
+        let paises = newBanderas.map(item => item.pais)
+        let ramdomIndex = Math.floor(Math.random() * paises.length)
+        let paisIncorrecto = paises[ramdomIndex]
+        if (!respuestasIncorrectas.includes(paisIncorrecto) && paisIncorrecto != paisActual) {
+          respuestasIncorrectas.push(paisIncorrecto)   //Si ambas condiciones se cumplen (es decir, el país incorrecto no está en el array respuestasIncorrectas y no es igual al país actual),
+        }
+      }
+
+
+      let ramdom0a3 = Math.floor(Math.random() * 3) //0y 2
+      let options = [...respuestasIncorrectas.slice(0, ramdom0a3), paisActual, ...respuestasIncorrectas.slice(ramdom0a3)]
+
+
+      quiz.push(    //Se crea un objeto con pregunta correcta y no incorrectas para cada pregunta
+        {
+          respuesta: paisActual,
+          opcions: options
+        }
+      )
+
+
+      // console.log(paisActual);
+      // console.log(respuestasIncorrectas);
+
+
+      paises.splice(ramdomIndex, 1)   //: Este código elimina el país actual del array paises para asegurarse de que no se repita 
+      //asi garantizamos que cada pregunta del cuestionario sea sobre un país diferente.
+    }
+    console.log(quiz);
+    this.preguntas = quiz
+  }
+
+
+  // Método para iniciar el juego
+  // iniciarJuego() { // joao
+  //   // generar el array de opciones
+  //   let preguntaAleatoria = a()
+  //   function a() {
+  //     const indiceAleatorio = Math.floor(Math.random() * newBanderas.length);
+  //     return newBanderas[indiceAleatorio]
+  //   }
+
+
+  //   this.imageBandera.src = preguntaAleatoria.bandera;
+  //   this.banderas.push(preguntaAleatoria.pais);
+  //   this.banderas.push(a().pais)
+  //   this.banderas.push(a().pais)
+  //   this.banderas.push(a().pais)
+  //   console.log(this.banderas)
+
+
+  //   let botonA = document.getElementById('span-a');
+  //   botonA.innerHTML = this.banderas[0];
+  //   let botonB = document.getElementById('span-b');
+  //   botonB.innerHTML = this.banderas[1];
+  //   let botonC = document.getElementById('span-c');
+  //   botonC.innerHTML = this.banderas[2];
+  //   let botonD = document.getElementById('span-d');
+  //   botonD.innerHTML = this.banderas[3];
+
+  // }
+
+
+  iniciarJuego() {
+    this.siguentePregunta()
+  }
+
+  siguentePregunta() {
+    this.seguirAnimando = true
+    if (this.preguntaActual == 10 || this.jugador.totalVidas == -1) {
+      juego.seguirAnimando = false
+      juego.barraProgresso = "100%"
+      alert("Juego finalizado")
+      return
     }
 
     const opciones = (x) => {
@@ -247,10 +350,6 @@ class Juego {
 
 
   }
-
-
-
-
   // Método para iniciar el temporizador de cada pregunta
   startTimer() {
     console.log("estoy en el start timer")

@@ -2,6 +2,7 @@
     transition: all 0.3s;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
@@ -82,6 +83,8 @@ body {
 
 
 
+
+
 h1 {
     color: #255d37;
     ;
@@ -117,6 +120,7 @@ h1 {
 }
 
 
+
 #opciones {
     display: flex;
     flex-direction: column;
@@ -124,112 +128,149 @@ h1 {
     padding: 3px 3px 12px 3px;
 }
 
-.opition {
-    display: flex;
-    width: 200px;
-    margin: 10px 38px 3px 40px;
-    background-color: #ccc;
-    /* background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%); */
-    /* background-image: linear-gradient(to right, rgb(241 11 11) 0%, rgb(231 116 35) 77%, #ee0979 100%); color rojo ERROU */
-    /* background-image: linear-gradient(to right, #0ebb00 0%, #45b68f 51%, #DCE35B 100%); color verde ACERTOU */
-    text-transform: uppercase;
-    transition: .5s;
-    background-size: 200% auto;
-    color: #fff;
-    border-radius: 10px;
 
-}
+button {
+    .opition {
+        display: flex;
+        width: 200px;
+        margin: 10px 38px 3px 40px;
+        background-color: #ccc;
+        /* background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%); */
+        /* background-image: linear-gradient(to right, rgb(241 11 11) 0%, rgb(231 116 35) 77%, #ee0979 100%); color rojo ERROU */
+        /* background-image: linear-gradient(to right, #0ebb00 0%, #45b68f 51%, #DCE35B 100%); color verde ACERTOU */
+        text-transform: uppercase;
+        transition: .5s;
+        background-size: 200% auto;
+        color: #fff;
+        border-radius: 10px;
 
-.opition:hover {
-    /* background-color: #ffffff;
+    }
+
+
+    button:hover {
+        background-color: #2a2929b4;
+        color: white;
+
+        .opition:hover {
+            /* background-color: #ffffff;
     color: white; */
-    cursor: pointer;
-    transform: scale(1.1);
-}
+            cursor: pointer;
+            transform: scale(1.1);
+        }
 
-#btn-a {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
-}
+        .incorrecto {
+            background-color: red;
+        }
 
-#btn-b {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
-}
+        .correcto {
+            background-color: green;
+        }
 
-#btn-c {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
-}
 
-#btn-d {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
-}
+        #btn-a {
+            background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
+        }
 
-.span {
-    padding-left: 14px;
-}
+        #btn-b {
+            background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
+        }
 
-#imgBandera {
-    width: 270px;
-    height: 150px;
-}
+        #btn-c {
+            background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
+        }
 
-/* ----------------------- pantalla final ----------------------*/
+        #btn-d {
+            background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
+        }
 
-/* ----------------------- DERROTA ----------------------*/
-#game-over {
-    width: 300px;
-    height: 300px;
-    display: none;
-    background-color: #080808;
-    background-image: linear-gradient(to top, #57456f 0%, #000000bf 100%);
-    color: white;
-    margin-top: 37px;
-    border: 3px solid #fb0404;
-}
+        .span {
+            padding-left: 14px;
+        }
 
-#over {
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(250, 22, 22);
-    font-size: 46px;
-    font-family: sans-serif;
-}
 
-/* ----------------------- VICTORIA ----------------------*/
-#game-victoria {
-    width: 300px;
-    height: 300px;
-    display: none;
-    background-color: #080808;
-    background-image: linear-gradient(135deg, #92FFC0 10%, #002661 100%);
-    color: white;
-    margin-top: 37px;
+        #imgBandera {
+            width: 270px;
+            height: 150px;
+        }
 
-    border: 3px solid #020202;
-}
+        /* ----------------------- pantalla final ----------------------*/
 
-#victoria {
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(81, 211, 63);
-    font-size: 46px;
-    font-family: sans-serif;
-}
+        /* ----------------------- DERROTA ----------------------*/
+        #game-over {
+            width: 300px;
+            height: 300px;
+            display: none;
+            background-color: #080808;
+            background-image: linear-gradient(to top, #57456f 0%, #000000bf 100%);
+            color: white;
+            margin-top: 37px;
+            border: 3px solid #fb0404;
+        }
 
-/* ----------------------- JUGAR DE NUEVO ----------------------*/
-#play-again-vitoria,
-#play-again-derrota {
-    width: 110px;
-    background-color: ivory;
-}
+        #over {
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(250, 22, 22);
+            font-size: 46px;
+            font-family: sans-serif;
+        }
 
-#play-again-vitoria:hover {
-    color: #fefdfd;
-    background-color: #05812c;
-    transform: scale(1.5);
-}
+        /* ----------------------- VICTORIA ----------------------*/
+        #game-victoria {
+            width: 300px;
+            height: 300px;
+            display: none;
+            background-color: #080808;
+            background-image: linear-gradient(135deg, #92FFC0 10%, #002661 100%);
+            color: white;
+            margin-top: 37px;
 
-#play-again-derrota:hover {
-    color: #fefdfd;
-    background-color: #b40404;
-    transform: scale(1.5);
-}
+            border: 3px solid #020202;
+        }
+
+        #victoria {
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: rgb(81, 211, 63);
+            font-size: 46px;
+            font-family: sans-serif;
+        }
+
+        /* ----------------------- JUGAR DE NUEVO ----------------------*/
+        #play-again-vitoria,
+        #play-again-derrota {
+
+            #play-again {
+                width: 110px;
+                background-color: ivory;
+            }
+
+
+            #play-again:hover {
+                #play-again-vitoria:hover {
+                    color: #fefdfd;
+                    background-color: #05812c;
+                    transform: scale(1.5);
+                }
+
+
+
+
+
+
+                #over {
+                    color: rgb(255, 255, 255);
+                    /* text-shadow: -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700; */
+                    /* background: linear-gradient(to right, #ffd700 50%, #ed1515 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: rgb(250, 22, 22);
+                    font-size: 46px;
+                }
+
+                #play-again-derrota:hover {
+                    color: #fefdfd;
+                    background-color: #b40404;
+                    transform: scale(1.5);
+                }

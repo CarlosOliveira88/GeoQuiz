@@ -151,8 +151,12 @@ const preguntasGeografia = [
     }
 ];
 
+<<<<<<< HEAD
 
 const newBanderas = [
+=======
+const BANDERAS = [
+>>>>>>> dev
     {
         pais: "Brasil",
         bandera: "imagenes/brasil.webp",
