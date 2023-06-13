@@ -1043,7 +1043,7 @@ class Juego {
     arrayOpiciones() {
         let respuesta = this.banderas[this.preguntaActual].pais
         let array = [];
-        console.log("respuesta = " + respuesta)
+        // console.log("respuesta = " + respuesta)
         array.push(respuesta);
 
 
@@ -1064,7 +1064,7 @@ class Juego {
 
         }
         // console.log(array)
-        // array.sort(() => Math.random() - 0.5); cuando lo utilizo, a cada 3 una sale errada aun que este correcta
+        array.sort(() => Math.random() - 0.5); //cuando lo utilizo, a cada 3 una sale errada aun que este correcta
         console.log(array)
         console.log("respuesta = " + respuesta)
 
@@ -1128,7 +1128,7 @@ class Juego {
         let respuesta = this.banderas[this.preguntaActual].pais;
         let respuestaJugador = "";
         let boton;
-        // console.log("estoy en verificar respuesta y respuesta vale =>  " + respuesta)
+        console.log("estoy en verificar respuesta y respuesta vale =>  " + respuesta)
 
         // clic boton a 
         document.getElementById('btn-a').addEventListener('click', () => {
@@ -1137,10 +1137,12 @@ class Juego {
             respuesta = this.banderas[this.preguntaActual].pais;
             this.stopTimer();
             verificar(boton);
+
         });
         // clic boton b 
         document.getElementById('btn-b').addEventListener('click', () => {
             respuestaJugador = this.spanB.innerHTML;
+            respuesta = this.banderas[this.preguntaActual].pais;
             boton = document.getElementById('btn-b');
             this.stopTimer();
             verificar(boton);
@@ -1148,6 +1150,7 @@ class Juego {
         // clic boton c 
         document.getElementById('btn-c').addEventListener('click', () => {
             respuestaJugador = this.spanC.innerHTML;
+            respuesta = this.banderas[this.preguntaActual].pais;
             boton = document.getElementById('btn-c');
             this.stopTimer();
             verificar(boton);
@@ -1155,6 +1158,7 @@ class Juego {
         // clic boton d 
         document.getElementById('btn-d').addEventListener('click', () => {
             respuestaJugador = this.spanD.innerHTML;
+            respuesta = this.banderas[this.preguntaActual].pais;
             boton = document.getElementById('btn-d');
             this.stopTimer();
             verificar(boton);
