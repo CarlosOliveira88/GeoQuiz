@@ -8,7 +8,7 @@ dos alumnos del Bootcamp de Full Stack Development de  **Ironhack Barcelona** y
 este es el primer proyecto combinando CSS, HTMLy JavaScript que ambos hemos desarrollado.
 
 ## Deployment 🚀
-Puedes jugar al juego [aquí]
+Puedes jugar al juego [https://carlosoliveira88.github.io/GeoQuiz/]
 
 ## Estructura de trabajo 📋
 Desarrollamos este proyecto usando [Trello](http://trello.com/home) para organizar nuestro flujo de trabajo.
