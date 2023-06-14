@@ -2,11 +2,13 @@
     transition: all 0.3s;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 50vh;
     text-align: center;
     background-image: url(imagenes/01-geo.webp);
     background-size: cover;
@@ -15,42 +17,43 @@ body {
     background-attachment: fixed;
 }
 
-#inicio {
-    display: block;
-    width: 300px;
-    background-color: #85FFBD;
-    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    margin-top: 37px;
-    border: 3px solid black;
-}
 
-#inicio-btn {
-    display: block;
-    width: 200px;
-    height: 60px;
-    border-radius: 30px;
-    background-color: #333;
-    color: #fff;
-    margin-bottom: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 20px;
-    font-family: system-ui;
-}
-
-#inicio-btn:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-#preguntas-button {
+.inicio {
     display: none;
 }
 
-/* ----------------------- pantalla de juego ----------------------*/
+
+#game {
+    width: 300px;
+    height: 300px;
+    /*display: none;*/
+}
+
+
+#game-over {
+    width: 300px;
+    height: 600px;
+    display: none;
+    background-color: #080808;
+    color: white;
+    margin-top: 37px;
+}
+
+
+h1 {
+    color: #05812c;
+}
+
+
+#quiz-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+
 #header {
     display: flex;
     align-items: center;
@@ -61,58 +64,33 @@ body {
     padding-left: 20px;
 }
 
-#header,
-#opciones {
-    background-image: linear-gradient(to top, #b885ff 0%, #0069f8bf 100%);
-    /* background-image: linear-gradient(to top, #c3aaf1 0%, #342eb8 100%);*/
-}
 
 .vida1,
 .vida2 {
     width: 15px;
-    display: inline;
-}
-
-#game {
-    width: 300px;
-    display: none;
-    margin-top: 37px;
-    border: 3px solid #020202;
 }
 
 
 
-h1 {
-    color: #255d37;
-    ;
-}
-
-#quiz-container {
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-}
 
 #bandera {
-    border-top: solid;
-    border-bottom: solid;
-    background-color: #85FFBD;
-    background-image: linear-gradient(45deg, #b885ff 0%, #FFFB7D 100%);
+    border: 2px solid #05812c;
+    background-color: #a6f6a6;
 }
+
+
+#progress-container {
+    width: 200px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 10px auto;
+}
+
 
 #progress-bar {
-    width: 90%;
-    height: 10px;
-    background-color: #fd060600;
-    margin-left: 5%;
-}
-
-.progress {
+    width: 0%;
     height: 100%;
-    background-color: rgb(241 11 11);
-    background-image: linear-gradient(135deg, #1502b0 10%, #02aab0 100%);
+    background-color: #69b542;
     transition: width 1s linear;
 }
 
@@ -124,106 +102,64 @@ h1 {
     padding: 3px 3px 12px 3px;
 }
 
-.opition {
+
+button {
     display: flex;
     width: 200px;
     margin: 10px 38px 3px 40px;
-    background-color: #ccc;
-    /* background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%); */
-    /* background-image: linear-gradient(to right, rgb(241 11 11) 0%, rgb(231 116 35) 77%, #ee0979 100%); color rojo ERROU */
-    /* background-image: linear-gradient(to right, #0ebb00 0%, #45b68f 51%, #DCE35B 100%); color verde ACERTOU */
-    text-transform: uppercase;
-    transition: .5s;
-    background-size: 200% auto;
-    color: #fff;
-    border-radius: 10px;
-
 }
 
-.opition:hover {
-    /* background-color: #ffffff;
-    color: white; */
+
+button:hover {
+    background-color: #2a2929b4;
+    color: white;
     cursor: pointer;
     transform: scale(1.1);
 }
-
-#btn-a {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
+.incorrecto {
+    background-color: red;
+}
+.correcto{
+    background-color: green;
 }
 
-#btn-b {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
-}
-
-#btn-c {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
-}
-
-#btn-d {
-    background-image: linear-gradient(to right, #1502b0 0%, #00CDAC 51%, #02AAB0 100%);
-}
 
 .span {
     padding-left: 14px;
 }
+
 
 #imgBandera {
     width: 270px;
     height: 150px;
 }
 
-/* ----------------------- pantalla final ----------------------*/
 
-/* ----------------------- DERROTA ----------------------*/
-#game-over {
-    width: 300px;
-    height: 300px;
-    display: none;
-    background-color: #080808;
-    background-image: linear-gradient(to top, #57456f 0%, #000000bf 100%);
-    color: white;
-    margin-top: 37px;
-    border: 3px solid #fb0404;
-}
-
-#over {
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(250, 22, 22);
-    font-size: 46px;
-    font-family: sans-serif;
-}
-
-/* ----------------------- VICTORIA ----------------------*/
-#game-victoria {
-    width: 300px;
-    height: 300px;
-    display: none;
-    background-color: #080808;
-    background-image: linear-gradient(135deg, #92FFC0 10%, #002661 100%);
-    color: white;
-    margin-top: 37px;
-
-    border: 3px solid #020202;
-}
-
-#victoria {
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(81, 211, 63);
-    font-size: 46px;
-    font-family: sans-serif;
-}
-
-/* ----------------------- JUGAR DE NUEVO ----------------------*/
-#play-again-vitoria,
-#play-again-derrota {
+#play-again {
     width: 110px;
+    margin-left: 95px;
     background-color: ivory;
 }
 
-#play-again-vitoria:hover {
+
+#play-again:hover {
     color: #fefdfd;
     background-color: #05812c;
     transform: scale(1.5);
+}
+
+
+
+
+
+
+#over {
+    color: rgb(255, 255, 255);
+    /* text-shadow: -1px -1px 0 #ffd700, 1px -1px 0 #ffd700, -1px 1px 0 #ffd700, 1px 1px 0 #ffd700; */
+    /* background: linear-gradient(to right, #ffd700 50%, #ed1515 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(250, 22, 22);
+    font-size: 46px;
 }
